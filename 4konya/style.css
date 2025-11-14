@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+    height: auto;
+}
+
+.uppercased {
+    text-transform: uppercase;
+}
+
+/*  CSS RESET SCTION END */
+/*  *************************** */
+
+:root {
+    --tablo-red: #F54932;
+    --tablo-white: #FFFFFF;
+
+}
+
+
+header {
+    display: block;
+    width: 100%;
+    height: 700px;
+    background-image: url('img/1920.png');
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-origin: content-box;
+    background-clip: border-box;
+    background-size: cover;
+
+    /* background-color: aqua; */
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.tablo {
+    display: flex;
+    width: 100%;
+    overflow-y: hidden;
+    color: var(--tablo-white);
+    background-color: var(--tablo-red);
+    white-space: nowrap;
+    justify-content: space-around;
+}
+
+.tablo>p {
+    padding: 16px 8px;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.dot {
+    height: 100%;
+    width: 100%;
+    border: 6px solid var(--tablo-white);
+    background-color: var(--tablo-white);
+    border-radius: 50%;
+    align-self: center;
+}
+
+.oval {
+    width: 30%;
+    height: 250px;
+    background: #a84909;
+    border-radius: 50%;
+}
+
+.block1 {
+    /* position: relative; */
+    display: flex;
+    height: 400px;
+    align-items: center;
+}
+
+.block1>h1 {
+    position: relative;
+    display: flex;
+}
+
+.span_red {
+
+    color: #F54932;
+}
+
+.small_link {
+    font-size: 0.5rem;
+}

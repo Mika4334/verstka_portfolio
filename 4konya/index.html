@@ -33,28 +33,30 @@
                 <button class="header_button">Подробнее о турнире</button>
             </div>
         </div>
-        <div></div>
     </header>
 
     <div class="tablo">
-        <h1>Дело помощи утопающим — дело рук самих утопающих!</h1>
-        <div class="dot"></div>
-        <h1>Шахматы двигают вперед не только культуру, но и экономику!</h1>
-        <div class="dot"></div>
-        <h1>Лед тронулся, господа присяжные заседатели!</h1>
+        <div class="anim">
+            <h1>Дело помощи утопающим — дело рук самих утопающих!</h1>
+            <div class="dot"></div>
+            <h1>Шахматы двигают вперед не только культуру, но и экономику!</h1>
+            <div class="dot"></div>
+            <h1>Лед тронулся, господа присяжные заседатели!</h1>
+        </div>
     </div>
 
     <main class="container">
         <div class="block1">
             <p>Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему:
                 <span class="span_red">«Плодотворная дебютная идея» </span>
-            <div class="oval"></div>
             </p>
+            <div class="oval"></div>
         </div>
 
         <div class="block2">
-            <div><img src="img/Frame 48095654.png" alt="chess_grandmaster">
-            </div>
+            <img src="img/Frame 48095654.png" alt="chess_grandmaster">
+            <!-- <div><img src="img/Frame 48095654.png" alt="chess_grandmaster">
+            </div> -->
             <div>
                 <h1>и Сеанс
                     <span class="span_red">одновременной игры в шахматы на 160 досках</span>
@@ -92,7 +94,6 @@
                 <h1>Этапы преображения <br> Васюков
                     <a class="small_link" href="#">Будущие источники обогащения васюкинцев</a>
                 </h1>
-
             </div>
             <div class="plates">
                 <div class="plate">
@@ -131,14 +132,14 @@
 
         <div class="carusel">
             <div class="carusel__navbar">
-                <h1>Участники турнира</h1>
+                <h1 id="h1">Участники турнира</h1>
                 <div>
-                    <button></button>
+                    <button type="button" id="left_button">левая</button>
                     <p><span class="current_number">3</span> /6</p>
-                    <button disabled></button>
+                    <button id="right_button">правая</button>
                 </div>
             </div>
-            <div class="carusel__items">
+            <div class="carusel__items" id="carusel_items">
                 <div class="profile_card">
                     <img src="img/Frame 48095641.png" alt="blank_profile_image">
                     <h2>Хозе-Рауль Капабланка</h2>
@@ -179,12 +180,13 @@
         </div>   
     </main>
 
-
     <footer>
         <p>Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта.
             С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова
             «Двенадцать стульев».</p>
     </footer>
+
+    <script src=" script.js"></script>
 </body>
 
 </html>

@@ -18,19 +18,24 @@
 
 
 <body>
-    <nav>
-        <a href="./"><img src="img/logo.png" alt="logo"></a>
-    </nav>
 
     <header>
         <div class="inner__header">
-            <h1>Превратите <br> уездный
+            <div class="nav">
+                <a href="./"><img src="img/logo.png" alt="logo"></a>
+            </div>
+            <h1 class="h1top">Превратите <br> уездный
                 город</h1>
-            <h1>в столицу <br> земного шара</h1>
-            <p>Оплатите взнос на телеграммы для организации <br> Международного васюкинского турнира по шахматам</p>
+            <h1 class="h1bot">в столицу <br> земного шара</h1>
+            <p class="pmiddle">Оплатите взнос на телеграммы для организации Международного васюкинского турнира
+                по шахматам</p>
             <div class="header__button_container">
-                <button class="header_button">Поддержать шахматную мысль</button>
-                <button class="header_button">Подробнее о турнире</button>
+                <button class="header_button">
+                    <p>Поддержать шахматную мысль</p>
+                </button>
+                <button class="header_button">
+                    <p>Подробнее о турнире</p>
+                </button>
             </div>
         </div>
     </header>
@@ -47,10 +52,14 @@
 
     <main class="container">
         <div class="block1">
-            <p>Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему:
+            <p class="hide1">Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему:
                 <span class="span_red">«Плодотворная дебютная идея» </span>
             </p>
+            <p class="hide2">Чтобы поддержать Международный васюкинский турнир </p>
             <div class="oval"></div>
+            <p class="hide3">посетите лекцию на тему:
+                <span class="span_red">«Плодотворная дебютная идея» </span>
+            </p>
         </div>
 
         <div class="block2">
@@ -95,8 +104,8 @@
                     <a class="small_link" href="#">Будущие источники обогащения васюкинцев</a>
                 </h1>
             </div>
-            <div class="plates">
-                <div class="plate">
+            <div class="plates" id="plates">
+                <div class="plate" id="plate">
                     <img src="img/1.png" alt="number_1">
                     <p>Строительство железнодорожной магистрали Москва-Васюки</p>
                 </div>
@@ -127,58 +136,88 @@
                         во все концы света, включая Лос-Анжелос и Мельбурн</p>
                 </div>
             </div>
-
+            <div class="carusel__navbar">
+                <div class="show_carusel_buttons">
+                    <button type="button" id="plate_next"></button>
+                    <div class="pagination">
+                        <input type="radio" name="carousel" id="carousel-radio">
+                        <input type="radio" name="carousel" id="carousel-radio">
+                        <input type="radio" name="carousel" id="carousel-radio">
+                        <input type="radio" name="carousel" id="carousel-radio">
+                    </div>
+                    <button type="button" id="plate_prev"></button>
+                </div>
+            </div>
         </div>
 
         <div class="carusel">
             <div class="carusel__navbar">
                 <h1 id="h1">Участники турнира</h1>
-                <div>
-                    <button type="button" id="left_button">левая</button>
-                    <p><span class="current_number">3</span> /6</p>
-                    <button id="right_button">правая</button>
+                <div class="show_carusel_buttons">
+                    <button type="button" id="left_button"></button>
+                    <p><span id="current_number" class="current_number">3</span> / <span id="last_number"
+                            class="last_number">6</span></p>
+                    <button type="button" id="right_button"></button>
                 </div>
             </div>
             <div class="carusel__items" id="carusel_items">
-                <div class="profile_card">
+                <div class="profile_card" id="profile_card">
                     <img src="img/Frame 48095641.png" alt="blank_profile_image">
                     <h2>Хозе-Рауль Капабланка</h2>
                     <p>Чемпион мира по шахматам</p>
                     <button>Подробнее</button>
                 </div>
                 <div class="profile_card">
-                    <img src="img/Frame 48095641.png" alt="blank_profile_image"">
-                        <h2>Эммануил Ласкер</h2>
-                        <p>Чемпион мира по шахматам</p>
-                        <button>Подробнее</button>
+                    <img src="img/Frame 48095641.png" alt="blank_profile_image">
+                    <h2>Эммануил Ласкер</h2>
+                    <p>Чемпион мира по шахматам</p>
+                    <button>Подробнее</button>
                 </div>
                 <div class=" profile_card">
-                    <img src="img/Frame 48095641.png" alt="blank_profile_image"">
-                        <h2>Александр Алехин</h2>
-                        <p>Чемпион мира по шахматам</p>
-                        <button>Подробнее</button>
+                    <img src="img/Frame 48095641.png" alt="blank_profile_image">
+                    <h2>Александр Алехин</h2>
+                    <p>Чемпион мира по шахматам</p>
+                    <button>Подробнее</button>
                 </div>
                 <div class=" profile_card">
-                    <img src="img/Frame 48095641.png" alt="blank_profile_image"">
-                        <h2>Арон Нимцович</h2>
-                        <p>Чемпион мира по шахматам</p>
-                        <button>Подробнее</button>
+                    <img src="img/Frame 48095641.png" alt="blank_profile_image">
+                    <h2>Арон Нимцович</h2>
+                    <p>Чемпион мира по шахматам</p>
+                    <button>Подробнее</button>
                 </div>
                 <div class=" profile_card">
-                    <img src="img/Frame 48095641.png" alt="blank_profile_image"">
-                        <h2>Рихард Рети</h2>
-                        <p>Чемпион мира по шахматам</p>
-                        <button>Подробнее</button>
+                    <img src="img/Frame 48095641.png" alt="blank_profile_image">
+                    <h2>Рихард Рети</h2>
+                    <p>Чемпион мира по шахматам</p>
+                    <button>Подробнее</button>
                 </div>
                 <div class=" profile_card">
-                    <img src="img/Frame 48095641.png" alt="blank_profile_image"">
-                        <h2>Остап Нила</h2>
-                        <p>Гроссмейстер</p>
-                        <button>Подробнее</button>
+                    <img src="img/Frame 48095641.png" alt="blank_profile_image">
+                    <h2>Остап Нила</h2>
+                    <p>Гроссмейстер</p>
+                    <button>Подробнее</button>
                 </div>
             </div>
-        </div>   
+            <div class="carusel__navbar">
+                <div class="show_carusel_buttons">
+                    <button type="button" id="bottom_left_button"></button>
+                    <p><span id="current_number" class="current_number">3</span> / <span id="last_number"
+                            class="last_number">6</span></p>
+                    <button type="button" id="bottom_right_button"></button>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <div class=" tablo">
+        <div class="anim">
+            <h1>Дело помощи утопающим — дело рук самих утопающих!</h1>
+            <div class="dot"></div>
+            <h1>Шахматы двигают вперед не только культуру, но и экономику!</h1>
+            <div class="dot"></div>
+            <h1>Лед тронулся, господа присяжные заседатели!</h1>
+        </div>
+    </div>
 
     <footer>
         <p>Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта.

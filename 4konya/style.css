@@ -21,7 +21,7 @@ body {
     padding: 0;
     /* Удаляет внутренние отступы */
     box-sizing: border-box;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 
 }
 
@@ -61,7 +61,7 @@ h1 {
 
 
 header {
-    min-width: 375px;
+    /* min-width: 375px; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -171,7 +171,8 @@ header button:nth-child(2) {
 
 .tablo {
     padding: 18px 0;
-    overflow-inline: hidden;
+    /* overflow-inline: hidden; */
+    overflow-x: hidden;
     color: var(--white);
     background-color: var(--red);
 }
@@ -180,7 +181,7 @@ header button:nth-child(2) {
     display: flex;
     flex-direction: row;
     white-space: nowrap;
-    animation: scroll 20s linear infinite;
+    /* animation: scroll 20s linear infinite; */
     width: 100%;
 }
 
@@ -210,8 +211,8 @@ header button:nth-child(2) {
 }
 
 main {
-    /* width: 100%; */
-    padding: 0 72px 0 72px;
+    width: 100%;
+    /* padding: 0 72px 0 72px; */
 }
 
 
@@ -525,11 +526,17 @@ footer p {
 
 
 @media screen and (max-width: 850px) {
+
+
+
     header {
-        width: 375px;
+        /* width: 375px; */
+        width: 100%;
     }
 
     .inner__header {
+        /* width: 100%; */
+        width: 375px;
         padding: 18px 20px 0 18px;
         margin: 0;
     }
@@ -552,7 +559,7 @@ footer p {
     }
 
     main {
-        width: 100vw;
+        /* width: 100vw; */
         padding: 0 19px 0 21px;
     }
 
@@ -807,4 +814,23 @@ footer p {
         flex-direction: row;
         align-items: baseline;
     }
+
+
+
+
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+}
+
+* {
+    outline: 1px solid green !important;
 }

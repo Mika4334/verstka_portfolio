@@ -827,7 +827,7 @@ footer p {
 
 
 
-    body {
+    /* body {
         overflow-x: hidden;
         width: 100%;
     }
@@ -835,11 +835,12 @@ footer p {
     main {
         width: 100%;
         max-width: 100%;
-    }
+    } */
 
 
 }
 
+/* 
 * {
     outline: 1px solid green !important;
-}
+} */

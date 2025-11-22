@@ -2,11 +2,16 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
 * {
     margin: 0;
     padding: 0;
+}
+
+html {
+    max-width: 100%;
 }
 
 body {

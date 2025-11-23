@@ -8,66 +8,122 @@
 
 }
 
+
+html {
+    min-width: 375px;
+}
+
 body {
     max-width: 100%;
+    min-width: 375px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     background-color: rgb(255, 0, 98);
     background-size: cover;
+    gap: 0;
+}
 
-    /* gap: 200px; */
-    gap: 8.33333rem 0;
+body>*:not(:nth-child(1), :nth-child(4), :nth-child(5)) {
+    margin-bottom: 8.33333rem;
 }
 
 header {
+    display: flex;
+    flex-direction: row;
     height: 700px;
     background-color: yellow;
     padding: 10px;
+
+    background-image: url('../4konya/img/1920.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .inner-header {
-    width: 100%;
+    width: 50%;
     height: 100%;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    padding: 10px;
+}
+
+marquee {
+    display: inline-block;
+    text-align: justify;
+    overflow: hidden !important;
+}
+
+marquee div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    gap: 0 20px;
+}
+
+marquee p {
+    padding: 10px 0 10px 0;
+    white-space: nowrap;
+}
+
+.circle {
+    min-width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    shape-outside: ellipse();
+    background-color: aliceblue;
 }
 
 main {
+    width: 100%;
+    padding: 10px;
     background-color: aquamarine;
 }
 
 .inner-main {
-    padding: 0 19px 0 10px;
-
+    width: 100%;
+    background-color: rgb(0, 98, 66);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 100%;
-    min-width: 355px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
     gap: 50px;
 }
 
 section {
-    /* min-width: 375px; */
-    height: 100%;
-    background-color: blueviolet;
-
+    width: 100%;
     display: flex;
-    /* flex-direction: row; */
-    flex-flow: row wrap;
-    /* align-content: center; */
-    /* align-items: center; */
-    justify-content: space-around;
-
-    gap: 64px 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 30px 64px;
+    background-color: blueviolet;
 }
 
 section div {
-    /* min-width: 375px; */
+    max-width: 100%;
+    min-width: 335px;
+    text-align: center;
     background-color: red;
+}
+
+section img {
+    width: 100%;
+}
+
+.oval {
+    width: 100%;
+    border-radius: 50%;
+    shape-outside: ellipse();
 }
 
 

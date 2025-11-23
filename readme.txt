@@ -3,4 +3,4 @@
 789
 
 
-1. создай отдельную ветку 2. закоммить и отправь на remote 3. через сайт сделай пулл реквест и слей ветки 4. сделай git pull и посмотри через git log
+npx @tailwindcss/cli -i ./input.css -o ./output.css --watch

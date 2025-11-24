@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -24,6 +27,7 @@ html {
 }
 
 body {
+    font-family: 'Merriweather', serif;
     /* line-height: 1.5; */
     -webkit-font-smoothing: antialiased;
 
@@ -57,10 +61,7 @@ body {
     --padding-left: 5%;
 }
 
-@font-face {
-    font-family: M;
-    src: url(https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap);
-}
+
 
 h1 {
     text-transform: uppercase;
@@ -202,7 +203,7 @@ header button:nth-child(2) {
 }
 
 .tablo h1 {
-    font-family: M;
+    font-family: "Merriweather", serif;
     line-height: 110%;
     text-align: center;
     font-size: 22px;
@@ -250,6 +251,7 @@ main {
 }
 
 .block1 p {
+    line-height: 135%;
     height: 195px;
     max-width: 764px;
 }
@@ -270,6 +272,9 @@ main {
 .hide2,
 .hide3 {
     display: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .block2 {
@@ -282,7 +287,7 @@ main {
 }
 
 .block2__img {
-    width: 472px;
+    width: 474px;
     height: 527px;
     background-image: url('img/Frame\ 48095654.png');
     background-position: center;
@@ -291,6 +296,7 @@ main {
 }
 
 .block2 h1 {
+    line-height: 135%;
     font-size: 36px;
     max-width: 704px;
     max-height: 147px;
@@ -300,10 +306,10 @@ main {
 .block2__data {
     display: flex;
     flex-direction: column;
-    gap: 55px;
+    /* gap: 55px; */
     width: 704px;
     height: 527px;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .block2 table {
@@ -311,8 +317,46 @@ main {
     /* max-width: 704px; */
     /* max-height: 248px; */
     border-collapse: collapse;
+    font-family: "GolosText", serif;
     font-size: 20px;
+    margin-top: 10px;
 }
+
+
+.table-show:nth-child(2) {
+    display: block;
+}
+
+.table-show:nth-child(3) {
+    display: none;
+}
+
+td {
+    max-width: 306px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+th {
+    max-width: 398px;
+    text-align: left;
+    padding-left: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.block2 table td,
+.block2 table th {
+    height: 53px;
+}
+
+.block2 table tr:first-child td,
+.block2 table tr:first-child th,
+.block2 table tr:last-child td,
+.block2 table tr:last-child th {
+    height: 40px;
+}
+
 
 .block2 table td,
 .block2 table th {
@@ -363,11 +407,38 @@ table th {
     overflow-x: hidden;
 }
 
+.block3 h1 {
+    font-size: 54px;
+    line-height: 120%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.block3 span {
+    line-height: 50%;
+    align-self: flex-end;
+    width: 300px;
+    position: relative;
+    top: -60px;
+    left: -355px;
+}
+
 .block3>div>h1 .small_link {
+    font-family: "GolosText", serif;
     display: block;
 }
 
 .block3>div .small_link {
+    font-family: "GolosText", serif;
+    display: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.block3 .carusel__navbar {
     display: none;
 }
 
@@ -380,12 +451,15 @@ table th {
 }
 
 .plate {
-    display: flex;
     font-size: 20px;
-    font-family: "Merriweather", medium;
+    font-family: "GolosText", serif;
     background-color: var(--lightbrown);
     padding: 20px;
     min-width: 335px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
 }
 
 .plate p {
@@ -408,7 +482,6 @@ table th {
 }
 
 
-
 .carusel {
     display: flex;
     flex-direction: column;
@@ -426,6 +499,7 @@ table th {
 
     font-size: 16px;
     margin-bottom: 60px;
+
 }
 
 .carusel__navbar h1 {
@@ -465,12 +539,20 @@ table th {
 .carusel__items {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    margin-left: 38px;
+    gap: 94px;
     margin-bottom: 0;
 }
 
 .show_carusel_buttons:nth-child(1) {
     display: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom {
+    margin-bottom: 0;
 }
 
 
@@ -482,6 +564,7 @@ table th {
     align-items: center;
     justify-content: center;
     /* padding: 0 37px 0 37px; */
+    font-family: "GolosText", serif;
 }
 
 
@@ -512,6 +595,7 @@ table th {
     border-radius: 20px;
     background-color: transparent;
 
+    font-family: "GolosText", serif;
     margin-top: 20px;
 }
 
@@ -537,6 +621,7 @@ table th {
 }
 
 .small_link {
+    font-family: "GolosText", serif;
     text-transform: none;
     font-size: 20px;
 }
@@ -660,7 +745,7 @@ footer p {
     }
 
     .tablo h1 {
-        font-family: M;
+        font-family: "Merriweather", serif;
         line-height: 110%;
         text-align: center;
         font-size: 16px;
@@ -688,6 +773,9 @@ footer p {
 
     .hide1 {
         display: none;
+        height: 0;
+        margin: 0;
+        padding: 0;
     }
 
     .hide2,
@@ -727,88 +815,64 @@ footer p {
         /* overflow-x: hidden; */
     }
 
-    .block2__table {
-        min-height: 392px;
-        margin-bottom: -4px;
+    .block2 .small_link {
+        margin-top: -4px;
+        height: 44px;
     }
 
-    table {
-        gap: 0;
-        margin: 0;
-        padding: 0;
+    .table-show:nth-child(2) {
+        display: none;
     }
 
-    table tr td {
-        line-height: 120%;
-    }
-
-    table tr th {
-        line-height: 120%;
-    }
-
-    tr {
-        line-height: 120%;
+    .table-show:nth-child(3) {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        border: 1px solid black;
-        border-top: 0;
-        border-right: 0;
-        border-left: 0;
-        min-height: 75px;
-        gap: 12px;
+        gap: 16px;
     }
 
-    tr:not(:nth-child(1)) {
-        margin-top: 16px;
-    }
-
-    tr:nth-child(4) {
-        margin-top: 16px;
-        min-height: 40px;
-        gap: 25px;
-    }
-
-    th:last-child {
+    .hidden-table div {
+        font-family: "GolosText regular";
+        font-size: 20px;
         display: flex;
+        flex-direction: column;
         gap: 12px;
     }
 
-    .block2 table th {
-        border-top: 0;
-        border-right: 0;
-        border-bottom: 0;
-        border-left: 0;
-        text-align: left;
-        /* padding-bottom: 16px; */
-        max-height: 76px;
+    .hidden-table div *:nth-child(even) {
+        font-weight: bolder;
+
     }
 
-    .block2 table td {
-        border-bottom: 1px;
-        border-top: 0;
-        border-right: 0;
-        border-left: 0;
-        /* padding-top: 16px; */
-        /* padding-bottom: 12px; */
+    .cell {
+        border-top: 1px solid var(--black);
     }
 
-    .block2 table tr:first-child {
-        padding-top: 0;
-    }
-
-    .block2 table tr:last-child {
-        border-bottom: 0;
-        /* padding-bottom: 12px; */
-    }
-
-    .block2 table tr:nth-child(4) {
+    .cell:nth-child(4) {
         display: flex;
         flex-direction: row;
-        align-items: baseline;
+        align-items: flex-end;
+        height: 40px;
     }
 
+    .cell-specialtext {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        align-items: flex-end;
+        height: 24px;
+    }
 
+    .cell-specialtext span:nth-child(1) {
+        text-decoration: line-through var(--red);
+    }
+
+    .hidden-table div :nth-child(1) {
+        padding-top: 16px;
+    }
+
+    .hidden-table div:nth-child(1) :nth-child(1) {
+        padding-top: 0;
+    }
 
     .block3 {
         display: flex;
@@ -825,14 +889,19 @@ footer p {
     }
 
     .block3>div>h1 {
-        padding-bottom: 12px;
+        font-size: 36px;
+        margin-bottom: 12px;
+        height: 120px;
     }
 
     .block3>div>h1 .small_link {
         display: none;
+        margin: 0;
+        padding: 0;
     }
 
     .block3>div .small_link {
+        height: 44px;
         display: block;
     }
 
@@ -849,7 +918,6 @@ footer p {
         min-height: 88px;
         width: 335px;
         font-size: 18px;
-        font-family: "Merriweather", medium;
 
         display: flex;
         flex-direction: row;
@@ -943,6 +1011,9 @@ footer p {
 
     .show_carusel_buttons:nth-child(2) {
         display: none;
+        height: 0;
+        margin: 0;
+        padding: 0;
     }
 
     .show_carusel_buttons:nth-child(1) {
@@ -962,6 +1033,7 @@ footer p {
     }
 
     .carusel__items {
+        margin-left: 0;
         margin-bottom: 40px;
         gap: 78px;
     }
@@ -1048,9 +1120,10 @@ footer p {
     top: 0;
     left: 0;
 
-    /* height: 100%; */
+    /* !!! height: 100%;  */
     background-image: url('img/375.png');
     background-position: top left;
     background-repeat: no-repeat;
     opacity: 0.3;
+    overflow-x: hidden;
 }

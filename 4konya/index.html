@@ -9,16 +9,17 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <!-- <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"> -->
 
+    <!-- <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> -->
     <title>4коня</title>
 </head>
 
 
 <body>
-    <!-- <img class="tsp" src="img/375.png" alt="375"> -->
+    <img class="tsp" src="img/375.png" alt="375">
     <!-- <img class="tsp" src="img/1366.png" alt="1366"> -->
     <header>
         <div class="inner__header">
@@ -71,7 +72,7 @@
                         <span class="span_red">одновременной игры в шахматы на 160 досках</span>
                         гроссмейстера О. Нила
                     </h1>
-                    <div class="block2__table">
+                    <div class="block2__table table-show">
                         <table>
                             <tr>
                                 <td>Место проведения:</td>
@@ -95,6 +96,28 @@
                             </tr>
                         </table>
                     </div>
+                    <div class="hidden-table table-show">
+                        <div>
+                            <div>Место проведения:</div>
+                            <div>Клуб «Картонажник»</div>
+                        </div>
+                        <div class="cell">
+                            <div>Дата и время мероприятия:</div>
+                            <div>22 июня 1927 г. в 18:00</div>
+                        </div>
+                        <div class="cell">
+                            <div>Стоимость входных билетов:</div>
+                            <div>20 коп.</div>
+                        </div>
+                        <div class="cell">
+                            <div>Плата за игру:</div>
+                            <p>50 коп.</p>
+                        </div>
+                        <div class="cell">
+                            <div>Взнос на телеграммы:</div>
+                            <p class="cell-specialtext"><span>100 руб.</span>21 руб. 16 коп.</p>
+                        </div>
+                    </div>
                     <a class="small_link" href="#">По всем вопросам обращаться в администрацию к К. Михельсону</a>
                 </div>
 
@@ -103,7 +126,7 @@
             <div class="block3">
                 <div>
                     <h1>Этапы преображения <br> Васюков
-                        <a class="small_link" href="#">Будущие источники обогащения васюкинцев</a>
+                        <span><a class="small_link" href="#">Будущие источники обогащения васюкинцев</a></span>
                     </h1>
                     <a class="small_link" href="#">Будущие источники обогащения васюкинцев</a>
                 </div>
@@ -202,7 +225,7 @@
                         <button>Подробнее</button>
                     </div>
                 </div>
-                <div class="carusel__navbar">
+                <div class="carusel__navbar bottom">
                     <div class="show_carusel_buttons">
                         <button type="button" id="bottom_left_button"></button>
                         <p><span id="current_number" class="current_number">3</span> / <span id="last_number"

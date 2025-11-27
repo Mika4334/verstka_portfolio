@@ -1,17 +1,195 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="output.css">
+    <title>Посты</title>
 </head>
 
 <body>
-    <h1 class="text-3xl font-bold underline text-clifford">
-        Hello world!
-    </h1>
-    <h2></h2>
+
+    <header class="felx flex-col content-center h-50 bg-linear-180 from-cyan-500 to-blue-500">
+        <div class="flex justify-start pl-10 gap-10">
+            <img class="rounded-full w-auto h-18" src="img/pp.png" alt="profile_pic">
+            <div class="flex-col content-center">
+                <!-- <h1
+                    class="text-3xl text-orange-600 font-bold truncate [-webkit-text-stroke:0.8px_rgba(255,255,255,0.4)] ">
+                    Рэддит Посты
+                </h1> -->
+
+                <h1
+                    class="text-3xl font-bold bg-linear-0 from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent drop-shadow-lg">
+                    Рэддит Посты
+                </h1>
+
+                <p class="text-gray-500 truncate">r/Posts</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex gap-12 pt-4 ">
+        <aside class="hidden md:flex flex-col min-w-[280px] gap-1.5 pl-4 pr-4  ">
+            <div class="h-60 flex-col">
+                <a class="topsection__nav-link" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                        <path
+                            d="M17.877 8.525a1.6 1.6 0 0 0-.35-.52l-6.395-6.352a1.6 1.6 0 0 0-1.13-.467h-.003a1.6 1.6 0 0 0-1.13.467L2.473 8.005A1.6 1.6 0 0 0 2 9.14v6.374a3.3 3.3 0 0 0 3.3 3.3h9.4a3.3 3.3 0 0 0 3.3-3.3V9.14c0-.211-.042-.42-.123-.615M16.2 15.514c0 .827-.673 1.5-1.5 1.5H11v-5.575H9v5.575H5.3c-.827 0-1.5-.673-1.5-1.5v-6.29L10 3.066l6.2 6.158z" />
+                    </svg>
+                    <p>Home</p>
+                </a>
+                <a class="topsection__nav-link" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="rpl-rtl-icon">
+                        <path
+                            d="M10 1a9 9 0 0 0-9 9 9 9 0 0 0 9 9 9 9 0 0 0 9-9 9 9 0 0 0-9-9m0 16.2c-1.66 0-3.186-.57-4.405-1.517l6.476-6.477V13h1.801V7.028a.9.9 0 0 0-.9-.9h-5.94v1.801h3.771l-6.481 6.482a7.15 7.15 0 0 1-1.521-4.41c0-3.97 3.23-7.2 7.2-7.2s7.2 3.23 7.2 7.2-3.23 7.2-7.2 7.2z" />
+                    </svg>
+                    <p>Popular</p>
+                </a>
+                <a class="topsection__nav-link" href="">
+                    <svg rpl="" fill="currentColor" height="20" icon-name="answers" viewBox="0 0 20 20" width="20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.332 11.042l-4.05-7.056A4.875 4.875 0 009.92 1.5a4.898 4.898 0 00-4.198 2.485l-4.05 7.056a4.938 4.938 0 00.042 5.044 4.894 4.894 0 004.238 2.414h8.099c1.82 0 3.437-.957 4.32-2.559a4.956 4.956 0 00-.04-4.9v.002zM9.948 3.306a3.107 3.107 0 012.78 1.583l1.325 2.308c.5.871.697 1.203 1.002 1.559l-.066.093c-.455-.184-1.201-.212-1.885-.082-.757.144-1.38.48-1.48.538a3.229 3.229 0 01-3.241.005A3.272 3.272 0 016.93 7.536c-.428-1.218.012-2.562.96-3.417a3.107 3.107 0 012.058-.813h-.001zM3.253 15.158a3.142 3.142 0 01-.027-3.213L4.55 9.637c.499-.872.687-1.209.84-1.653l.114.011c.069.488.418 1.153.872 1.684a5.283 5.283 0 001.203 1.02 3.27 3.27 0 01.824 4.973c-.834.981-2.212 1.27-3.421.872a3.126 3.126 0 01-1.73-1.386zm13.55-.094a3.105 3.105 0 01-2.751 1.63h-2.65c-1 0-1.383.006-1.842.093l-.047-.104c.386-.305.783-.94 1.013-1.601a5.342 5.342 0 00.277-1.558 3.27 3.27 0 011.616-2.826 3.235 3.235 0 012.253-.378c1.262.236 2.2 1.292 2.46 2.545.16.737.05 1.513-.328 2.199z">
+                        </path>
+                    </svg>
+                    <p>Answers <span class="text-white-500">BETA</span></p>
+                </a>
+                <a class="topsection__nav-link" href="">
+                    <svg rpl="" fill="currentColor" height="20" icon-name="communities" viewBox="0 0 20 20" width="20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15 12.05c1.08 0 1.95.87 1.95 1.95s-.87 1.95-1.95 1.95-1.95-.87-1.95-1.95.87-1.95 1.95-1.95zm0-1.8c-2.07 0-3.75 1.68-3.75 3.75 0 2.07 1.68 3.75 3.75 3.75 2.07 0 3.75-1.68 3.75-3.75 0-2.07-1.68-3.75-3.75-3.75zM5 12.05c1.08 0 1.95.87 1.95 1.95S6.08 15.95 5 15.95 3.05 15.08 3.05 14s.87-1.95 1.95-1.95zm0-1.8c-2.07 0-3.75 1.68-3.75 3.75 0 2.07 1.68 3.75 3.75 3.75 2.07 0 3.75-1.68 3.75-3.75 0-2.07-1.68-3.75-3.75-3.75zM10 4.05c1.08 0 1.95.87 1.95 1.95S11.08 7.95 10 7.95 8.05 7.08 8.05 6 8.92 4.05 10 4.05zm0-1.8C7.93 2.25 6.25 3.93 6.25 6c0 2.07 1.68 3.75 3.75 3.75 2.07 0 3.75-1.68 3.75-3.75 0-2.07-1.68-3.75-3.75-3.75z">
+                        </path>
+                    </svg>
+                    <p>Explore</p>
+                </a>
+                <a class="topsection__nav-link" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="rpl-rtl-icon">
+                        <path
+                            d="M10 1a9 9 0 1 0 .001 18.001A9 9 0 0 0 10 1m4.9 14.26V7.04h-1.8v9.45c-.68.33-1.42.55-2.2.65V10H9.1v7.14c-.78-.1-1.52-.32-2.2-.65v-3.46H5.1v2.23C3.69 13.94 2.8 12.08 2.8 10c0-3.97 3.23-7.2 7.2-7.2s7.2 3.23 7.2 7.2c0 2.08-.89 3.95-2.3 5.26" />
+                    </svg>
+                    <p>All</p>
+                </a>
+                <a class="topsection__nav-link" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+                    <p>Start a community</p>
+                </a>
+            </div>
+            <span class="border-t border-t-gray-200"></span>
+            <div class="h-72 flex flex-col justify-around">
+                <div class="flex justify-around gap-5">
+                    <p>GAMES ON REDDIT</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" width="25" height="25">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="h-18  flex justify-center items-center bg-yellow-400 rounded-2xl">
+                        <div class="absolute pl-50 pr-0 pb-15 w-60">
+                            <p class="flex justify-center text-[14px] font-medium rounded-2xl text-white bg-orange-600">
+                                NEW
+                            </p>
+                        </div>
+                        <img class="flex h-10" src="img/ni.jpg" alt="">
+                        <div>
+                            <h2 class="font-bold">Pocket Grids</h2>
+                            <p>Daily mini crosswords</p>
+                            <p>650K monthly players</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="topsection__nav-link">
+                    <img class="small-icon" src="img/hc.webp" alt="">
+                    <p>Hot and Cold</p>
+                </a href="">
+                <a href="" class="topsection__nav-link">
+                    <img class="small-icon" src="img/fmv.webp" alt="">
+                    <p>Farm Merge Valley</p>
+                </a href="">
+                <a href="" class="topsection__nav-link">
+                    <img class="small-icon" src="img/nin.webp" alt="">
+                    <p>Ninigrams</p>
+                </a href="">
+                <a href="" class="topsection__nav-link pl-1.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                        <path
+                            d="M18.971 13.149s-.296-2.342-.63-4.771C17.601 3 13.131 3 11.661 3H8.34C6.87 3 2.398 3 1.658 8.379c-.333 2.423-.629 4.762-.63 4.766A3.412 3.412 0 0 0 4.41 17a3.4 3.4 0 0 0 3.24-2.352 1.08 1.08 0 0 1 1.031-.747h2.638c.471 0 .886.3 1.035.753a3.407 3.407 0 0 0 6.616-1.505zm-2.17 1.503a1.6 1.6 0 0 1-1.21.548 1.6 1.6 0 0 1-1.529-1.112 2.88 2.88 0 0 0-2.743-1.987H8.681a2.89 2.89 0 0 0-2.746 1.995A1.6 1.6 0 0 1 4.41 15.2c-.47 0-.9-.194-1.21-.548a1.6 1.6 0 0 1-.386-1.276c0-.002.296-2.335.628-4.751.436-3.173 2.274-3.824 4.898-3.824h3.32c2.624 0 4.462.65 4.898 3.823.332 2.418.627 4.75.628 4.756.062.467-.075.919-.385 1.272m-4.3-5.902a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5m-5.5 2a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5m8.75-.25a1.25 1.25 0 1 1-2.502 0 1.25 1.25 0 0 1 2.501 0z" />
+                    </svg>
+                    <p>Discover More Games</p>
+                </a href="">
+            </div>112
+            <span class="border-t border-t-gray-200"></span>
+            <div class="h-20">
+                <div class="flex justify-around gap-5">
+                    <p>CUSTOM FEEDS</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" width="25" height="25">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                    </svg>
+                </div>
+                <a class="topsection__nav-link" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+                    <p>Create Custom Feed</p>
+                </a>
+            </div>
+            <span class="border-t border-t-gray-200"></span>
+            <div class="h-66.25">
+                <div class="flex justify-around gap-5">
+                    <p>RECENT</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" width="25" height="25">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                    </svg>
+                </div>
+                <a href="" class="topsection__nav-link">
+                    <img class="small-icon" src="img/d2.webp" alt="">
+                    <p>r/DotA2</p>
+                </a href="">
+                <a href="" class="topsection__nav-link">
+                    <img class="small-icon" src="img/gdt.png" alt="">
+                    <p>r/godot</p>
+                </a href="">
+            </div>
+        </aside>
+
+        <section class="flex flex-col">
+            <h1>ДОБАВИТЬ ПОСТ</h1>
+            <div class="">
+                <div>
+                    <h3>Тема</h3>
+                    <input id="postTheme" type="text">
+                </div>
+                <div>
+                    <h3>Комментарий</h3>
+                    <input id="postComment" type="text">
+                </div>
+                <button onclick="createPost()">Отправить</button>
+            </div>
+
+            <h1 id="h1">ПОСТЫ</h1>
+            <div>
+                <ul id="list">
+
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="fetch.js"></script>
 </body>
 
 </html>

@@ -5,26 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <title>Посты</title>
 </head>
 
 <body>
-    <h1>ПОСТЫ</h1>
-    <div>
-        <ul>
-            <li></li>
-        </ul>
-    </div>
 
-    <h1>ДОБАВИТ ПОСТ</h1>
-    <div>
+    <header class="flex">
+        <p class="text-3xl font-bold underline">123</p>
+        <p>456</p>
+    </header>
 
-        <form action="">
-            <input type="text">
-            <input type="checkbox" name="" id="" checked>
-            <button>Отправить</button>
-        </form>
-    </div>
+    <main class="flex">
+        <h1>ДОБАВИТ ПОСТ</h1>
+        <div class="">
+            <div>
+                <h3>Тема</h3>
+                <input id="postTheme" type="text">
+            </div>
+            <div>
+                <h3>Комментарий</h3>
+                <input id="postComment" type="text">
+            </div>
+            <button onclick="createPost()">Отправить</button>
+        </div>
+
+        <h1 id="h1">ПОСТЫ</h1>
+        <div>
+            <ul id="list">
+
+            </ul>
+        </div>
+    </main>
+
+    <footer></footer>
 
     <script src="fetch.js"></script>
 </body>

@@ -3,3 +3,12 @@
 @theme {
     --color-clifford: #da373d;
 }
+
+.topsection__nav-link {
+    @apply flex items-center h-10 gap-5
+}
+
+
+.small-icon {
+    @apply w-8 h-8 rounded-full
+}

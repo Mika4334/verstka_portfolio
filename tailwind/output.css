@@ -13,6 +13,7 @@
     --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-cyan-500: oklch(71.5% 0.143 215.221);
+    --color-blue-200: oklch(88.2% 0.059 254.128);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-700: oklch(48.8% 0.243 264.376);
     --color-blue-900: oklch(37.9% 0.146 265.522);
@@ -632,15 +633,16 @@ div[id^=buttonsParent] {
   justify-content: flex-end;
   gap: calc(var(--spacing) * 5);
 }
-input[id^=newComment], input[id^=newTitle] {
-  min-width: calc(var(--spacing) * 100);
+textarea[id^=newComment], input[id^=newTitle] {
+  width: calc(var(--spacing) * 100);
+  max-width: 100%;
   border-style: var(--tw-border-style);
   border-width: 2px;
-  outline-style: var(--tw-outline-style);
-  outline-width: 2px;
+  border-color: var(--color-blue-200);
 }
-input[id^=newComment] {
-  max-height: calc(var(--spacing) * 30);
+textarea[id^=newComment] {
+  height: calc(var(--spacing) * 30);
+  max-height: calc(var(--spacing) * 60);
 }
 .baseBtn {
   float: right;

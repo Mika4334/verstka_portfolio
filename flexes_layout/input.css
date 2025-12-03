@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+
+
+@theme {
+    --color-clifford: #da373d;
+}
+
+.topsection__nav-link {
+    @apply flex items-center h-10 gap-5
+}
+
+.small-icon {
+    @apply w-8 h-8 rounded-full
+}
+
+.inputTheme {
+    @apply h-14 w-full border-2 rounded-3xl border-neutral-200 
+    focus:outline focus:border-blue-500 
+    focus:pl-3 focus:placeholder:text-gray-400
+    hover:bg-gray-100
+    placeholder:text-clifford pl-3
+}
+
+.inputText {
+    @apply block w-full min-w-100 min-h-30
+    resize-y 
+    placeholder:text-gray-600 pl-3 pt-2
+    focus:outline-0
+    
+}
+
+#list {
+    @apply flex flex-col gap-10
+}
+
+#list>li {
+    @apply flex gap-10
+}
+
+.commentItem {
+    @apply max-w-200
+}
+
+.likes {
+    @apply flex flex-col justify-start items-center w-10
+}
+
+.post {
+    @apply flex flex-col gap-1
+}
+
+
+p[id^="titleText"] {
+    @apply font-bold uppercase
+}
+
+p[id^=commentText] {
+    @apply italic
+}
+
+div[id^=buttonsParent] {
+    @apply flex justify-end gap-5
+}
+
+textarea[id^=newComment], input[id^=newTitle] {
+    @apply max-w-full w-100 border-2 border-blue-200
+}
+
+
+textarea[id^=newComment] {
+    @apply h-30 max-h-60
+}
+
+.baseBtn {
+    @apply float-right mt-2 h-10 text-center pl-4 pr-4 text-slate-100 bg-blue-900 rounded-3xl hover:bg-blue-950
+}

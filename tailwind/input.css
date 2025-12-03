@@ -1,77 +1,118 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: ChronicleSemiBold;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Chronicle Display Semibold.otf") format("otf");
+}
+
+@font-face {
+  font-family: GliroyBold;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Gilroy-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: GliroyExtraBold;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Gilroy-ExtraBold.ttf") format("ttf");
+}
 
 
 @theme {
-    --color-clifford: #da373d;
+   --font-chronicle: "ChronicleSemiBold";
+   --font-gliroybold: "GliroyBold";
+   --font-gliroyextrabold: "GliroyExtraBold";
+   --color-bg-0: #0b1d26;
+   --color-accent-0: #fbd784;
+   --tracking-em33: 0.33em;
 }
 
-.topsection__nav-link {
-    @apply flex items-center h-10 gap-5
+/* IMPORTANT PATTERN HERE */
+/* 
+   sm:640px md:768px lg:1024px xl:1280px 2xl:1536px
+   
+   sm:40rem (640px)
+   md:48rem (768px)
+   lg:64rem (1024px) 
+   xl:80rem (1280px)
+   2xl:96rem (1536px) */
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+/* 
+   max-sm	@media (width < 40rem) { ... }
+   max-md	@media (width < 48rem) { ... }
+   max-lg	@media (width < 64rem) { ... }
+   max-xl	@media (width < 80rem) { ... }
+   max-2xl	@media (width < 96rem) { ... } 
+*/
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+
+html {
+   @apply scroll-smooth
 }
 
-.small-icon {
-    @apply w-8 h-8 rounded-full
+body {
+   @apply bg-bg-0 bg-[url(img/Group18.png)] bg-contain bg-no-repeat
+
+   /* bg-[url(img/BGContent.png),url(img/VG.png),url(img/MG.png),url(img/HG.png)]
+   bg-position-[center_34%,center_25%,center_10%,top_center] */
+
+   /* bg-[linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url('img/BGContent.png'),url('img/VG.png'),url('img/MG.png'),url('img/HG.png')]
+   bg-position-[center,center_400px,center_3%,center_2%,center_top]
+   sm:bg-position-[center,center_510px,center_4.5%,center_2.3%,center_top]
+   lg:bg-position-[center,center_590px,center_5%,center_0.3%,center_-2%]
+   xl:bg-position-[center,center_740px,center_9%,center_2%,center_-5%]
+   bg-contain
+   bg-no-repeat */
 }
 
-.inputTheme {
-    @apply h-14 w-full border-2 rounded-3xl border-neutral-200 
-    focus:outline focus:border-blue-500 
-    focus:pl-3 focus:placeholder:text-gray-400
-    hover:bg-gray-100
-    placeholder:text-clifford pl-3
+.yellow-big {
+   @apply whitespace-nowrap tracking-em33 text-accent-0 uppercase text-[13px]
+   xl:text-[18px]
 }
 
-.inputText {
-    @apply block w-full min-w-100 min-h-30
-    resize-y 
-    placeholder:text-gray-600 pl-3 pt-2
-    focus:outline-0
-    
+.yellow-small {
+   @apply text-accent-0 font-bold text-[13px]
+   lg:text-[18px]
 }
 
-#list {
-    @apply flex flex-col gap-10
+.white-h2 {
+   @apply text-[34px] font-chronicle font-medium text-white 
+   lg:text-[64px]
 }
 
-#list>li {
-    @apply flex gap-10
+.logo {
+   @apply w-27 h-6
 }
 
-.commentItem {
-    @apply max-w-200
+.sticks {
+   @apply w-[3px] h-15 bg-white
 }
 
-.likes {
-    @apply flex flex-col justify-start items-center w-10
+section {
+   @apply flex flex-col gap-10 mb-20 items-center justify-center w-full 
+   lg:justify-around lg:mb-50 lg:flex-row
 }
 
-.post {
-    @apply flex flex-col gap-1
+article {
+   @apply 2xl:pl-0 pr-0
 }
 
-
-p[id^="titleText"] {
-    @apply font-bold uppercase
+article span {
+   @apply relative h-0 w-0 opacity-10 font-gliroyextrabold font-extrabold text-[240px]
+   top-[-150px] left-[-140px]
 }
 
-p[id^=commentText] {
-    @apply italic
+.hide {
+   @apply hidden 2xl:flex
 }
 
-div[id^=buttonsParent] {
-    @apply flex justify-end gap-5
+.nav-burger-hide {
+   @apply hidden md:flex
 }
-
-textarea[id^=newComment], input[id^=newTitle] {
-    @apply max-w-full w-100 border-2 border-blue-200
-}
-
-
-textarea[id^=newComment] {
-    @apply h-30 max-h-60
-}
-
-.baseBtn {
-    @apply float-right mt-2 h-10 text-center pl-4 pr-4 text-slate-100 bg-blue-900 rounded-3xl hover:bg-blue-950
+.nav-burger-show {
+   @apply block md:hidden
 }

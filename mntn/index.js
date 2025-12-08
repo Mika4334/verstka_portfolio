@@ -4,6 +4,7 @@ document.querySelectorAll(".BurgerWindowButton").forEach(element => {
 
 document.getElementById("BurgerWindow").classList.toggle('hidden')
 
-function ocBurgerWindow() {
+function ocBurgerWindow(event) {
+    event.preventDefault();
     document.getElementById("BurgerWindow").classList.toggle('hidden')
 }

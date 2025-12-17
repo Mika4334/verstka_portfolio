@@ -1,14 +1,32 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@theme {
+  --color-pm: #6c5fbc;
+  --color-pmhover: #786dbd;
+  --color-pmbackdrop: #786dbd84;
+  --color-hr: var(--color-zinc-300);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --text-sc: var(--text-zinc-600);
+
+
+  --font-first: "Poppins", sans-serif;
+  --font-second: "Inter", sans-serif;
+  --font-third: "Manrope", sans-serif;
+
+  --font-rob: "Roboto", sans-serif;
+  --font-ps: "Public Sans", sans-serif;
+  --font-qs: "Quicksand", sans-serif;
+  --font-pjs: "Plus Jakarta Sans", sans-serif;
+}
+
+.burgerPopover:popover-open {
+  @apply flex flex-col justify-center items-center w-[200px] min-w-[100px] m-auto gap-5 bg-pmbackdrop/0 backdrop-blur-lg
+}
+
+.burgerPopover::backdrop {
+  @apply bg-pmbackdrop backdrop-blur-lg
+}
+
+.burgerPopover>a{
+  @apply pt-4 pb-4 block content-center w-full text-center text-pm bg-white rounded-2xl border-2 border-pm
 }

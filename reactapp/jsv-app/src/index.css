@@ -2,12 +2,14 @@
 
 @theme {
   --color-pm: #6c5fbc;
+  --color-sc: var(--color-zinc-600);
   --color-pmhover: #786dbd;
   --color-pmbackdrop: #786dbd84;
   --color-hr: var(--color-zinc-300);
 
-  --text-sc: var(--text-zinc-600);
-
+  --color-ylw: var(--color-yellow-500);
+  --color-red: var(--color-orange-600);
+  --color-grn: var(--color-green-600);
 
   --font-first: "Poppins", sans-serif;
   --font-second: "Inter", sans-serif;
@@ -30,3 +32,33 @@
 .burgerPopover>a{
   @apply pt-4 pb-4 block content-center w-full text-center text-pm bg-white rounded-2xl border-2 border-pm
 }
+
+h1 {
+  @apply text-[75px]/[120%] font-[600px] -tracking-[0.04em]
+}
+
+h2 {
+  @apply text-[50px]/[114%] font-[700px] capitalize text-center
+}
+
+h3 {
+  @apply text-[45px]/[125%] font-[700px]
+}
+
+h4 {
+  @apply text-[25px]/[162%] font-[600px]
+}
+
+
+header {
+  @apply md:flex md:flex-row md:justify-center md:h-[607px] md:pr-[58px] md:pl-[97px] 
+  flex-col h-[670px] gap-[37px] items-center pr-[21px] pl-[21px]
+}
+
+.features{
+  @apply sm:flex-row sm:justify-between sm:h-[220px] sm:pt-[49px] sm:pb-[49px] sm:bg-[url(/svg/BG.svg)] 
+  lg:pl-[249px] lg:pr-[249px] 
+  flex flex-col justify-around items-center h-[748px] w-full pl-10 pr-10 bg-no-repeat bg-cover bg-center bg-[url(/svg/BGmobile.svg)]
+  text-center text-white
+}
+

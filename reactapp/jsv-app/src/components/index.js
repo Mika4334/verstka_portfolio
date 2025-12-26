@@ -1,7 +1,7 @@
 // 🚀 АВТОГЕНЕРИРОВАННЫЕ ИМПОРТЫ
-// 25.12.2025 10:45:11
-// Файлов: 19, Экспортов: 21
-// Хеш: 1a82f093
+// 26.12.2025 08:17:44
+// Файлов: 20, Экспортов: 22
+// Хеш: f4254231
 //
 
 // import { Badge } from './components/ui-kit/Badge';
@@ -13,6 +13,7 @@
 // import { BurgerMenu } from './components/ui-kit/BurgerMenu';
 // import { CIcon } from './components/ui-kit/CIcon';
 // import { CImage } from './components/ui-kit/CImage';
+// import { DishCard } from './components/views/DishCard';
 // import { Features } from './components/ui-kit/Features';
 // import { H2 } from './components/ui-kit/H2';
 // import { HeroH1 } from './components/ui-kit/HeroH1';
@@ -39,6 +40,7 @@ export { Bookmark } from './ui-kit/Bookmark';
 export { BurgerMenu } from './ui-kit/BurgerMenu';
 export { CIcon } from './ui-kit/CIcon';
 export { CImage } from './ui-kit/CImage';
+export { DishCard } from './views/DishCard';
 export { Features } from './ui-kit/Features';
 export { H2 } from './ui-kit/H2';
 export { HeroH1 } from './ui-kit/HeroH1';

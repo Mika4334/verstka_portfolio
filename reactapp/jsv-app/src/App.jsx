@@ -22,29 +22,15 @@ import { Badge } from './components/ui-kit/Badge';
 import { Bookmark } from './components/ui-kit/Bookmark';
 import { RestCard } from './components/views/RestCard';
 import { ViewAll } from './components/ui-kit/ViewAll';
+import { DishCard } from './components/views/DishCard';
 
 //image import???
 
 function App() {
   return (
-
     <main className='bg-red-400 h-full max-w-full mx-5 lg:mx-17 xl:mx-23.75'>
 
-      <section className='flex flex-col gap-12.5'>
-        <H2 beforeText='Our Top' spanText='Dishes' />
-        <div className='flex flex-col justify-center items-center lg:justify-around lg:flex-row gap-y-10'>
-          <RestCard w='w-[396px]' h='h-[298px]' srcImg={`bg-[url(/img/rest/kfc.png)]`} href='#'
-            badgeColor='y' badgeText="Healthy" />
-          <RestCard w='w-[396px]' h='h-[298px]' srcImg={`bg-[url(/img/rest/bk.png)]`} href='#'
-            badgeColor='r' badgeText="Trending" />
-          <RestCard w='w-[396px]' h='h-[298px]' srcImg={`bg-[url(/img/rest/kfc.png)]`} href='#'
-            badgeColor='y' badgeText="Healthy" />
-        </div>
-        <ViewAll />
-      </section>
-
     </main>
-
   )
 }
 

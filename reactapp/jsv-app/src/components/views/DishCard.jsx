@@ -1,6 +1,5 @@
 import { Badge } from './../ui-kit/Badge';
 import { Stars } from './../ui-kit/Stars';
-import { Bookmark } from './../ui-kit/Bookmark';
 import { CImage } from '../ui-kit/CImage';
 import { CIcon } from '../ui-kit/CIcon';
 

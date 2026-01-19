@@ -23,51 +23,48 @@ import { Bookmark } from './components/ui-kit/Bookmark';
 import { RestCard } from './components/views/RestCard';
 import { ViewAll } from './components/ui-kit/ViewAll';
 import { DishCard } from './components/views/DishCard';
+import { StatusCard } from './components/ui-kit/StatusCard';
+import { ExpensesCard } from './components/ui-kit/ExpensesCard';
+import { ReviewCard } from './components/ui-kit/ReviewCard';
+import { ReviewCarousel } from './components/ui-kit/ReviewCarousel';
+import { DiscountCard } from './components/ui-kit/DiscountCard';
+import { Footer } from './components/views/Footer';
 
-//image import???
 
 function App() {
-  return (
-    <main className='bg-red-400 h-full max-w-full mx-5 lg:mx-17 xl:mx-23.75'>
+  const slides = [
+    {
+      revName: 'Aaaa',
+      years: '01',
+      comment: 'some comment',
+      stars: 1
+    },
+    {
+      revName: 'Aaaa',
+      years: '02',
+      comment: 'some comment',
+      stars: 2
+    },
+    {
+      revName: 'Aaaa',
+      years: '02',
+      comment: 'some comment',
+      stars: 3
+    }
+  ]
+  let revs = [];
+  slides.forEach((element, index) => {
+    revs.push(<ReviewCard key={`revID ${index}`} w='w-[314px]' revName={element.revName} years={element.years} comment={element.comment} stars={element.stars} />)
+  });
 
-    </main>
+
+  return (
+    <>
+      <main className='bg-red-400 h-full max-w-full mx-5 lg:mx-17 xl:mx-23.75'>
+      </main>
+      <Footer />
+    </>
   )
 }
 
 export default App
-
-
-// function Header() {
-//   return (
-
-//   );
-// }
-
-// function Main() {
-//   return (
-//     <main>
-//     </main>
-//   )
-// }
-
-
-// function Footer() {
-//   return (
-//     <footer>
-//       <p>Copyrited by Mika4334 © 2025</p>
-//     </footer>
-//   );
-// }
-
-
-// function App() {
-//   return (
-//     <>
-//       <Header />
-//       <Main />
-//       <Footer />
-//     </>
-//   )
-// }
-
-

@@ -77,12 +77,37 @@ export function SITE() {
                     <ViewAll />
                 </section>
 
-                <section></section>
+                <section className='flex flex-col gap-12.5'>
+                    <H2 beforeText='Control' spanText='Purchases' afterText='Via Dashboard' textSize='text-[100px]' />
+                    <div className='flex justify-around'>
+                        <div className='flex flex-col gap-2.5'>
+                            <StatusCard w='w-[227px]' h='h-[58px]' srcImg='/img/dishes/fi1.png'
+                                alt='dish' statusText='On the way' statusTextColor='text-red-500' timeDate='3:00PM' />
+                            <StatusCard w='w-[227px]' h='h-[58px]' srcImg='/img/dishes/fi1.png'
+                                alt='dish' statusText='On the way' statusTextColor='text-red-500' timeDate='3:00PM' />
+                            <StatusCard w='w-[227px]' h='h-[58px]' srcImg='/img/dishes/fi1.png'
+                                alt='dish' statusText='On the way' statusTextColor='text-red-500' timeDate='3:00PM' />
+                            <CIcon relative w='w-38' h='h-[111px]' position='top-0 left-30 rotate-90 -scale-100' src='/svg/CurlArrow.svg' alt='CurlArrow' />
+                        </div>
+                    </div>
+                </section>
 
-                <section></section>
+                <section className='flex flex-col'>
+                    <ExpensesCard w='w-[316px]' />
+                </section>
 
-                <section></section>
+                <section className='flex flex-col gap-[55px] items-center'>
+                    <H2 spanText='Customer' afterText='Say' textSize='text-[100px]' />
+                    <ReviewCard w='w-[314px]' stars={5} years='01' revName='Richard R.'
+                        comment='“ Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time ”' />
+                    <ReviewCarousel >
+                        {revs}
+                    </ReviewCarousel>
+                </section>
 
+                <section className='flex flex-col items-center'>
+                    <DiscountCard />
+                </section>
             </main>
         </>
     )

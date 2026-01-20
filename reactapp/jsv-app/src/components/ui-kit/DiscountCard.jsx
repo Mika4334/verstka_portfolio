@@ -1,6 +1,6 @@
 import { CImage } from '../ui-kit/CImage';
 
-export function DiscountCard({ w }) {
+export function DiscountCard() {
     return (
         <>
             <div className='sm:hidden'>

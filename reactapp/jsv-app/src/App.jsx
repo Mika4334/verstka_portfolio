@@ -29,7 +29,8 @@ import { ReviewCard } from './components/ui-kit/ReviewCard';
 import { ReviewCarousel } from './components/ui-kit/ReviewCarousel';
 import { DiscountCard } from './components/ui-kit/DiscountCard';
 import { Footer } from './components/views/Footer';
-
+import { WeekendSlider } from './components/ui-kit/WeekendSlider';
+import { WeekendCard } from './components/ui-kit/WeekendCard';
 
 function App() {
   const slides = [
@@ -61,8 +62,15 @@ function App() {
   return (
     <>
       <main className='bg-red-400 h-full max-w-full mx-5 lg:mx-17 xl:mx-23.75'>
+        <section className='flex flex-col items-center'>
+          <WeekendSlider>
+            <WeekendCard cardNumber={1} />
+            <WeekendCard cardNumber={2} />
+            <WeekendCard cardNumber={3} />
+            <WeekendCard cardNumber={4} />
+          </WeekendSlider>
+        </section>
       </main>
-      <Footer />
     </>
   )
 }

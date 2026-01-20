@@ -109,6 +109,9 @@ export function SITE() {
                     <DiscountCard />
                 </section>
             </main>
+
+            <Footer />
+
         </>
     )
 }

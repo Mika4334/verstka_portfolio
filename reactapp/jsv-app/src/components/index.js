@@ -1,7 +1,7 @@
 // 🚀 АВТОГЕНЕРИРОВАННЫЕ ИМПОРТЫ
-// 19.01.2026 10:40:35
-// Файлов: 27, Экспортов: 29
-// Хеш: 845ed9da
+// 20.01.2026 09:32:46
+// Файлов: 29, Экспортов: 31
+// Хеш: 0a71f3df
 //
 
 // import { Badge } from './components/ui-kit/Badge';
@@ -33,6 +33,9 @@
 // import { StatusCard } from './components/ui-kit/StatusCard';
 // import { Trustpilot } from './components/ui-kit/Truspilot';
 // import { ViewAll } from './components/ui-kit/ViewAll';
+// import { WeekendCard } from './components/ui-kit/WeekendCard';
+// import { WeekendSlider } from './components/ui-kit/WeekendSlider';
+// import { ReviewCarousel } from './components/ui-kit/WeekendSlider';
 
 // 🔥 ЭКСПОРТЫ ДЛЯ index.js:
 // (Не редактировать вручную!)
@@ -67,3 +70,6 @@ export { Stars } from './ui-kit/Stars';
 export { StatusCard } from './ui-kit/StatusCard';
 export { Trustpilot } from './ui-kit/Truspilot';
 export { ViewAll } from './ui-kit/ViewAll';
+export { WeekendCard } from './ui-kit/WeekendCard';
+export { WeekendSlider } from './ui-kit/WeekendSlider';
+export { ReviewCarousel } from './ui-kit/WeekendSlider';

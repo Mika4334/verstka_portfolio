@@ -4,7 +4,7 @@ export function ReviewCarousel({ children }) {
     let slides = React.Children.toArray(children)
 
     return (
-        <div className={`flex w-[314px] pb-[45px] overflow-x-scroll carouselScroll`}>
+        <div className={`flex w-78.5 pb-11.25 overflow-x-scroll carouselScroll`}>
             {slides}
         </div >
     )

@@ -1,7 +1,7 @@
 export function BurgerMenu() {
     return (
         <>
-            <button popovertarget="burgerPopover" className="burgerMenu w-8 h-[23px]">
+            <button popovertarget="burgerPopover" className="burgerMenu w-8 h-5.75">
                 <svg
                     width={34}
                     height={25}

@@ -2,11 +2,11 @@
 export function SITE() {
     return (
         <>
-            <nav className='max-w-full pt-12 pb-[25px] border-b border-hr '>
-                <div className='flex justify-between items-center w-full max-w-[1248px]'>
+            <nav className='max-w-full pt-12 pb-6.25 border-b border-hr '>
+                <div className='flex justify-between items-center w-full max-w-312'>
                     <Logo />
                     <NavMenu />
-                    <div className='loginSignup w-[233px] h-[63px] flex justify-between'>
+                    <div className='loginSignup w-58.25-h-15.75lex justify-between'>
                         <LoginButton textValue='Login' />
                         <PrimaryButton textValue='Signup' />
                     </div>
@@ -18,7 +18,7 @@ export function SITE() {
                     <LineText textColor='text-sc' stripeColor='bg-sc' />
                     <HeroH1 />
                     <HeroP />
-                    <div className='flex gap-[13px] h-10'>
+                    <div className='flex gap-3.25 h-10'>
                         <PrimaryButton textValue='Get Started' />
                         <SecondaryButton textValue='Go Pro' />
                     </div>
@@ -96,7 +96,7 @@ export function SITE() {
                     <ExpensesCard w='w-[316px]' />
                 </section>
 
-                <section className='flex flex-col gap-[55px] items-center'>
+                <section className='flex flex-col gap-13.75 items-center'>
                     <H2 spanText='Customer' afterText='Say' textSize='text-[100px]' />
                     <ReviewCard w='w-[314px]' stars={5} years='01' revName='Richard R.'
                         comment='“ Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time ”' />

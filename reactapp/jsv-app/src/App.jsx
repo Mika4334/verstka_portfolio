@@ -31,6 +31,9 @@ import { DiscountCard } from './components/ui-kit/DiscountCard';
 import { Footer } from './components/views/Footer';
 import { WeekendSlider } from './components/ui-kit/WeekendSlider';
 import { WeekendCard } from './components/ui-kit/WeekendCard';
+import { FoodCategorySort } from './components/ui-kit/FoodCategorySort';
+import { FoodResSort } from './components/ui-kit/FoodResSort';
+import { SearchBar } from './components/ui-kit/SearchBar';
 
 function App() {
   const slides = [
@@ -70,6 +73,11 @@ function App() {
             <WeekendCard cardNumber={4} />
           </WeekendSlider>
         </section>
+
+        <SearchBar />
+        <FoodResSort />
+        <FoodCategorySort />
+
       </main>
     </>
   )

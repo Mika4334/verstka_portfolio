@@ -1,7 +1,6 @@
 import { CImage } from '../ui-kit/CImage';
 
 export function StatusCard({ w, h, imgW, imgH, srcImg, alt, statusText, statusTextColor, timeDate }) {
-    console.log(w, h);
     return (
         <div className={`${w} ${h} flex items-center justify-between bg-white rounded-2xl overflow-hidden max-w-full h-min-300 shadow-[0_40px_35px_rgba(0,0,0,0.25)]`}>
             <div className='flex h-full items-center gap-5 pl-2.75'>

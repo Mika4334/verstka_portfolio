@@ -1,6 +1,6 @@
 export function Logo() {
     return (
-        <a href="" className="block logo w-28 h-[42px]" >
+        <a href="" className="block logo w-28 h-10.5" >
             <svg width="112" height="43" viewBox="0 0 112 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="3.67383" y="4.97852" width="42.2674" height="37.3367" rx="6.96951" fill="#6C5FBC" />
                 <rect x="1.0075" y="1.0075" width="40.2524" height="35.3217" rx="5.96201" fill="#DBD9EE" stroke="#6C5FBC" stroke-width="2.01499" />

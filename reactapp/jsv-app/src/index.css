@@ -57,7 +57,7 @@ h4 {
 }
 
 h5 {
-  @apply text-[12px]/[140%] font-semibold
+  @apply text-[18px]/[25px] font-semibold sm:text-[15px]/[22px]
 }
 
 
@@ -71,6 +71,11 @@ header {
   lg:pl-62.25 lg:pr-62.25 
   flex flex-col justify-around items-center h-187 w-full pl-10 pr-10 bg-no-repeat bg-cover bg-center bg-[url(/svg/BGmobile.svg)]
   text-center text-white
+}
+
+.CategoryCard {
+  @apply flex flex-col items-center justify-center w-16.5 h-23.25 rounded-2xl border-4
+  font-medium text-[10px]/[15px] sm:text-[11px]/[18px]
 }
 
 
@@ -94,4 +99,16 @@ header {
   .carouselScroll::-webkit-scrollbar-thumb:hover {
     background: #c0a0b9;
   }
+
+  .RangeSlider::-webkit-slider-thumb {
+    @apply mb-2.5 appearance-none w-4 h-4 bg-pm outline-3 outline-hr rounded-full cursor-grab transition-shadow hover:drop-shadow-lg ease-in-out;
+  }
+
+  .RangeSlider {
+    @apply appearance-none h-2.5 border-transparent bg-pm rounded-full w-full;
+  }
+
+  /* .RangeSlider {
+    @apply appearance-none h-2.5 dark:border-y-[#212121] border-slate-200 border-y-2 bg-indigo-500 rounded-full;
+  } */
 }

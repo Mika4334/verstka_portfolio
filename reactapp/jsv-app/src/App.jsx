@@ -34,50 +34,139 @@ import { WeekendCard } from './components/ui-kit/WeekendCard';
 import { FoodCategorySort } from './components/ui-kit/FoodCategorySort';
 import { FoodResSort } from './components/ui-kit/FoodResSort';
 import { SearchBar } from './components/ui-kit/SearchBar';
+import { FAQ } from './components/ui-kit/FAQ';
+import { QuestionsAnswers } from './components/ui-kit/QuestionsAnswers';
+import { CartCard } from './components/ui-kit/CartCard';
+import { Cart } from './components/views/Cart';
+import { DropdownForm } from './components/ui-kit/DropdownForm';
+import { PlanCard } from './components/ui-kit/PlanCard';
+import { Dropdown } from './components/ui-kit/Dropdown';
+import { FeatureItem } from './components/ui-kit/FeatureItem';
+
+
+const slides = [
+  {
+    revName: 'Aaaa',
+    years: '01',
+    comment: 'some comment',
+    stars: 1
+  },
+  {
+    revName: 'Aaaa',
+    years: '02',
+    comment: 'some comment',
+    stars: 2
+  },
+  {
+    revName: 'Aaaa',
+    years: '02',
+    comment: 'some comment',
+    stars: 3
+  }
+]
+
+const qa = [
+  {
+    question: 'Question  #01',
+    answer: 'AAAAAAAAA',
+  },
+  {
+    question: 'Question  #02',
+    answer: 'BBBBBB',
+  },
+  {
+    question: 'Question  #03',
+    answer: 'CCCCCCC',
+  },
+  {
+    question: 'Question  #04',
+    answer: 'DDDDDDDDD',
+  },
+]
+
+const basicPlan = [
+  {
+    allowed: true,
+    feature: 'Support 24/7',
+  },
+  {
+    allowed: true,
+    feature: 'Fast Delivery',
+  },
+  {
+    allowed: true,
+    feature: '20% Off Food Deals',
+  },
+  {
+    allowed: false,
+    feature: 'Transaction History',
+  },
+  {
+    allowed: false,
+    feature: 'Weekend Deals',
+  },
+  {
+    allowed: false,
+    feature: 'Dashboard Access',
+  },
+  {
+    allowed: false,
+    feature: 'Premium Group Access',
+  },
+]
+
+const premiumPlan = [
+  {
+    allowed: true,
+    feature: 'Support 24/7',
+  },
+  {
+    allowed: true,
+    feature: 'Fast Delivery',
+  },
+  {
+    allowed: true,
+    feature: '20% Off Food Deals',
+  },
+  {
+    allowed: true,
+    feature: 'Transaction History',
+  },
+  {
+    allowed: true,
+    feature: 'Weekend Deals',
+  },
+  {
+    allowed: true,
+    feature: 'Dashboard Access',
+  },
+  {
+    allowed: true,
+    feature: 'Premium Group Access',
+  },
+]
 
 function App() {
-  const slides = [
-    {
-      revName: 'Aaaa',
-      years: '01',
-      comment: 'some comment',
-      stars: 1
-    },
-    {
-      revName: 'Aaaa',
-      years: '02',
-      comment: 'some comment',
-      stars: 2
-    },
-    {
-      revName: 'Aaaa',
-      years: '02',
-      comment: 'some comment',
-      stars: 3
-    }
-  ]
-  let revs = [];
-  slides.forEach((element, index) => {
-    revs.push(<ReviewCard key={`revID ${index}`} w='w-[314px]' revName={element.revName} years={element.years} comment={element.comment} stars={element.stars} />)
-  });
 
-
+  let revs = slides.map((element, index) => <ReviewCard key={`revID ${index}`} w='w-[314px]' revName={element.revName} years={element.years} comment={element.comment} stars={element.stars} />);
+  let qas = qa.map((element, index) => <QuestionsAnswers key={`qaID ${index}`} question={element.question} answer={element.answer} />);
+  let basic = basicPlan.map((element, index) => <FeatureItem key={`feaID ${index}`} allow={element.allowed} text={element.feature} />)
+  let premium = premiumPlan.map((element, index) => <FeatureItem key={`feaID ${index}`} allow={element.allowed} text={element.feature} />)
   return (
     <>
       <main className='bg-red-400 h-full max-w-full mx-5 lg:mx-17 xl:mx-23.75'>
-        <section className='flex flex-col items-center'>
-          <WeekendSlider>
-            <WeekendCard cardNumber={1} />
-            <WeekendCard cardNumber={2} />
-            <WeekendCard cardNumber={3} />
-            <WeekendCard cardNumber={4} />
-          </WeekendSlider>
+        <section className='flex flex-col items-center gap-10'>
+          {/* <Cart></Cart>
+          <CartCard srcImg='/img/dishes/fi2.png' price={10.99} total={10.99} qnty={10} />
+          <FAQ>
+            {qas}
+          </FAQ>
+          <ReviewCarousel>
+            {revs}
+          </ReviewCarousel> */}
+          <PlanCard planName='basic' price='0' featureItems={basic} />
+          <PlanCard planName='premium' price='9' featureItems={premium} />
         </section>
-
-        <SearchBar />
-        <FoodResSort />
-        <FoodCategorySort />
-
       </main>
     </>
   )

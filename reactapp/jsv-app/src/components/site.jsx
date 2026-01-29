@@ -110,8 +110,28 @@ export function SITE() {
                 </section>
             </main>
 
+
+            <section className='flex sm:flex-row flex-col items-center sm:justify-around gap-10'>
+                <div className='flex flex-col gap-5'>
+                    <WeekendSlider>
+                        <WeekendCard cardNumber={1} />
+                        <WeekendCard cardNumber={2} />
+                        <WeekendCard cardNumber={3} />
+                        <WeekendCard cardNumber={4} />
+                    </WeekendSlider>
+                    <SearchBar />
+                    <FoodResSort />
+                </div>
+                <div>
+                    <FoodCategorySort h='h-[495px]' />
+                </div>
+            </section>
+
             <Footer />
 
+            <FAQ>
+                {qas}
+            </FAQ>
         </>
     )
 }

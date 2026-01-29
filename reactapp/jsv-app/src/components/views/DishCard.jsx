@@ -1,5 +1,5 @@
-import { Badge } from './../ui-kit/Badge';
-import { Stars } from './../ui-kit/Stars';
+import { Badge } from '../ui-kit/Badge';
+import { Stars } from '../ui-kit/Stars';
 import { CImage } from '../ui-kit/CImage';
 import { CIcon } from '../ui-kit/CIcon';
 
@@ -16,7 +16,7 @@ export function DishCard({ w, imgW, h, srcImg, alt, href = '#', badgeText, badge
             <div className='flex justify-between pl-6.75 pr-5.25 pb-3.25 pt-2 lg:pl-8.5 lg:pr-6.5 lg:pb-3'>
                 <div className='flex flex-col'>
                     <Badge textValue={badgeText} badgeColor={badgeColor} />
-                    <h4>The Chicken King</h4>
+                    <h5>The Chicken King</h5>
                     <div className='flex items-center gap-1.5'>
                         <p>24min •</p>
                         <Stars starsQty='1' width='w-5' overlayColor='var(--color-pm)' />
@@ -26,8 +26,8 @@ export function DishCard({ w, imgW, h, srcImg, alt, href = '#', badgeText, badge
                         <div>
                             <p className='dishPrice font-bold'>$12<span className='font-normal text-hr'>.99</span></p>
                         </div>
-                        <a href={href} >
-                            <CImage src='/svg/add.svg' alt='' w='w-[29px]' />
+                        <a href={href}>
+                            <CImage src='/svg/add.svg' alt='add' w='w-[29px]' />
                         </a>
                     </div>
                 </div>

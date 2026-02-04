@@ -42,7 +42,11 @@ import { DropdownForm } from './components/ui-kit/DropdownForm';
 import { PlanCard } from './components/ui-kit/PlanCard';
 import { Dropdown } from './components/ui-kit/Dropdown';
 import { FeatureItem } from './components/ui-kit/FeatureItem';
-
+import { PlanPlate } from './components/ui-kit/PlanPlate';
+import { FeatureListItem } from './components/ui-kit/FeatureItem';
+import { ArticleCard } from './components/ui-kit/ArticleCard';
+import { ArticleSlider } from './components/ui-kit/ArticleSlider';
+import { ArticlePost } from './components/ui-kit/ArticlePost';
 
 const slides = [
   {
@@ -152,6 +156,11 @@ function App() {
   let qas = qa.map((element, index) => <QuestionsAnswers key={`qaID ${index}`} question={element.question} answer={element.answer} />);
   let basic = basicPlan.map((element, index) => <FeatureItem key={`feaID ${index}`} allow={element.allowed} text={element.feature} />)
   let premium = premiumPlan.map((element, index) => <FeatureItem key={`feaID ${index}`} allow={element.allowed} text={element.feature} />)
+  let allPlansFeatures = [...new Set([...basicPlan.map(item => item.feature), ...premiumPlan.map(item => item.feature)])].map((element, index) => <FeatureListItem key={`fliID ${index}`} text={element} />);
+
+  let basicForPlate = basicPlan.map((element, index) => <FeatureItem key={`feaID ${index}`} allow={element.allowed} />)
+  let premiumForPlate = premiumPlan.map((element, index) => <FeatureItem key={`feaID ${index}`} allow={element.allowed} />)
+
   return (
     <>
       <main className='bg-red-400 h-full max-w-full mx-5 lg:mx-17 xl:mx-23.75'>
@@ -164,8 +173,31 @@ function App() {
           <ReviewCarousel>
             {revs}
           </ReviewCarousel> */}
-          <PlanCard planName='basic' price='0' featureItems={basic} />
+          {/* <PlanCard planName='basic' price='0' featureItems={basic} />
           <PlanCard planName='premium' price='9' featureItems={premium} />
+          <PlanPlate allFeatures={allPlansFeatures} plan0={basicForPlate} plan1={premiumForPlate} /> */}
+        </section>
+        {/* <section className='flex flex-col items-center'>
+          <ArticleSlider>
+            <ArticleCard title='#1' userName='Perperzon' userProfilePic='/img/articles/article_profile.png' headImage='/img/articles/0.png' ddMMYear='15 dec, 2022' />
+            <ArticleCard title='#2' userName='Perperzon' userProfilePic='/img/articles/article_profile.png' headImage='/img/articles/0.png' ddMMYear='15 dec, 2022' />
+            <ArticleCard title='#3' userName='Perperzon' userProfilePic='/img/articles/article_profile.png' headImage='/img/articles/0.png' ddMMYear='15 dec, 2022' />
+            <ArticleCard title='#4' userName='Perperzon' userProfilePic='/img/articles/article_profile.png' headImage='/img/articles/0.png' ddMMYear='15 dec, 2022' />
+            <ArticleCard title='#5' userName='Perperzon' userProfilePic='/img/articles/article_profile.png' headImage='/img/articles/0.png' ddMMYear='15 dec, 2022' />
+            <ArticleCard title='#6' userName='Perperzon' userProfilePic='/img/articles/article_profile.png' headImage='/img/articles/0.png' ddMMYear='15 dec, 2022' />
+            <ArticleCard title='#7' userName='Perperzon' userProfilePic='/img/articles/article_profile.png' headImage='/img/articles/0.png' ddMMYear='15 dec, 2022' />
+            <ArticleCard title='#8' userName='Perperzon' userProfilePic='/img/articles/article_profile.png' headImage='/img/articles/0.png' ddMMYear='15 dec, 2022' />
+            <ArticleCard title='#9' userName='Perperzon' userProfilePic='/img/articles/article_profile.png' headImage='/img/articles/0.png' ddMMYear='15 dec, 2022' />
+            <ArticleCard title='#10' userName='Perperzon' userProfilePic='/img/articles/article_profile.png' headImage='/img/articles/0.png' ddMMYear='15 dec, 2022' />
+            <ArticleCard title='#11' userName='Perperzon' userProfilePic='/img/articles/article_profile.png' headImage='/img/articles/0.png' ddMMYear='15 dec, 2022' />
+            <ArticleCard title='#12' userName='Perperzon' userProfilePic='/img/articles/article_profile.png' headImage='/img/articles/0.png' ddMMYear='15 dec, 2022' />
+            <ArticleCard title='#13' userName='Perperzon' userProfilePic='/img/articles/article_profile.png' headImage='/img/articles/0.png' ddMMYear='15 dec, 2022' />
+            <ArticleCard title='#15' userName='Perperzon' userProfilePic='/img/articles/article_profile.png' headImage='/img/articles/0.png' ddMMYear='15 dec, 2022' />
+          </ArticleSlider>
+        </section> */}
+        <section>
+          <ArticlePost headImage='img/articles/0.png' userName='Username' userProfilePic='img/articles/article_profile.png' postTitle='How To Order Food On eatly ?' postText={`
+            Browse restaurants and menusOnce you're logged in, you can browse through the list of available restaurants on the Eatly website. You can filter by cuisine, price, and distance to find the perfect restaurant for your needs. Click on a restaurant to view its menu. Once you're logged in, you can browse through the list of available restaurants on the Eatly website. You can filter by cuisine, price, and distance.Place your orderLorem Ipsum passages, and more recently It was popularized in the 1960s with the releaseLorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Select your items`} />
         </section>
       </main>
     </>

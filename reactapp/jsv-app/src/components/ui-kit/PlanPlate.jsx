@@ -1,24 +1,27 @@
-import { FeatureItem } from './ui-kit/FeatureItem';
+import { FeatureItem } from '../ui-kit/FeatureItem';
+import { PrimaryButton } from '../ui-kit/BaseButton';
+import { FeatureList } from '../ui-kit/FeatureList';
 
-export function PlanPlate({ }) {
+export function PlanPlate({ allFeatures, plan0, plan1 }) {
+
     return (
-        <div>
-            <div>
+        <div className='hidden sm:flex flex-col gap-7 p-10 bg-white rounded-xl shadow-[7px_7px_35px_rgba(0,0,0,0.25)]'>
+            <div className='grid grid-cols-3 gap-20'>
                 <div>
-                    <h></h>
-                    <p></p>
+                    <h5>Pricing</h5>
+                    <p>Affordable Basic<br />& Pro Plans</p>
                 </div>
                 <div>
-                    <h></h>
-                    <p></p>
+                    <h5>Premium</h5>
+                    <p>Amazing Premium<br />Features Plan</p>
                 </div>
                 <div>
-                    <h></h>
-                    <p></p>
+                    <h5>Basic</h5>
+                    <p>Completely 100%<br />Free Plan</p>
                 </div>
             </div>
             <hr />
-            <div>
+            <div className='grid grid-cols-3 gap-20'>
                 <div></div>
                 <div className='flex items-center h-13'>
                     <p className='self-start pt-1'>$</p>
@@ -32,13 +35,24 @@ export function PlanPlate({ }) {
                 </div>
             </div>
             <hr />
-            <div>
-                <h5>Core features</h5>
-                <FeatureItem />
-                {/* Лист фичей без текста сделать */}
+            <h5>Core features</h5>
+            <div className='grid grid-cols-3 gap-20'>
+                <FeatureList>
+                    {allFeatures}
+                </FeatureList>
+                <FeatureList>
+                    {plan0}
+                </FeatureList>
+                <FeatureList>
+                    {plan1}
+                </FeatureList>
             </div>
             <hr />
-            <div></div>
+            <div className='grid grid-cols-3 gap-20'>
+                <div></div>
+                <PrimaryButton uppercase textValue='star free' height='h-10.5' width='w-26' />
+                <PrimaryButton uppercase textValue='star pro' height='h-10.5' width='w-26' />
+            </div>
         </div>
     )
 }

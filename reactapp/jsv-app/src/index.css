@@ -112,3 +112,29 @@ header {
     @apply appearance-none h-2.5 dark:border-y-[#212121] border-slate-200 border-y-2 bg-indigo-500 rounded-full;
   } */
 }
+
+
+@theme {
+  --animate-fancy: fancy-in 2s ease-out;
+
+  @keyframes fancy-in {
+    /* card entry */
+    0% {
+      opacity: 0.25;
+      transform: translateX(25vw);
+    }
+    /* card on stage */
+    20%, 80% {
+      opacity: 1;
+      transform: none;
+    }
+    /* card exit */
+    /* 100% {
+      transform: translateX(90%) scale(.98);
+      opacity: 0;
+    } */
+  }
+}
+/* [anim="fancy-in"]:not(.toggled) {
+  animation: fancy-in var(--ease-elastic-in-1) 300ms alternate;
+} */

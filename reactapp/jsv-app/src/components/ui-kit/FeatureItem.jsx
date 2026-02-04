@@ -10,3 +10,13 @@ export function FeatureItem({ text, allow }) {
         </>
     )
 }
+
+export function FeatureListItem({ text }) {
+    return (
+        <>
+            <li className="flex items-center gap-4">
+                <p className='text-[18px] text-sc'>{text}</p>
+            </li>
+        </>
+    )
+}

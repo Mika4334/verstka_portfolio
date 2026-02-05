@@ -6,7 +6,7 @@ export function PrimaryButton({ textValue, width, height, fontFamily, icon, uppe
     return (
         <button className={buttonClass} type="button">
             {textValue}
-            <img src="/img/svg/arrow_right.svg" alt="" className={`${icon ? '' : 'hidden h-0 w-0'}`} />
+            <img src="/svg/arrow_right.svg" alt="arrow_right" className={icon ? '' : 'hidden h-0 w-0'} />
         </button >
     )
 }

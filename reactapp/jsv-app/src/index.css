@@ -60,6 +60,9 @@ h5 {
   @apply text-[18px]/[25px] font-semibold sm:text-[15px]/[22px]
 }
 
+h6 {
+  @apply text-[30px]/[44px] font-semibold sm:text-[18px]/[23px]
+}
 
 header {
   @apply md:flex md:flex-row md:justify-center md:h-151.75 md:pr-14.5 md:pl-24.25 
@@ -135,6 +138,3 @@ header {
     } */
   }
 }
-/* [anim="fancy-in"]:not(.toggled) {
-  animation: fancy-in var(--ease-elastic-in-1) 300ms alternate;
-} */

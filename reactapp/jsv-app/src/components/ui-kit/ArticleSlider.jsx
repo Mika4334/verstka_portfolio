@@ -34,7 +34,7 @@ export function ArticleSlider({ children, forceCol }) {
     return (
         <>
             <div className="max-w-full flex overflow-x-hidden">
-                <div ref={divRef} className={forceCol ? 'grid-flow-col!' : 'grid gap-11 grid-rows-2 grid-flow-row md:grid-flow-col animate-fancy'}>
+                <div ref={divRef} className={forceCol ? 'grid grid-flow-row! gap-10' : 'grid gap-11 grid-rows-2 grid-flow-row md:grid-flow-col animate-fancy'}>
                     {children.slice(cStep, cStep + 6)}
                 </div>
             </div>

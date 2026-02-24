@@ -1,9 +1,10 @@
 // 🚀 АВТОГЕНЕРИРОВАННЫЕ ИМПОРТЫ
-// 04.02.2026 10:49:57
-// Файлов: 45, Экспортов: 48
-// Хеш: 4095b6cd
+// 19.02.2026 08:25:27
+// Файлов: 49, Экспортов: 55
+// Хеш: b3a986c9
 //
 
+// import { AppleMenu } from './components/ui-kit/AppleMenu';
 // import { ArticleCard } from './components/ui-kit/ArticleCard';
 // import { ArticlePost } from './components/ui-kit/ArticlePost';
 // import { ArticleSlider } from './components/ui-kit/ArticleSlider';
@@ -19,6 +20,7 @@
 // import { ChooseOption } from './components/ui-kit/ChooseOption';
 // import { CIcon } from './components/ui-kit/CIcon';
 // import { CImage } from './components/ui-kit/CImage';
+// import { CustomerSupportForm } from './components/ui-kit/CustomerSupportForm';
 // import { DiscountCard } from './components/ui-kit/DiscountCard';
 // import { DishCard } from './components/views/DishCard';
 // import { Dropdown } from './components/ui-kit/Dropdown';
@@ -36,6 +38,9 @@
 // import { HeroH1 } from './components/ui-kit/HeroH1';
 // import { HeroP } from './components/ui-kit/HeroP';
 // import { LineText } from './components/ui-kit/LineText';
+// import { SignUpForm } from './components/ui-kit/LoginForm';
+// import { SignInForm } from './components/ui-kit/LoginForm';
+// import { ForgetForm } from './components/ui-kit/LoginForm';
 // import { Logo } from './components/ui-kit/Logo';
 // import { NavMenu } from './components/ui-kit/NavMenu';
 // import { PlanCard } from './components/ui-kit/PlanCard';
@@ -43,8 +48,9 @@
 // import { QuestionsAnswers } from './components/ui-kit/QuestionsAnswers';
 // import { RestCard } from './components/views/RestCard';
 // import { ReviewCard } from './components/ui-kit/ReviewCard';
-// import { ReviewCarousel } from './components/ui-kit/ReviewCarousel';
+// import { ReviewSlider } from './components/ui-kit/ReviewSlider';
 // import { SearchBar } from './components/ui-kit/SearchBar';
+// import { SignUpCard } from './components/ui-kit/SignUpCard';
 // import { SITE } from './components/site';
 // import { Stars } from './components/ui-kit/Stars';
 // import { StatusCard } from './components/ui-kit/StatusCard';
@@ -58,6 +64,7 @@
 // (Не редактировать вручную!)
 //
 
+export { AppleMenu } from './ui-kit/AppleMenu';
 export { ArticleCard } from './ui-kit/ArticleCard';
 export { ArticlePost } from './ui-kit/ArticlePost';
 export { ArticleSlider } from './ui-kit/ArticleSlider';
@@ -73,6 +80,7 @@ export { CartCard } from './ui-kit/CartCard';
 export { ChooseOption } from './ui-kit/ChooseOption';
 export { CIcon } from './ui-kit/CIcon';
 export { CImage } from './ui-kit/CImage';
+export { CustomerSupportForm } from './ui-kit/CustomerSupportForm';
 export { DiscountCard } from './ui-kit/DiscountCard';
 export { DishCard } from './views/DishCard';
 export { Dropdown } from './ui-kit/Dropdown';
@@ -90,6 +98,9 @@ export { H2 } from './ui-kit/H2';
 export { HeroH1 } from './ui-kit/HeroH1';
 export { HeroP } from './ui-kit/HeroP';
 export { LineText } from './ui-kit/LineText';
+export { SignUpForm } from './ui-kit/LoginForm';
+export { SignInForm } from './ui-kit/LoginForm';
+export { ForgetForm } from './ui-kit/LoginForm';
 export { Logo } from './ui-kit/Logo';
 export { NavMenu } from './ui-kit/NavMenu';
 export { PlanCard } from './ui-kit/PlanCard';
@@ -97,8 +108,9 @@ export { PlanPlate } from './ui-kit/PlanPlate';
 export { QuestionsAnswers } from './ui-kit/QuestionsAnswers';
 export { RestCard } from './views/RestCard';
 export { ReviewCard } from './ui-kit/ReviewCard';
-export { ReviewCarousel } from './ui-kit/ReviewCarousel';
+export { ReviewSlider } from './ui-kit/ReviewSlider';
 export { SearchBar } from './ui-kit/SearchBar';
+export { SignUpCard } from './ui-kit/SignUpCard';
 export { SITE } from './site';
 export { Stars } from './ui-kit/Stars';
 export { StatusCard } from './ui-kit/StatusCard';

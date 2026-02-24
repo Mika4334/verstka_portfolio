@@ -81,27 +81,74 @@ header {
   font-medium text-[10px]/[15px] sm:text-[11px]/[18px]
 }
 
+.ContactUsInputs {
+  @apply w-full mt-6.5 h-13.5 pl-3 border border-pm rounded-xl placeholder:text-gray-400 focus:outline-2 focus:outline-pm focus:border-pm focus:border
+}
+
+.ContactUsTextarea {
+  @apply w-full my-11 pl-3 pt-3 border border-pm rounded-xl placeholder:text-gray-400 focus:outline-2 focus:outline-pm focus:border-pm focus:border
+}
+
+.SignUpInputs {
+  @apply block w-full ps-9 pe-3 py-2.5 bg-foot/50 ring-0 ring-offset-0 border-2 border-transparent text-sm rounded-xl focus:outline-2 focus:outline-pm focus:bg-white focus:text-pm placeholder:text-gray-400 focus:placeholder:text-pm
+}
+
+.SignUpButtons {
+  @apply cursor-pointer rounded-xl h-full w-full bg-foot/50 hover:bg-white
+}
+
+
+.ApplemenuAnchor {
+  @apply hover:[&_img]:w-30 px-1
+}
+
+.ApplemenuAnchor {
+  @apply hover:[&_+a_img]:w-20 [&:has(+_a:hover)_img]:w-20
+}
+
+.ApplemenuAnchor>img {
+  @apply transition-all duration-500 w-10
+}
+
+
+.reviewSlider {
+  @apply flex gap-10 w-full flex-none overflow-x-scroll bg-amber-200
+        scroll-smooth snap-x snap-mandatory [scroll-target-group:auto]
+        after:content-[''] after:flex-none after:min-w-[calc(50vw+1584px+50px)] after:block
+}
+
+.reviewSlider>div {
+  @apply snap-start snap-always
+}
+
+.reviewSlider>div:has(+ :target){
+  @apply bg-red!
+}
 
 @layer utilities {
+
   .carouselScroll::-webkit-scrollbar {
-    width: 10px;
-    height: 5px;
+    width: 20px;
+    height: 8px;
   }
 
   .carouselScroll::-webkit-scrollbar-track {
     border-radius: 100vh;
     background: var(--color-pmbackdrop);
+    margin-left: 600px;
+    margin-right: 50px;
   }
 
   .carouselScroll::-webkit-scrollbar-thumb {
+    /* width: 10px; */
     background: var(--color-pm);
     border-radius: 100vh;
     /* border: 3px solid #f6f7ed; */
   }
 
-  .carouselScroll::-webkit-scrollbar-thumb:hover {
+  /* .carouselScroll::-webkit-scrollbar-thumb:hover {
     background: #c0a0b9;
-  }
+  } */
 
   .RangeSlider::-webkit-slider-thumb {
     @apply mb-2.5 appearance-none w-4 h-4 bg-pm outline-3 outline-hr rounded-full cursor-grab transition-shadow hover:drop-shadow-lg ease-in-out;

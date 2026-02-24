@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
 import { CIcon } from '../ui-kit/CIcon';
 
-function SliderButton({ onButtonClick, isActive }) {
+function SliderButton({ onButtonClick, isActive, white }) {
     return (
-        <button onClick={onButtonClick} className={`bg-hr w-5.25 h-2 rounded-md ${isActive ? 'bg-pm w-10.75' : ''}`}></button>
+        <button onClick={onButtonClick} className={`${white && isActive ? 'bg-white' : ''} bg-hr w-5.25 h-2 rounded-md ${isActive ? 'bg-pm w-10.75' : ''}`}></button>
     )
 }
 
 
-export function WeekendSlider({ children }) {
-
+export function WeekendSlider({ children, iconHide = false, whiteTheme = false }) {
     let slides = React.Children.toArray(children)
     let [index, setIndex] = useState(0)
     let buttons = []
 
     for (let i = 0; i < slides.length; i++) {
-        buttons.push(<SliderButton key={i} onButtonClick={() => setIndex(i)} isActive={i === index} />);
+        buttons.push(<SliderButton key={i} onButtonClick={() => setIndex(i)} isActive={i === index} white={whiteTheme} />);
     }
 
     return (
         <>
-            <CIcon relative w='w-14' h='h-10' position='-top-5 left-[34vh] sm:-top-5 sm:left-[59vh] xl:-top-5 xl:left-[82vh]' src='/svg/il1.svg' alt='il1' />
-            <div className={`flex overflow-x-hidden`}>
+            <CIcon hide={iconHide} relative w='w-14' h='h-10' position='-top-5 left-[34vh] sm:-top-5 sm:left-[59vh] xl:-top-5 xl:left-[82vh]' src='/svg/il1.svg' alt='il1' />
+            <div className={`${whiteTheme ? 'text-white!' : ''} flex overflow-x-hidden`}>
                 {
                     slides[index]
                 }

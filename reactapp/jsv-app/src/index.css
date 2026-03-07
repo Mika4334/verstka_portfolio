@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @theme {
   --color-pm: #6c5fbc;
   --color-sc: var(--color-zinc-600);
@@ -110,20 +109,37 @@ header {
   @apply transition-all duration-500 w-10
 }
 
-
 .reviewSlider {
   @apply flex gap-10 w-full flex-none overflow-x-scroll bg-amber-200
-        scroll-smooth snap-x snap-mandatory [scroll-target-group:auto]
+        scroll-smooth snap-x snap-mandatory
         after:content-[''] after:flex-none after:min-w-[calc(50vw+1584px+50px)] after:block
+}
+
+.ReviewCardTopInfo {
+  @apply hidden
 }
 
 .reviewSlider>div {
   @apply snap-start snap-always
 }
 
-.reviewSlider>div:has(+ :target){
-  @apply bg-red!
+.reviewSlider>div {
+  container-type: scroll-state;
+  container-name: slider;
 }
+
+@container scroll-state(snapped:x) {
+    .ReviewCardTopInfo {
+      @apply flex
+    }
+}
+/* @container slider scroll-state(snapped:x) {
+    .ReviewCardTopInfo {
+      @apply flex
+    }
+} */
+
+
 
 @layer utilities {
 
@@ -135,8 +151,13 @@ header {
   .carouselScroll::-webkit-scrollbar-track {
     border-radius: 100vh;
     background: var(--color-pmbackdrop);
-    margin-left: 600px;
+    margin-left: 350px;
     margin-right: 50px;
+    
+    @media (max-width: 475px) {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
   }
 
   .carouselScroll::-webkit-scrollbar-thumb {

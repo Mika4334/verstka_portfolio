@@ -3,8 +3,8 @@ import { Stars } from '../ui-kit/Stars';
 
 export function ReviewCard({ w, revName, years, comment, stars }) {
     return (
-        <div className={`w-max-full ${w ?? ''} min-w-78.5 p-5.75 flex flex-col gap-5 rounded-3xl bg-white drop-shadow-[0px_10px_10px_rgba(0,0,0,0.20)]`}>
-            <div className='flex justify-between items-center'>
+        <div className={`mb-11 sm:mb-4 h-full w-max-full ${w ?? ''} min-w-78.5 p-5.75 flex flex-col gap-5 rounded-3xl bg-white drop-shadow-[0px_10px_10px_rgba(0,0,0,0.20)]`}>
+            <div className='flex justify-between items-center ReviewCardTopInfo'>
                 <div className='flex items-center'>
                     <CImage imgH='h-30' src='/img/etc//profilepic_customer.png' alt='profilepic_customer' />
                     <div className='pl-3'>

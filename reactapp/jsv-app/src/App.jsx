@@ -249,6 +249,8 @@ function App() {
         </section> */}
         <section className='flex flex-col justify-around'>
           <ReviewSlider slides={slides} />
+          <Cart />
+          {/* <CartCard /> */}
           {/* <ReviewSlider /> */}
           {/* <AppleMenu /> */}
           {/* <WeekendSlider>

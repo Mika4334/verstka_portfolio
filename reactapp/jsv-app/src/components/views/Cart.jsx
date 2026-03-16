@@ -59,8 +59,8 @@ export function Cart({
 								<div className='absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
 									<div
 										className="w-5 h-5 bg-gray-400 group-focus-within:bg-pm
-                                        [mask:url('/svg/coupon.svg')_center/contain_no-repeat]
-                                        [-webkit-mask:url('/svg/coupon.svg')_center/contain_no-repeat]"
+                                            [mask:url('/svg/coupon.svg')_center/contain_no-repeat]
+                                            [-webkit-mask:url('/svg/coupon.svg')_center/contain_no-repeat]"
 									/>
 								</div>
 								<input

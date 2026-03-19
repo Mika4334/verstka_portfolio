@@ -192,7 +192,7 @@ const premiumPlan = [
 	},
 ];
 
-const cOrder = [
+const pOrder = [
 	{
 		customer: "A1",
 		imgSrc: "/img/dishes/fi1.png",
@@ -334,7 +334,7 @@ function App() {
 				<section className='flex flex-col justify-around'>
 					{/* <ReviewSlider slides={slides} /> */}
 					<Cart
-						order={cOrder}
+						preOrder={pOrder}
 						coupons={coupons}
 						customerAdress='Horizenal Road Stree 1178 California, USA'
 					/>

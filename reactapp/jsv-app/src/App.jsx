@@ -333,7 +333,11 @@ function App() {
         </section> */}
 				<section className='flex flex-col justify-around'>
 					{/* <ReviewSlider slides={slides} /> */}
-					<Cart order={cOrder} coupons={coupons} />
+					<Cart
+						order={cOrder}
+						coupons={coupons}
+						customerAdress='Horizenal Road Stree 1178 California, USA'
+					/>
 					{/* <CartCard /> */}
 					{/* <ReviewSlider /> */}
 					{/* <AppleMenu /> */}

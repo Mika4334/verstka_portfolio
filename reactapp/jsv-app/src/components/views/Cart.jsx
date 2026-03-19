@@ -154,7 +154,7 @@ export function Cart({
 	deliveryTime = "15 min",
 	delivery = 10,
 	order,
-	coupons,
+	coupons = {},
 }) {
 	const [quantities, setQuantities] = useState(() => {
 		const initialQuantities = {};
@@ -328,14 +328,28 @@ export function Cart({
                                             [-webkit-mask:url('/svg/coupon.svg')_center/contain_no-repeat]"
 									/>
 								</div>
-								<input
-									value={couponCode}
-									onChange={(e) => setCouponCode(e.target.value)}
-									className='SignUpInputs'
-									placeholder='Apply Coupon'
-									type='text'
-									disabled={discount > 0}
-								/>
+								<div className='flex justify-center items-center h-15'>
+									<input
+										value={couponCode}
+										onChange={(e) => setCouponCode(e.target.value)}
+										className='SignUpInputs h-full'
+										placeholder='Apply Coupon'
+										type='text'
+										disabled={discount > 0}
+									/>
+									<button
+										type='button'
+										onClick={handleApplyCoupon}
+										disabled={discount > 0}
+										className={`ml-2 w-1/4 h-full px-4 py-2 rounded-lg ${
+											discount > 0
+												? "bg-hr cursor-not-allowed border-[2px] border-hr"
+												: "text-white bg-pm border-[2px] border-pm rounded-2xl hover:bg-pmhover hover:border-white cursor-pointer"
+										}`}
+									>
+										Apply
+									</button>
+								</div>
 								{discount > 0 && (
 									<button
 										type='button'
@@ -345,28 +359,16 @@ export function Cart({
 								)}
 							</div>
 							{couponMessage.text && (
-								<p
-									className={`text-sm ${
+								<h6
+									className={`tracking-wider ${
 										couponMessage.type === "success"
 											? "text-green-600"
 											: "text-red-600"
 									}`}
 								>
 									{couponMessage.text}
-								</p>
+								</h6>
 							)}
-							<button
-								type='button'
-								onClick={handleApplyCoupon}
-								disabled={discount > 0}
-								className={`self-end px-4 py-2 rounded-lg ${
-									discount > 0
-										? "bg-gray-300 cursor-not-allowed"
-										: "bg-blue-500 hover:bg-blue-600 text-white"
-								}`}
-							>
-								Apply
-							</button>
 						</div>
 						<div className='flex flex-col w-full gap-4.5'>
 							<div className='flex justify-between items-center border-b border-dashed border-sc text-sc'>

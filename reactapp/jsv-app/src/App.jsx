@@ -222,7 +222,7 @@ const coupons = [
 		value: 10,
 		minOrder: 50,
 		maxDiscount: 30,
-		expiryDate: "2024-12-31",
+		expiryDate: "2026-12-31",
 	},
 	{
 		code: "FIXED20",

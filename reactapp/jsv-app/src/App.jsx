@@ -289,9 +289,9 @@ function App() {
 
 	return (
 		<>
-			<main className='bg-red-400 h-full max-w-full mx-5 lg:mx-17 xl:mx-23.75'>
-				<section className='flex flex-col items-center gap-10'>
-					{/* <Cart></Cart>
+			<main className='bg-red-400 h-full max-w-full w-full px-5 lg:px-17 xl:px-23.75'>
+				{/* <section className='flex flex-col items-center gap-10'> */}
+				{/* <Cart></Cart>
           <CartCard srcImg='/img/dishes/fi2.png' price={10.99} total={10.99} qnty={10} />
           <FAQ>
             {qas}
@@ -299,10 +299,10 @@ function App() {
           <ReviewCarousel>
             {revs}
           </ReviewCarousel> */}
-					{/* <PlanCard planName='basic' price='0' featureItems={basic} />
+				{/* <PlanCard planName='basic' price='0' featureItems={basic} />
           <PlanCard planName='premium' price='9' featureItems={premium} />
           <PlanPlate allFeatures={allPlansFeatures} plan0={basicForPlate} plan1={premiumForPlate} /> */}
-				</section>
+				{/* </section> */}
 				{/* <section className='flex flex-col items-center'>
           <ArticleSlider>
             {allArticles}
@@ -331,7 +331,7 @@ function App() {
         <section className='flex justify-around'>
           <ForgetForm />
         </section> */}
-				<section className='flex flex-col justify-around'>
+				<section className='flex flex-col items-center'>
 					{/* <ReviewSlider slides={slides} /> */}
 					<Cart
 						preOrder={pOrder}

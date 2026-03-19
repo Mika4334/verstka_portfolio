@@ -280,6 +280,7 @@ import { CartCard } from "../ui-kit/CartCard";
 import { CImage } from "../ui-kit/CImage";
 import { PrimaryButton } from "../ui-kit/BaseButton";
 import { useState, useEffect, useCallback } from "react";
+import { CIcon } from "../ui-kit/CIcon";
 
 export function Cart({
 	customerAdress = null,
@@ -466,12 +467,12 @@ export function Cart({
 	}
 
 	return (
-		<div className='flex flex-col justify-center items-center'>
-			<div className='flex justify-center items-center h-fit w-full'>
+		<div className='flex flex-col justify-center items-center max-w-full'>
+			<div className='flex justify-center items-center h-fit sm:w-full'>
 				<CImage src='/img/cart/map.png' />
 			</div>
 
-			<div className='bg-white w-118 h-80 rounded-3xl -mt-34'>
+			<div className='bg-white w-93 h-80 rounded-3xl -mt-34 max-w-full'>
 				<div className='flex flex-col gap-5'>
 					<div className='flex gap-5 bg-black rounded-t-3xl p-5'>
 						<CImage src='/img/cart/delivery_man.png' />
@@ -501,16 +502,18 @@ export function Cart({
 				</div>
 			</div>
 
-			<div className='flex flex-col w-full mt-24 md:mt-28 lg:mt-40'>
-				<CImage src='/svg/il2.svg' divW='w-10' customStyle='pl-185' />
-				<div className='flex w-full justify-center'>
-					<CImage src='/svg/CartArrowLeft.svg' customStyle='self-end' />
+			<div className='flex flex-col max-w-full mt-24 md:mt-28 lg:mt-40'>
+				<div className='flex w-full justify-center bg-yellow-200'>
+					<CImage
+						src='/svg/CartArrowLeft.svg'
+						customStyle='self-end hidden sm:block'
+					/>
 					{/* ИЗМЕНИТЬ ПОВЕДЕНИЕ НА САБМИТ */}
-					<form className='min-w-79 w-full max-w-173 flex flex-col gap-8 justify-center items-center'>
+					<form className='min-w-79 max-w-full flex flex-col gap-8 justify-center items-center bg-green-400'>
 						{orders}
 						<div className='flex flex-col gap-5 w-full'>
 							<div className='relative group'>
-								<div className='absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
+								<div className='absolute inset-y-0 inset-s-0 flex items-center ps-3 pointer-events-none'>
 									<div
 										className="w-5 h-5 bg-gray-400 group-focus-within:bg-pm
                                             [mask:url('/svg/coupon.svg')_center/contain_no-repeat]
@@ -530,7 +533,7 @@ export function Cart({
 										<button
 											type='button'
 											onClick={handleApplyCoupon}
-											className={`ml-2 w-1/4 h-full px-4 py-2 rounded-lg text-white bg-pm border-[2px] border-pm rounded-2xl hover:bg-pmhover hover:border-white cursor-pointer`}
+											className={`ml-2 w-1/4 h-full px-4 py-2 rounded-lg text-white bg-pm border-0.5 border-pm hover:bg-pmhover hover:border-white cursor-pointer`}
 										>
 											Apply
 										</button>
@@ -538,7 +541,7 @@ export function Cart({
 										<button
 											type='button'
 											onClick={handleRemoveCoupon}
-											className='ml-2 w-1/4 h-full px-4 py-2 rounded-lg text-white bg-red-500 border-[2px] border-red-500 rounded-2xl hover:bg-red-600 hover:border-white cursor-pointer'
+											className='ml-2 w-1/4 h-full px-4 py-2 rounded-lg text-white bg-red-500 border-0.5 border-red-500 hover:bg-red-600 hover:border-white cursor-pointer'
 										>
 											Remove
 										</button>
@@ -584,7 +587,18 @@ export function Cart({
 							type='submit'
 						/>
 					</form>
-					<CImage src='/svg/CartArrowRight.svg' customStyle='self-end' />
+					<div className='flex flex-col justify-between w-0 sm:w-full'>
+						<CImage
+							src='/svg/il2.svg'
+							w='w-6'
+							imgW='w-10'
+							customStyle='-mt-10'
+						/>
+						<CImage
+							src='/svg/CartArrowRight.svg'
+							customStyle='self-end hidden sm:block'
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

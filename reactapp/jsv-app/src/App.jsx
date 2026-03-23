@@ -194,22 +194,22 @@ const premiumPlan = [
 
 const pOrder = [
 	{
-		customer: "A1",
+		productName: "Chicken Hell",
 		imgSrc: "/img/dishes/fi1.png",
 		price: 5.0,
 	},
 	{
-		customer: "A2",
+		productName: "Swe Dish",
 		imgSrc: "/img/dishes/fi2.png",
 		price: 5.0,
 	},
 	{
-		customer: "A3",
+		productName: "Sweet Salad",
 		imgSrc: "/img/dishes/fi3.png",
 		price: 5.0,
 	},
 	{
-		customer: "A4",
+		productName: "File'o fish",
 		imgSrc: "/img/dishes/fi4.png",
 		price: 5.0,
 	},
@@ -289,7 +289,7 @@ function App() {
 
 	return (
 		<>
-			<main className='bg-red-400 h-full max-w-full w-full px-5 lg:px-17 xl:px-23.75'>
+			<main className='bg-red-400 h-full max-w-full w-full px-5 lg:px-17 xl:px-23.75  overflow-x-hidden'>
 				{/* <section className='flex flex-col items-center gap-10'> */}
 				{/* <Cart></Cart>
           <CartCard srcImg='/img/dishes/fi2.png' price={10.99} total={10.99} qnty={10} />

@@ -447,7 +447,7 @@ export function Cart({
 			quantity={quantities[item.uniqueId] || 0}
 			onIncrement={() => handleIncrement(item.uniqueId)}
 			onDecrement={() => handleDecrement(item.uniqueId)}
-			name={item.name} // Добавьте name в CartCard если нужно
+			productName={item.productName} // Добавьте name в CartCard если нужно
 		/>
 	));
 
@@ -467,140 +467,152 @@ export function Cart({
 	}
 
 	return (
-		<div className='flex flex-col justify-center items-center max-w-full'>
-			<div className='flex justify-center items-center h-fit sm:w-full'>
-				<CImage src='/img/cart/map.png' />
-			</div>
+		<>
+			<CIcon
+				src='/img/cart/map.png'
+				divH='h-100'
+				divW='w-full'
+				position=''
+				customStyle='flex justify-center sm:hidden relative scale-150 pt-16'
+			/>
+			<div className='flex flex-col justify-center items-center max-w-full'>
+				<CImage src='/img/cart/map.png' customStyle='hidden sm:flex' />
 
-			<div className='bg-white w-93 h-80 rounded-3xl -mt-34 max-w-full'>
-				<div className='flex flex-col gap-5'>
-					<div className='flex gap-5 bg-black rounded-t-3xl p-5'>
+				<div className='flex flex-col bg-white w-93 min-h-77 sm:h-80 rounded-3xl -mt-10 sm:-mt-34 z-1 max-w-full max-h-full drop-shadow-[5px_10px_10px_rgba(0,0,0,0.20)]'>
+					<div className='flex gap-5 bg-black rounded-t-3xl p-5  drop-shadow-[0px_5px_2px_rgba(0,0,0,0.30)]'>
 						<CImage src='/img/cart/delivery_man.png' />
 						<div className='flex flex-col justify-center items-start text-white'>
 							<h5>David Smith</h5>
 							<p>Food Rider</p>
 						</div>
 					</div>
-					<div className='flex justify-between px-5 py-8'>
-						<div className='flex gap-7'>
-							<CImage src='/img/cart/location_time.png' />
-							<div className='flex flex-col justify-between'>
-								<div>
-									<p className='text-sm text-sc'>Delivery Time</p>
-									<p className='text-sm'>{deliveryTime}</p>
+					<div className='flex h-full'>
+						<div className='flex gap-3 px-2 py-2 sm:px-5 min-h-50'>
+							<div className='flex gap-5 h-3/5 mt-3 sm:h-3/4 sm:pt-3'>
+								<div className='flex flex-col items-center justify-center'>
+									<CImage src='/svg/deliver_locatin.svg' />
+									<div className='border-l-2 border-pm border-dashed h-full w-0'></div>
+									<CImage src='/svg/deliver_time.svg' />
 								</div>
-								<div>
-									<p className='text-sm text-sc'>Your Address</p>
-									<p className='text-sm'>{customerAdress}</p>
+
+								<div className='flex flex-col justify-between'>
+									<div>
+										<p className='text-xs sm:text-sm text-sc'>Delivery Time</p>
+										<p className='text-xs sm:text-sm'>{deliveryTime}</p>
+									</div>
+									<div>
+										<p className='text-xs sm:text-sm text-sc'>Your Address</p>
+										<p className='text-xs sm:text-sm'>{customerAdress}</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div className='self-end w-32 h-10'>
-							<PrimaryButton textValue='Pending' />
+							<div className='self-end w-32 h-10'>
+								<PrimaryButton textValue='Pending' />
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div className='flex flex-col max-w-full mt-24 md:mt-28 lg:mt-40'>
-				<div className='flex w-full justify-center bg-yellow-200'>
-					<CImage
-						src='/svg/CartArrowLeft.svg'
-						customStyle='self-end hidden sm:block'
-					/>
-					{/* ИЗМЕНИТЬ ПОВЕДЕНИЕ НА САБМИТ */}
-					<form className='min-w-79 max-w-full flex flex-col gap-8 justify-center items-center bg-green-400'>
-						{orders}
-						<div className='flex flex-col gap-5 w-full'>
-							<div className='relative group'>
-								<div className='absolute inset-y-0 inset-s-0 flex items-center ps-3 pointer-events-none'>
-									<div
-										className="w-5 h-5 bg-gray-400 group-focus-within:bg-pm
-                                            [mask:url('/svg/coupon.svg')_center/contain_no-repeat]
-                                            [-webkit-mask:url('/svg/coupon.svg')_center/contain_no-repeat]"
-									/>
-								</div>
-								<div className='flex justify-center items-center h-15'>
-									<input
-										value={couponCode}
-										onChange={(e) => setCouponCode(e.target.value)}
-										className='SignUpInputs h-full'
-										placeholder='Apply Coupon'
-										type='text'
-										disabled={appliedCoupon !== null}
-									/>
-									{appliedCoupon === null ? (
-										<button
-											type='button'
-											onClick={handleApplyCoupon}
-											className={`ml-2 w-1/4 h-full px-4 py-2 rounded-lg text-white bg-pm border-0.5 border-pm hover:bg-pmhover hover:border-white cursor-pointer`}
-										>
-											Apply
-										</button>
-									) : (
-										<button
-											type='button'
-											onClick={handleRemoveCoupon}
-											className='ml-2 w-1/4 h-full px-4 py-2 rounded-lg text-white bg-red-500 border-0.5 border-red-500 hover:bg-red-600 hover:border-white cursor-pointer'
-										>
-											Remove
-										</button>
-									)}
-								</div>
-							</div>
-							{couponMessage.text && (
-								<h6
-									className={`tracking-wider ${
-										couponMessage.type === "success"
-											? "text-green-600"
-											: "text-red-600"
-									}`}
-								>
-									{couponMessage.text}
-								</h6>
-							)}
-						</div>
-						<div className='flex flex-col w-full gap-4.5'>
-							<div className='flex justify-between items-center border-b border-dashed border-sc text-sc'>
-								<p>Subtotal</p>
-								<p>${subtotal.toFixed(2)}</p>
-							</div>
-							{discount > 0 && (
-								<div className='flex justify-between items-center border-b border-dashed border-sc text-green-600'>
-									<p>Discount</p>
-									<p>-${discount.toFixed(2)}</p>
-								</div>
-							)}
-							<div className='flex justify-between items-center border-b border-dashed border-sc text-sc'>
-								<p>Delivery</p>
-								<p>${delivery}</p>
-							</div>
-							<div className='flex justify-between items-center font-bold text-2xl'>
-								<p>Total</p>
-								<p>${total.toFixed(2)}</p>
-							</div>
-						</div>
-						<PrimaryButton
-							textValue='Review Payment'
-							height='h-11.5 '
-							width='w-full'
-							type='submit'
-						/>
-					</form>
-					<div className='flex flex-col justify-between w-0 sm:w-full'>
+				<div className='flex flex-col items-center mt-24 md:mt-28 lg:mt-40 w-full'>
+					<div className='flex w-full justify-center max-w-244'>
 						<CImage
-							src='/svg/il2.svg'
-							w='w-6'
-							imgW='w-10'
-							customStyle='-mt-10'
-						/>
-						<CImage
-							src='/svg/CartArrowRight.svg'
+							src='/svg/CartArrowLeft.svg'
 							customStyle='self-end hidden sm:block'
 						/>
+						{/* ИЗМЕНИТЬ ПОВЕДЕНИЕ НА САБМИТ */}
+						<form className='min-w-79 w-full flex flex-col gap-8 justify-center items-center'>
+							{orders}
+							<div className='flex flex-col gap-5 w-full'>
+								<div className='relative group'>
+									<div className='absolute inset-y-0 inset-s-0 flex items-center ps-3 pointer-events-none'>
+										<div
+											className="w-5 h-5 bg-gray-400 group-focus-within:bg-pm
+                                            [mask:url('/svg/coupon.svg')_center/contain_no-repeat]
+                                            [-webkit-mask:url('/svg/coupon.svg')_center/contain_no-repeat]"
+										/>
+									</div>
+									<div className='flex justify-center items-center h-15'>
+										<input
+											value={couponCode}
+											onChange={(e) => setCouponCode(e.target.value)}
+											className='SignUpInputs h-full'
+											placeholder='Apply Coupon'
+											type='text'
+											disabled={appliedCoupon !== null}
+										/>
+										{appliedCoupon === null ? (
+											<button
+												type='button'
+												onClick={handleApplyCoupon}
+												className={`ml-2 w-1/4 h-full px-4 py-2 rounded-lg text-white bg-pm border-0.5 border-pm hover:bg-pmhover hover:border-white cursor-pointer`}
+											>
+												Apply
+											</button>
+										) : (
+											<button
+												type='button'
+												onClick={handleRemoveCoupon}
+												className='ml-2 w-1/4 h-full px-4 py-2 rounded-lg text-white bg-red-500 border-0.5 border-red-500 hover:bg-red-600 hover:border-white cursor-pointer'
+											>
+												Remove
+											</button>
+										)}
+									</div>
+								</div>
+								{couponMessage.text && (
+									<h6
+										className={`tracking-wider ${
+											couponMessage.type === "success"
+												? "text-green-600"
+												: "text-red-600"
+										}`}
+									>
+										{couponMessage.text}
+									</h6>
+								)}
+							</div>
+							<div className='flex flex-col w-full gap-4.5'>
+								<div className='flex justify-between items-center border-b border-dashed border-sc text-sc'>
+									<p>Subtotal</p>
+									<p>${subtotal.toFixed(2)}</p>
+								</div>
+								{discount > 0 && (
+									<div className='flex justify-between items-center border-b border-dashed border-sc text-green-600'>
+										<p>Discount</p>
+										<p>-${discount.toFixed(2)}</p>
+									</div>
+								)}
+								<div className='flex justify-between items-center border-b border-dashed border-sc text-sc'>
+									<p>Delivery</p>
+									<p>${delivery}</p>
+								</div>
+								<div className='flex justify-between items-center font-bold text-2xl'>
+									<p>Total</p>
+									<p>${total.toFixed(2)}</p>
+								</div>
+							</div>
+							<PrimaryButton
+								textValue='Review Payment'
+								height='h-11.5 '
+								width='w-full'
+								type='submit'
+							/>
+						</form>
+						<div className='flex flex-col justify-between w-0 sm:w-fit'>
+							<CImage
+								src='/svg/il2.svg'
+								w='w-5 sm:w-10'
+								imgW='w-10'
+								customStyle='-mt-10'
+							/>
+							<CImage
+								src='/svg/CartArrowRight.svg'
+								customStyle='self-end hidden sm:block'
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 }

@@ -5,6 +5,7 @@ export function CartCard({
 	imgH,
 	srcImg,
 	alt,
+	productName,
 	price,
 	quantity,
 	onIncrement,
@@ -14,7 +15,7 @@ export function CartCard({
 
 	return (
 		<div className='flex items-center justify-between w-full px-4 bg-white rounded-2xl h-min-300 shadow-[0_7px_35px_rgba(0,0,0,0.25)]'>
-			<div className='flex items-center gap-5 py-1'>
+			<div className='flex items-center gap-5 py-1 h-full'>
 				<CImage
 					h='h-[100px]'
 					src={srcImg}
@@ -23,9 +24,9 @@ export function CartCard({
 					imgH={imgH}
 					shadow='drop-shadow-[-1px_5px_5px_rgba(0,0,0,0.25)]'
 				/>
-				<div>
-					<h5>Chicken Hell</h5>
-					<h5 className='text-[7px]'>${price}</h5>
+				<div className='flex flex-col h-full gap-4 justify-center sm:justify-around py-3'>
+					<h5 className='text-sm! sm:text-md! md:text-xl!'>{productName}</h5>
+					<h5 className='text-sm! sm:text-md! md:text-xl!'>${price}</h5>
 				</div>
 			</div>
 			<div className='flex flex-col justify-between items-center'>
@@ -47,7 +48,7 @@ export function CartCard({
 						<CImage src='/svg/add.svg' alt='add' w='w-8' />
 					</button>
 				</div>
-				<h5>${subTotal.toFixed(2)}</h5>
+				<h5 className='text-pm font-bold!'>${subTotal.toFixed(2)}</h5>
 			</div>
 		</div>
 	);

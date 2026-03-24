@@ -289,7 +289,7 @@ function App() {
 
 	return (
 		<>
-			<main className='bg-red-400 h-full max-w-full w-full px-5 lg:px-17 xl:px-23.75  overflow-x-hidden'>
+			<main className='bg-red-400 h-full max-w-full w-full px-5 lg:px-17 xl:px-23.75 overflow-x-hidden'>
 				{/* <section className='flex flex-col items-center gap-10'> */}
 				{/* <Cart></Cart>
           <CartCard srcImg='/img/dishes/fi2.png' price={10.99} total={10.99} qnty={10} />
@@ -303,11 +303,10 @@ function App() {
           <PlanCard planName='premium' price='9' featureItems={premium} />
           <PlanPlate allFeatures={allPlansFeatures} plan0={basicForPlate} plan1={premiumForPlate} /> */}
 				{/* </section> */}
-				{/* <section className='flex flex-col items-center'>
-          <ArticleSlider>
-            {allArticles}
-          </ArticleSlider>
-        </section> */}
+				<section className='flex flex-col items-center overflow-y-hidden '>
+					<ArticleSlider showButton>{allArticles}</ArticleSlider>
+				</section>
+
 				{/* <section className='flex flex-col items-center'>
           <ArticlePost headImage='img/articles/head_image.png' userName='Username' userProfilePic='img/articles/article_profile.png' postTitle='How To Order Food On eatly ?'
             postTextBefore={`
@@ -323,29 +322,31 @@ function App() {
           <CustomerSupportForm />
         </section> */}
 				{/* <section className='flex justify-around'>
-          <SignUpForm />
-        </section>
-        <section className='flex justify-around'>
-          <SignInForm />
-        </section>
-        <section className='flex justify-around'>
-          <ForgetForm />
-        </section> */}
-				<section className='flex flex-col items-center'>
-					{/* <ReviewSlider slides={slides} /> */}
-					<Cart
+					<SignUpForm />
+				</section>
+				<section className='flex justify-around'>
+					<SignInForm />
+				</section>
+				<section className='flex justify-around'>
+					<ForgetForm />
+				</section> */}
+				{/* <BurgerMenu /> */}
+				{/* <section className='flex flex-col items-center'> */}
+				{/* <ReviewSlider slides={slides} /> */}
+				{/* <Cart
 						preOrder={pOrder}
 						coupons={coupons}
 						customerAdress='Horizenal Road Stree 1178 California, USA'
-					/>
-					{/* <CartCard /> */}
-					{/* <ReviewSlider /> */}
-					{/* <AppleMenu /> */}
-					{/* <WeekendSlider>
+					/> */}
+				{/* <CartCard /> */}
+				{/* <ReviewSlider /> */}
+				{/* <AppleMenu /> */}
+				{/* <WeekendSlider>
             {revs}
           </WeekendSlider> */}
-				</section>
+				{/* </section> */}
 			</main>
+			{/* <QuestionsAnswers /> */}
 		</>
 	);
 }

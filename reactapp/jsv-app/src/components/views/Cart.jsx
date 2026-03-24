@@ -357,7 +357,12 @@ export function Cart({
 		if (appliedCoupon) {
 			recalculateDiscount(appliedCoupon, subtotal);
 		}
-	}, [subtotal, appliedCoupon]);
+	});
+	// useEffect(() => {
+	// 	if (appliedCoupon) {
+	// 		recalculateDiscount(appliedCoupon, subtotal);
+	// 	}
+	// }, [subtotal, appliedCoupon]);
 
 	const recalculateDiscount = useCallback((coupon, currentSubtotal) => {
 		// Проверка минимальной суммы заказа, если указана

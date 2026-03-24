@@ -23,7 +23,8 @@
 }
 
 .burgerPopover:popover-open {
-	@apply flex flex-col justify-center items-center w-50 min-w-25 m-auto gap-5 bg-pmbackdrop/0 backdrop-blur-lg;
+	@apply flex flex-col justify-center items-center w-50 min-w-25 m-auto gap-5 bg-pmbackdrop/0;
+	/* backdrop-blur-lg; */
 }
 
 .burgerPopover::backdrop {
@@ -31,7 +32,7 @@
 }
 
 .burgerPopover > a {
-	@apply pt-4 pb-4 block content-center w-full text-center text-pm bg-white rounded-2xl border-2 border-pm;
+	@apply pt-4 pb-4 block content-center w-full text-center text-pm bg-white rounded-2xl border-2 border-pm  hover:bg-pm hover:text-white;
 }
 
 h1 {

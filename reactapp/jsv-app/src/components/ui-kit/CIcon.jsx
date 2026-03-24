@@ -15,7 +15,7 @@ export function CIcon({
 			className={`${divH ?? ""} ${divW ?? ""} h-0 w-0 ${relative && "relative"} ${customStyle ? customStyle : ""}`}
 		>
 			<img
-				className={`max-w-fit ${w} ${h} ${relative && "absolute"} ${position ?? ""} ${hide && "hidden"}`}
+				className={`max-w-fit ${w ?? ""} ${h ?? ""} ${relative && "absolute"} ${position ?? ""} ${hide && "hidden"}`}
 				src={src}
 				alt={alt}
 			/>

@@ -8,7 +8,6 @@ export function NavMenu() {
 				Menu
 			</a>
 			<a className='hover:text-pm' href=''>
-				{" "}
 				Blog
 			</a>
 			<a className='hover:text-pm' href=''>

@@ -140,7 +140,7 @@ header {
 
 @layer utilities {
 	.carouselScroll::-webkit-scrollbar {
-		width: 20px;
+		width: 14px;
 		height: 8px;
 	}
 

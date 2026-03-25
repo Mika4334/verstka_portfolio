@@ -8,7 +8,9 @@ export function WeekendCard({ cardNumber }) {
 					className='flex flex-col pl-6 justify-center bg-pm rounded-xl 
                 w-76.5 h-25.25 sm:w-134.75 sm:h-48 xl:w-189.5 xl:h-62.75'
 				>
-					<h4 className='font-bold text-slate-200'>GET 50% n{cardNumber}</h4>
+					<h4 className='font-bold text-slate-200'>
+						n{cardNumber} GET 50% OFF
+					</h4>
 					<h4 className='p4'>WEEKEND</h4>
 				</div>
 			</div>

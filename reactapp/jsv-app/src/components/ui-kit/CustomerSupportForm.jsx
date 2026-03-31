@@ -1,6 +1,6 @@
-import { PrimaryButton } from "../ui-kit/BaseButton";
-import { CImage } from "../ui-kit/CImage";
-import { H2 } from "../ui-kit/H2";
+import { PrimaryButton } from "./BaseButton";
+import { CImage } from "./CImage";
+import { H2 } from "./H2";
 
 export function CustomerSupportForm() {
 	return (

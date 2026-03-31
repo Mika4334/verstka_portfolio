@@ -353,11 +353,11 @@ function App() {
 				{/* <BurgerMenu /> */}
 				{/* <section className='flex flex-col items-center'> */}
 				{/* <ReviewSlider slides={slides} /> */}
-				{/* <Cart
-						preOrder={pOrder}
-						coupons={coupons}
-						customerAdress='Horizenal Road Stree 1178 California, USA'
-					/> */}
+				<Cart
+					preOrder={pOrder}
+					coupons={coupons}
+					customerAdress='Horizenal Road Stree 1178 California, USA'
+				/>
 				{/* <CartCard /> */}
 				{/* <ReviewSlider /> */}
 				{/* <AppleMenu /> */}

@@ -1,5 +1,5 @@
 import React from "react";
-import { ReviewCard } from "../ui-kit/ReviewCard";
+import { ReviewCard } from "./ReviewCard";
 
 export function ReviewSlider({ slides }) {
 	// let slides = React.Children.toArray(children)

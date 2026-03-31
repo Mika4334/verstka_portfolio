@@ -1,5 +1,5 @@
-import { PrimaryButton } from "../ui-kit/BaseButton";
-import { Dropdown } from "../ui-kit/Dropdown";
+import { PrimaryButton } from "./BaseButton";
+import { Dropdown } from "./Dropdown";
 
 export function PlanCard({ planName, price, featureItems }) {
 	return (

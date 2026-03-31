@@ -1,5 +1,5 @@
-import { CImage } from "../ui-kit/CImage";
-import { PrimaryButton } from "../ui-kit/BaseButton";
+import { CImage } from "./CImage";
+import { PrimaryButton } from "./BaseButton";
 import { useState, useCallback } from "react";
 
 export function FoodCategorySort({ h }) {

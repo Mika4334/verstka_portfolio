@@ -1,6 +1,6 @@
-import { FeatureItem } from "../ui-kit/FeatureItem";
-import { PrimaryButton } from "../ui-kit/BaseButton";
-import { FeatureList } from "../ui-kit/FeatureList";
+import { FeatureItem } from "./FeatureItem";
+import { PrimaryButton } from "./BaseButton";
+import { FeatureList } from "./FeatureList";
 
 export function PlanPlate({ allFeatures, plan0, plan1 }) {
 	return (

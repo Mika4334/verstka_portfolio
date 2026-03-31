@@ -1,4 +1,4 @@
-import { CIcon } from "../ui-kit/CIcon";
+import { CIcon } from "./CIcon";
 import React, { useState, useRef, useEffect } from "react";
 
 export function ArticleSlider({

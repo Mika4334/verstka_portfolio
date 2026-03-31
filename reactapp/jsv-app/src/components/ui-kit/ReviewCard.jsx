@@ -1,5 +1,5 @@
-import { CImage } from "../ui-kit/CImage";
-import { Stars } from "../ui-kit/Stars";
+import { CImage } from "./CImage";
+import { Stars } from "./Stars";
 
 export function ReviewCard({ w, revName, years, comment, stars }) {
 	return (

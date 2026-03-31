@@ -1,9 +1,10 @@
 // 🚀 АВТОГЕНЕРИРОВАННЫЕ ИМПОРТЫ
-// 19.02.2026 08:25:27
-// Файлов: 49, Экспортов: 55
-// Хеш: b3a986c9
+// 31.03.2026 11:45:31
+// Файлов: 50, Экспортов: 56
+// Хеш: 0c9c1899
 //
 
+// import { FOF } from './components/ui-kit/404';
 // import { AppleMenu } from './components/ui-kit/AppleMenu';
 // import { ArticleCard } from './components/ui-kit/ArticleCard';
 // import { ArticlePost } from './components/ui-kit/ArticlePost';
@@ -64,6 +65,7 @@
 // (Не редактировать вручную!)
 //
 
+export { FOF } from './ui-kit/404';
 export { AppleMenu } from './ui-kit/AppleMenu';
 export { ArticleCard } from './ui-kit/ArticleCard';
 export { ArticlePost } from './ui-kit/ArticlePost';

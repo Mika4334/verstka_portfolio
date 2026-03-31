@@ -1,4 +1,4 @@
-import { CIcon } from "../ui-kit/CIcon";
+import { CIcon } from "./CIcon";
 import { useState } from "react";
 
 export function QuestionsAnswers({ question, answer }) {

@@ -1,4 +1,4 @@
-import { CIcon } from "../ui-kit/CIcon";
+import { CIcon } from "./CIcon";
 
 export function WeekendCard({ cardNumber }) {
 	return (

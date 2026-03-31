@@ -1,7 +1,7 @@
-import { ArticleCard } from "../ui-kit/ArticleCard";
-import { ArticleSlider } from "../ui-kit/ArticleSlider";
-import { CImage } from "../ui-kit/CImage";
-import { PrimaryButton } from "../ui-kit/BaseButton";
+import { ArticleCard } from "./ArticleCard";
+import { ArticleSlider } from "./ArticleSlider";
+import { CImage } from "./CImage";
+import { PrimaryButton } from "./BaseButton";
 import React from "react";
 
 export function ArticlePost({

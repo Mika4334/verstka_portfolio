@@ -1,7 +1,7 @@
-import { CImage } from "../ui-kit/CImage";
-import { CIcon } from "../ui-kit/CIcon";
-import { BGImage } from "../ui-kit/BGImage";
-import { DropdownForm } from "../ui-kit/DropdownForm";
+import { CImage } from "./CImage";
+import { CIcon } from "./CIcon";
+import { BGImage } from "./BGImage";
+import { DropdownForm } from "./DropdownForm";
 
 export function ExpensesCard({ w, h }) {
 	return (

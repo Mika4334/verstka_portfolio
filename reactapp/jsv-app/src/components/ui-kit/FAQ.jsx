@@ -1,5 +1,5 @@
-import { CIcon } from "../ui-kit/CIcon";
-import { H2 } from "../ui-kit/H2";
+import { CIcon } from "./CIcon";
+import { H2 } from "./H2";
 import React from "react";
 
 export function FAQ({ children }) {

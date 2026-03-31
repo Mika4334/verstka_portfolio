@@ -1,8 +1,8 @@
-import { CImage } from "../ui-kit/CImage";
-import { Logo } from "../ui-kit/Logo";
-import { PrimaryButton } from "../ui-kit/BaseButton";
-import { WeekendSlider } from "../ui-kit/WeekendSlider";
-import { SignUpCard } from "../ui-kit/SignUpCard";
+import { CImage } from "./CImage";
+import { Logo } from "./Logo";
+import { PrimaryButton } from "./BaseButton";
+import { WeekendSlider } from "./WeekendSlider";
+import { SignUpCard } from "./SignUpCard";
 // import { useState } from 'react';
 
 export function SignUpForm() {

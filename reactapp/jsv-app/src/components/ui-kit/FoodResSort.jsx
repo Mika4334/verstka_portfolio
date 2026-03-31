@@ -1,4 +1,4 @@
-import { PrimaryButton, SecondaryButton } from "../ui-kit/BaseButton";
+import { PrimaryButton, SecondaryButton } from "./BaseButton";
 
 export function FoodResSort() {
 	return (

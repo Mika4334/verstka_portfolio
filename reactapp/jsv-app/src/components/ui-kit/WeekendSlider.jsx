@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CIcon } from "../ui-kit/CIcon";
+import { CIcon } from "./CIcon";
 
 function SliderButton({ onButtonClick, isActive, white }) {
 	return (

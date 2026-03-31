@@ -283,7 +283,7 @@ import { useState, useEffect, useCallback } from "react";
 import { CIcon } from "../ui-kit/CIcon";
 
 export function Cart({
-	customerAdress = null,
+	customerAdress = "",
 	deliveryTime = "15 min",
 	delivery = 10,
 	preOrder,

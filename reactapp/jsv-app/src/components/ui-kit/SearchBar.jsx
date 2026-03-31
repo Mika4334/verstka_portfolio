@@ -1,4 +1,4 @@
-import { CImage } from "../ui-kit/CImage";
+import { CImage } from "./CImage";
 export function SearchBar() {
 	return (
 		<div className='flex bg-slate-200/50 items-center pl-3.5 py-[14x]'>

@@ -1,4 +1,4 @@
-import { CImage } from "../ui-kit/CImage";
+import { CImage } from "./CImage";
 
 export function DiscountCard() {
 	return (

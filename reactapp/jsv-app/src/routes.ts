@@ -6,23 +6,40 @@ import {
 	prefix,
 } from "@react-router/dev/routes";
 
+// LAYOUT
+// 		header>navbar
+//		<Outlet>
+//		footer
+// category_filter
+// restaruant_preview/:id
+// cart
+// pricing
+// articles
+// /:article_id
+// customer_support
+// sign_up
+// sign_in
+// forget_password
+
 export default [
 	route("*", "components/pages/catchall.tsx"),
-
-	index("components/pages/home.tsx"),
-	route("cart", "components/pages/cart.tsx"),
-	// route("teams/:teamId", "./home.tsx"),
-	// index("./components/views/Cart.jsx"),
-	// route("about", "./about.jsx"),
-
-	// layout("./auth/layout.jsx", [
-	// 	route("login", "./auth/login.jsx"),
-	// 	route("register", "./auth/register.jsx"),
-	// ]),
-
-	// ...prefix("concerts", [
-	// 	index("./concerts/home.jsx"),
-	// 	route(":city", "./concerts/city.jsx"),
-	// 	route("trending", "./concerts/trending.jsx"),
-	// ]),
+	layout("components/pages/layout.tsx", [
+		index("components/pages/home.tsx"),
+		// route("category_filter", "components/pages/category_filter.tsx"),
+		// route(
+		// 	"restaruant_preview/:rest_id",
+		// 	"components/pages/restaruant_preview.tsx",
+		// ),
+		// route("cart", "components/pages/cart.tsx"),
+		// route("pricing", "components/pages/pricing.tsx"),
+		// ...prefix("articles", [
+		// 	index("components/pages/aarticles.tsx"),
+		// 	route(":article_id", "components/pages/article0.tsx"),
+		// 	route(":article_id", "components/pages/article1.tsx"),
+		// ]),
+		// route("customer_support", "components/pages/customer_support.tsx"),
+		// route("sign_up", "components/pages/sign_up.tsx"),
+		// route("sign_in", "components/pages/sign_in.tsx"),
+		// route("forget_password", "components/pages/forget_password.tsx"),
+	]),
 ] satisfies RouteConfig;

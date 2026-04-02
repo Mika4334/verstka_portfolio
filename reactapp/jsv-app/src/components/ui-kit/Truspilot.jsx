@@ -1,4 +1,4 @@
-export function Trustpilot(width) {
+export function Trustpilot({ width }) {
 	return (
 		<div className={width}>
 			<svg

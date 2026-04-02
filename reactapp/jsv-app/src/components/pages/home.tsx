@@ -1,13 +1,23 @@
 import type { Route } from "./+types/home";
-import { AppleMenu } from "../ui-kit/AppleMenu";
+import { Hero } from "../views/Hero";
+import { Download } from "../views/Download";
+import { OurTopRest } from "../views/OurTopRest";
+import { Features } from "../ui-kit/Features";
 
 export function meta({}: Route.MetaArgs) {
 	return [
-		{ title: "New React Router App" },
-		{ name: "description", content: "Welcome to React Router!" },
+		{ title: "Eatly" },
+		{ name: "delivery food service", content: "Welcome to Eatly" },
 	];
 }
 
 export default function Home() {
-	return <AppleMenu />;
+	return (
+		<>
+			<Hero />
+			<Features />
+			<Download />
+			<OurTopRest />
+		</>
+	);
 }

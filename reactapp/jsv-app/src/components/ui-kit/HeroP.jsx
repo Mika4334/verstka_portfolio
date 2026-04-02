@@ -1,11 +1,10 @@
-export function HeroP() {
+export function HeroP({ pText, pBonusText }) {
 	return (
 		<>
-			<p>
-				EatLy help you set saving goals, earn cash back offers, Go to disclaimer
-				for more details and get paychecks up to two days early. Get a{" "}
-				<a className='text-pm' href=''>
-					$20 bonus.
+			<p className='text-hr'>
+				{pText}
+				<a className='text-pm!' href=''>
+					{pBonusText}
 				</a>
 			</p>
 		</>

@@ -30,5 +30,5 @@ export function Stars({ starsQty = 1, width, svgW, svgH, gap, overlayColor }) {
 			/>,
 		);
 	}
-	return <div className={`flex items-center ${gap ?? ""}`}>{stars}</div>;
+	return <div className={`flex items-center ${gap ? gap : ""}`}>{stars}</div>;
 }

@@ -19,33 +19,30 @@ type Pages = {
       "*": string;
     };
   };
-  "/cart": {
-    params: {};
-  };
 };
 
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/*" | "/cart";
+    page: "/" | "/*";
   };
   "components/pages/catchall.tsx": {
     id: "components/pages/catchall";
     page: "/*";
   };
+  "components/pages/layout.tsx": {
+    id: "components/pages/layout";
+    page: "/";
+  };
   "components/pages/home.tsx": {
     id: "components/pages/home";
     page: "/";
-  };
-  "components/pages/cart.tsx": {
-    id: "components/pages/cart";
-    page: "/cart";
   };
 };
 
 type RouteModules = {
   "root": typeof import("./src/root.tsx");
   "components/pages/catchall": typeof import("./src/components/pages/catchall.tsx");
+  "components/pages/layout": typeof import("./src/components/pages/layout.tsx");
   "components/pages/home": typeof import("./src/components/pages/home.tsx");
-  "components/pages/cart": typeof import("./src/components/pages/cart.tsx");
 };

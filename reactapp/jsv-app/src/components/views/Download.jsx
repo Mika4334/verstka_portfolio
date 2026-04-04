@@ -9,12 +9,13 @@ export function Download() {
 			<div className='w-full'>
 				<CImage h='h-full' src='/img/MobileScreen.png' alt='MobileScreen' />
 			</div>
-			<div className='flex flex-col gap-10'>
+			<div className='flex flex-col gap-10  max-w-full'>
 				<H2
 					beforeText='Premium'
 					spanText='Quality'
 					afterText='for your health'
-					textSize='text-[100px]'
+					textSize='text-[38px]! sm:text-[100px]!'
+					Sbrk
 				/>
 				<ul className='w-full list-disc list-inside text-sc'>
 					<li>
@@ -39,14 +40,14 @@ export function Download() {
 					/>
 					<PrimaryButton
 						width='w-full mr-20'
-						height='h-[63px] '
+						height='h-[63px]'
 						textValue='Download'
 						icon
 					/>
 				</div>
 				<PrimaryButton
 					width='w-[186px]'
-					height='h-[63px]'
+					height='h-[63px] hidden md:flex'
 					textValue='Download'
 					icon
 				/>

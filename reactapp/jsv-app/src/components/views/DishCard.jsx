@@ -30,7 +30,7 @@ export function DishCard({ w, imgW, h, srcImg, alt, badgeText, badgeColor }) {
 				shadow='drop-shadow-[-10px_20px_15px_rgba(0,0,0,0.25)]'
 			/>
 			<div className='flex justify-between pl-6.75 pr-5.25 pb-3.25 pt-2 lg:pl-8.5 lg:pr-6.5 lg:pb-3'>
-				<div className='flex flex-col'>
+				<div className='flex flex-col w-full'>
 					<Badge textValue={badgeText} badgeColor={badgeColor} />
 					<h5>The Chicken King</h5>
 					<div className='flex items-center gap-1.5'>

@@ -5,7 +5,11 @@ import { ViewAll } from "../ui-kit/ViewAll";
 export function OurTopRest() {
 	return (
 		<section className='flex flex-col gap-12.5'>
-			<H2 beforeText='Our Top' spanText='Restarunt' />
+			<H2
+				beforeText='Our Top'
+				spanText='Restarunt'
+				textSize='text-[38px]! sm:text-[100px]!'
+			/>
 			<div className='flex flex-col justify-center items-center lg:justify-around lg:flex-row gap-y-10'>
 				<RestCard
 					w='w-[396px]'

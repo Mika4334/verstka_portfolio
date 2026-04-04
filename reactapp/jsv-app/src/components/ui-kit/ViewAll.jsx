@@ -12,16 +12,16 @@ export function ViewAll() {
 				<path
 					d='M1.12891 9.03125H16.933'
 					stroke='#ACADB9'
-					stroke-width='2.25773'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeWidth='2.25773'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M9.03125 1.12891L16.9333 9.03097L9.03125 16.933'
 					stroke='#ACADB9'
-					stroke-width='2.25773'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeWidth='2.25773'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 			</svg>
 		</div>

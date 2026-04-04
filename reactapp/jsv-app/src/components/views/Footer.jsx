@@ -4,11 +4,12 @@ import { CImage } from "../ui-kit/CImage";
 export function Footer() {
 	return (
 		<div
-			className='w-full flex flex-col gap-10 sm:pt-17psm:pb-14.25pt-[96px] pt-13.7575-[36px]
-        md:pb-20.25'
+			className='w-full flex flex-col gap-10 bg-hr/50 
+			pt-13 sm:pt-17 sm:pb-14.25pt-[96px] md:pb-20.25 px-5 lg:px-17 xl:px-23.75
+			mt-28'
 		>
 			<div className='flex justify-between'>
-				<Logo />
+				<Logo withName />
 				<div className='flex items-center justify-between w-28.75 sm:hidden'>
 					<a href='#'>
 						<CImage src='/svg/inst.svg' alt='' h='h-[16px]' />

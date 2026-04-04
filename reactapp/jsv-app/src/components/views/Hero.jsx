@@ -10,7 +10,7 @@ import { CImage } from "../ui-kit/CImage";
 export function Hero() {
 	return (
 		<div className='flex flex-col md:flex-row'>
-			<div className='flex flex-col gap-3'>
+			<div className='flex flex-col gap-3 justify-center'>
 				<HeroLineText
 					stripeColor='bg-hr'
 					textColor='text-hr'
@@ -22,9 +22,9 @@ export function Hero() {
 				for more details and get paychecks up to two days early. Get a'
 					pBonusText='$20 bonus.'
 				/>
-				<div className='flex justify-between min-h-12 h-15 gap-5 max-w-full'>
-					<PrimaryButton textValue='Get Started' />
-					<SecondaryButton textValue='Go Pro' />
+				<div className='flex min-h-12 h-15 gap-5 max-w-full'>
+					<PrimaryButton textValue='Get Started' width='w-40' />
+					<SecondaryButton textValue='Go Pro' width='w-28' />
 				</div>
 				<div className='flex gap-4 sm:gap-3.5 lg:gap-5 items-center'>
 					<Trustpilot width='w-fit' />
@@ -34,7 +34,7 @@ export function Hero() {
 					</div>
 				</div>
 			</div>
-			<div className='flex justify-between items-center w-full max-w-312'>
+			<div className='flex justify-end items-center w-full max-w-312'>
 				<CImage src='/img/Hero.png' />
 			</div>
 		</div>

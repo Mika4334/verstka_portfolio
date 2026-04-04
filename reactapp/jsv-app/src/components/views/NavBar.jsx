@@ -5,7 +5,7 @@ import { Logo } from "../ui-kit/Logo";
 export function NavBar() {
 	return (
 		<nav className='max-w-full pt-12 pb-6.25 border-b border-hr '>
-			<div className='flex justify-between items-center w-full max-w-312'>
+			<div className='flex justify-between items-center w-full'>
 				<Logo withName />
 				<NavMenu />
 				<div className='flex justify-between w-58 w-max-58 min-h-11 h-15'>

@@ -15,7 +15,7 @@ export function ReviewSlider({ slides }) {
 		/>
 	));
 	return (
-		<div className='bg-green-500 flex justify-center items-center overflow-hidden pl-0 xl:pl-25.75 lg:pl-18.25'>
+		<div className='flex justify-center items-center overflow-hidden pl-0 xl:pl-25.75 lg:pl-18.25'>
 			<div className='reviewSlider carouselScroll'>{revs}</div>
 		</div>
 	);

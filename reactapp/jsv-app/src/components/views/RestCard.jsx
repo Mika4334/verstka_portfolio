@@ -18,9 +18,9 @@ export function RestCard({
 		>
 			<BGImage src={srcImg} alt={alt} cover width='w-full' height='h-44' />
 			<div className='flex justify-between pl-6.75 pr-5.25 pb-3.25 pt-2 lg:pl-8.5 lg:pr-6.5 lg:pb-3'>
-				<div className='flex flex-col'>
+				<div className='flex flex-col gap-3'>
 					<Badge textValue={badgeText} badgeColor={badgeColor} />
-					<h4>The Chicken King</h4>
+					<h6 className='text-[30px]!'>The Chicken King</h6>
 					<div className='flex items-center gap-1.5'>
 						<p>24min •</p>
 						<Stars starsQty='1' width='w-5' overlayColor='var(--color-pm)' />

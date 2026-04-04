@@ -109,7 +109,7 @@ header {
 }
 
 .reviewSlider {
-	@apply flex gap-10 w-full flex-none overflow-x-scroll bg-amber-200
+	@apply flex gap-10 w-full flex-none overflow-x-scroll
         scroll-smooth snap-x snap-mandatory
         after:content-[''] after:flex-none after:min-w-[calc(50vw+1584px+50px)] after:block;
 }

@@ -12,10 +12,12 @@ import { Footer } from "../views/Footer";
 
 export default function Layout() {
 	return (
-		<main className='flex flex-col gap-16 bg-red-400 h-full max-w-full w-full px-5 lg:px-17 xl:px-23.75 overflow-x-hidden'>
-			<NavBar />
-			<Outlet />
+		<>
+			<main className='flex flex-col gap-30 h-full max-w-full w-full px-5 lg:px-17 xl:px-23.75 overflow-x-hidden'>
+				<NavBar />
+				<Outlet />
+			</main>
 			<Footer />
-		</main>
+		</>
 	);
 }

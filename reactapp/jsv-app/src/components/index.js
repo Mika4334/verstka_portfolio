@@ -1,7 +1,7 @@
 // 🚀 АВТОГЕНЕРИРОВАННЫЕ ИМПОРТЫ
-// 02.04.2026 11:41:10
-// Файлов: 54, Экспортов: 60
-// Хеш: e1062509
+// 04.04.2026 10:33:57
+// Файлов: 57, Экспортов: 63
+// Хеш: d8b09a74
 //
 
 // import { FOF } from './components/ui-kit/404';
@@ -21,6 +21,8 @@
 // import { ChooseOption } from './components/ui-kit/ChooseOption';
 // import { CIcon } from './components/ui-kit/CIcon';
 // import { CImage } from './components/ui-kit/CImage';
+// import { ControlPurchase } from './components/views/ControlPurchase';
+// import { CustomersSay } from './components/views/CustomersSay';
 // import { CustomerSupportForm } from './components/ui-kit/CustomerSupportForm';
 // import { DiscountCard } from './components/ui-kit/DiscountCard';
 // import { DishCard } from './components/views/DishCard';
@@ -47,6 +49,7 @@
 // import { Logo } from './components/ui-kit/Logo';
 // import { NavBar } from './components/views/NavBar';
 // import { NavMenu } from './components/ui-kit/NavMenu';
+// import { OurTopDishes } from './components/views/OurTopDishes';
 // import { OurTopRest } from './components/views/OurTopRest';
 // import { PlanCard } from './components/ui-kit/PlanCard';
 // import { PlanPlate } from './components/ui-kit/PlanPlate';
@@ -86,6 +89,8 @@ export { CartCard } from './ui-kit/CartCard';
 export { ChooseOption } from './ui-kit/ChooseOption';
 export { CIcon } from './ui-kit/CIcon';
 export { CImage } from './ui-kit/CImage';
+export { ControlPurchase } from './views/ControlPurchase';
+export { CustomersSay } from './views/CustomersSay';
 export { CustomerSupportForm } from './ui-kit/CustomerSupportForm';
 export { DiscountCard } from './ui-kit/DiscountCard';
 export { DishCard } from './views/DishCard';
@@ -112,6 +117,7 @@ export { ForgetForm } from './ui-kit/LoginForm';
 export { Logo } from './ui-kit/Logo';
 export { NavBar } from './views/NavBar';
 export { NavMenu } from './ui-kit/NavMenu';
+export { OurTopDishes } from './views/OurTopDishes';
 export { OurTopRest } from './views/OurTopRest';
 export { PlanCard } from './ui-kit/PlanCard';
 export { PlanPlate } from './ui-kit/PlanPlate';

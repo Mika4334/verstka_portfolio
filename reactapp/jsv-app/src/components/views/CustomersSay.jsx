@@ -76,7 +76,7 @@ export function CustomersSay() {
 			<H2
 				spanText='Customer'
 				afterText='Say'
-				textSize='text-[38px]! sm:text-[100px]!'
+				textSize='text-[38px]! sm:text-[50px]! xl:text-[100px]!'
 			/>
 			<ReviewSlider slides={slides} />
 		</div>

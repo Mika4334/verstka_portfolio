@@ -2,7 +2,7 @@ export function NavMenu() {
 	return (
 		<div
 			id='navMenu'
-			className='navMenu w-93.5 h-6.75 flex justify-between items-center'
+			className='navMenu w-93.5 h-6.75 flex justify-around items-center'
 		>
 			<a className='hover:text-pm' href=''>
 				Menu

@@ -7,17 +7,17 @@ export function ControlPurchase() {
 	return (
 		<section className='flex flex-col gap-12.5'>
 			<div className='flex justify-between'>
-				<div className='flex flex-col gap-2.5 max-w-full'>
+				<div className='flex flex-col gap-2.5 max-w-2/3'>
 					<H2
 						beforeText='Control'
 						spanText=' Purchases'
 						afterText='Via Dashboard'
-						textSize='text-[38px]! sm:text-[100px]!'
+						textSize='text-[38px]! sm:text-[55px]! text-start!'
 						Sbrk
 					/>
 					<StatusCard
 						w='w-[227px]'
-						h='h-[58px]'
+						h='h-15'
 						srcImg='/img/dishes/fi1.png'
 						alt='dish'
 						statusText='On the way'
@@ -26,7 +26,7 @@ export function ControlPurchase() {
 					/>
 					<StatusCard
 						w='w-[227px]'
-						h='h-[58px]'
+						h='h-15'
 						srcImg='/img/dishes/fi1.png'
 						alt='dish'
 						statusText='On the way'
@@ -35,7 +35,7 @@ export function ControlPurchase() {
 					/>
 					<StatusCard
 						w='w-[227px]'
-						h='h-[58px]'
+						h='h-15'
 						srcImg='/img/dishes/fi1.png'
 						alt='dish'
 						statusText='On the way'
@@ -53,9 +53,13 @@ export function ControlPurchase() {
 						customStyle='flex sm:hidden'
 					/>
 				</div>
-				<ExpensesCard w='w-140 min-w-80' customStyle='hidden sm:flex' />
+				<ExpensesCard
+					w='w-140 min-w-80'
+					h='h-fit'
+					customStyle='hidden md:flex'
+				/>
 			</div>
-			<div className='flex sm:hidden justify-center'>
+			<div className='flex md:hidden justify-center'>
 				<ExpensesCard w='w-140 min-w-80' />
 			</div>
 		</section>

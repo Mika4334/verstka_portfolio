@@ -1,4 +1,4 @@
-export function Badge({ textValue, badgeColor }) {
+export function Badge({ textValue, badgeColor, hide = false }) {
 	let setColor = "";
 	if (badgeColor === "r") {
 		setColor = "text-red bg-red/20";
@@ -9,7 +9,9 @@ export function Badge({ textValue, badgeColor }) {
 	}
 
 	return (
-		<div className={`w-fit py-0.5 px-1.5 rounded-lg ${setColor}`}>
+		<div
+			className={`w-fit py-0.5 px-1.5 rounded-lg ${setColor} ${hide ? "hidden" : ""}`}
+		>
 			{textValue}
 		</div>
 	);

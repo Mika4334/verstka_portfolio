@@ -1,8 +1,8 @@
 export function BurgerMenu() {
 	return (
-		<>
+		<div className='block sm:hidden'>
 			<button
-				popovertarget='burgerPopover'
+				popoverTarget='burgerPopover'
 				className='burgerMenu w-8 h-5.75 cursor-pointer'
 			>
 				<svg
@@ -41,6 +41,6 @@ export function BurgerMenu() {
 				<a href=''>Pricing</a>
 				<a href=''>Contact</a>
 			</div>
-		</>
+		</div>
 	);
 }

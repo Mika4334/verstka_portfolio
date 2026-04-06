@@ -12,7 +12,7 @@ function SliderButton({ onButtonClick, isActive, white }) {
 
 export function WeekendSlider({
 	children,
-	iconHide = false,
+	// iconHide = false,
 	whiteTheme = false,
 }) {
 	let slides = React.Children.toArray(children);
@@ -32,15 +32,16 @@ export function WeekendSlider({
 
 	return (
 		<>
-			<CIcon
+			{/* <CIcon
 				hide={iconHide}
 				relative
 				w='w-14'
+				divW='w-10'
 				h='h-10'
 				position='-top-5 left-[34vh] sm:-top-5 sm:left-[59vh] xl:-top-5 xl:left-[82vh]'
 				src='/svg/il1.svg'
 				alt='il1'
-			/>
+			/> */}
 			<div
 				className={`${whiteTheme ? "text-white!" : ""} flex overflow-x-hidden`}
 			>

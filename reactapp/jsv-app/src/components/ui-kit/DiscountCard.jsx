@@ -3,8 +3,8 @@ import { CImage } from "./CImage";
 export function DiscountCard() {
 	return (
 		<>
-			<div className='hidden sm:flex h-49.75 h-max-[280px] justify-center'>
-				<div className='flex flex-row bg-pm justify-between px-12.5 rounded-xl w-215.75 w-max-[1214px]'>
+			<div className='hidden sm:flex h-49.75 justify-center mb-20'>
+				<div className='flex bg-pm justify-between px-12.5 rounded-xl w-215 w-max-[214px]'>
 					<div className='md:w-78 lg:w-109.75 pt-6.5'>
 						<h3 className='font-bold text-slate-200'>GET 50%</h3>
 						<div className='flex py-1.5 mt-4 h-12 w-full rounded-lg bg-slate-200 justify-between items-center content-center'>

@@ -25,11 +25,8 @@ export default [
 	route("*", "components/pages/catchall.tsx"),
 	layout("components/pages/layout.tsx", [
 		index("components/pages/home.tsx"),
-		// route("category_filter", "components/pages/category_filter.tsx"),
-		// route(
-		// 	"restaruant_preview/:rest_id",
-		// 	"components/pages/restaruant_preview.tsx",
-		// ),
+		route("categories", "components/pages/category_filter.tsx"),
+		route("restpreview/:rest_id", "components/pages/restaruant_preview.tsx"),
 		// route("cart", "components/pages/cart.tsx"),
 		// route("pricing", "components/pages/pricing.tsx"),
 		// ...prefix("articles", [

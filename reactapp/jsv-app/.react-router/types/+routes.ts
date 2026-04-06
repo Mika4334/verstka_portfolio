@@ -19,12 +19,20 @@ type Pages = {
       "*": string;
     };
   };
+  "/categories": {
+    params: {};
+  };
+  "/restpreview/:rest_id": {
+    params: {
+      "rest_id": string;
+    };
+  };
 };
 
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/*";
+    page: "/" | "/*" | "/categories" | "/restpreview/:rest_id";
   };
   "components/pages/catchall.tsx": {
     id: "components/pages/catchall";
@@ -32,11 +40,19 @@ type RouteFiles = {
   };
   "components/pages/layout.tsx": {
     id: "components/pages/layout";
-    page: "/";
+    page: "/" | "/categories" | "/restpreview/:rest_id";
   };
   "components/pages/home.tsx": {
     id: "components/pages/home";
     page: "/";
+  };
+  "components/pages/category_filter.tsx": {
+    id: "components/pages/category_filter";
+    page: "/categories";
+  };
+  "components/pages/restaruant_preview.tsx": {
+    id: "components/pages/restaruant_preview";
+    page: "/restpreview/:rest_id";
   };
 };
 
@@ -45,4 +61,6 @@ type RouteModules = {
   "components/pages/catchall": typeof import("./src/components/pages/catchall.tsx");
   "components/pages/layout": typeof import("./src/components/pages/layout.tsx");
   "components/pages/home": typeof import("./src/components/pages/home.tsx");
+  "components/pages/category_filter": typeof import("./src/components/pages/category_filter.tsx");
+  "components/pages/restaruant_preview": typeof import("./src/components/pages/restaruant_preview.tsx");
 };

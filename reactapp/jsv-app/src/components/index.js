@@ -1,7 +1,7 @@
 // 🚀 АВТОГЕНЕРИРОВАННЫЕ ИМПОРТЫ
-// 04.04.2026 10:33:57
-// Файлов: 57, Экспортов: 63
-// Хеш: d8b09a74
+// 06.04.2026 09:57:06
+// Файлов: 59, Экспортов: 65
+// Хеш: 66b39df0
 //
 
 // import { FOF } from './components/ui-kit/404';
@@ -30,11 +30,12 @@
 // import { Dropdown } from './components/ui-kit/Dropdown';
 // import { DropdownForm } from './components/ui-kit/DropdownForm';
 // import { ExpensesCard } from './components/ui-kit/ExpensesCard';
-// import { FAQ } from './components/ui-kit/FAQ';
+// import { FAQ } from './components/views/FAQ';
 // import { FeatureItem } from './components/ui-kit/FeatureItem';
 // import { FeatureListItem } from './components/ui-kit/FeatureItem';
 // import { FeatureList } from './components/ui-kit/FeatureList';
 // import { Features } from './components/ui-kit/Features';
+// import { FilterControl } from './components/views/FilterControl';
 // import { FoodCategorySort } from './components/ui-kit/FoodCategorySort';
 // import { FoodResSort } from './components/ui-kit/FoodResSort';
 // import { Footer } from './components/views/Footer';
@@ -43,6 +44,7 @@
 // import { HeroH1 } from './components/ui-kit/HeroH1';
 // import { HeroLineText } from './components/ui-kit/HeroLineText';
 // import { HeroP } from './components/ui-kit/HeroP';
+// import { HR } from './components/ui-kit/HR';
 // import { SignUpForm } from './components/ui-kit/LoginForm';
 // import { SignInForm } from './components/ui-kit/LoginForm';
 // import { ForgetForm } from './components/ui-kit/LoginForm';
@@ -98,11 +100,12 @@ export { Download } from './views/Download';
 export { Dropdown } from './ui-kit/Dropdown';
 export { DropdownForm } from './ui-kit/DropdownForm';
 export { ExpensesCard } from './ui-kit/ExpensesCard';
-export { FAQ } from './ui-kit/FAQ';
+export { FAQ } from './views/FAQ';
 export { FeatureItem } from './ui-kit/FeatureItem';
 export { FeatureListItem } from './ui-kit/FeatureItem';
 export { FeatureList } from './ui-kit/FeatureList';
 export { Features } from './ui-kit/Features';
+export { FilterControl } from './views/FilterControl';
 export { FoodCategorySort } from './ui-kit/FoodCategorySort';
 export { FoodResSort } from './ui-kit/FoodResSort';
 export { Footer } from './views/Footer';
@@ -111,6 +114,7 @@ export { Hero } from './views/Hero';
 export { HeroH1 } from './ui-kit/HeroH1';
 export { HeroLineText } from './ui-kit/HeroLineText';
 export { HeroP } from './ui-kit/HeroP';
+export { HR } from './ui-kit/HR';
 export { SignUpForm } from './ui-kit/LoginForm';
 export { SignInForm } from './ui-kit/LoginForm';
 export { ForgetForm } from './ui-kit/LoginForm';

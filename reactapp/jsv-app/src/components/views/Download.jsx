@@ -9,12 +9,12 @@ export function Download() {
 			<div className='w-full'>
 				<CImage h='h-full' src='/img/MobileScreen.png' alt='MobileScreen' />
 			</div>
-			<div className='flex flex-col gap-10  max-w-full'>
+			<div className='flex flex-col gap-10 max-w-full'>
 				<H2
 					beforeText='Premium'
 					spanText='Quality'
 					afterText='for your health'
-					textSize='text-[38px]! sm:text-[100px]!'
+					textSize='text-[38px]! sm:text-[50px]! xl:text-[100px]!'
 					Sbrk
 				/>
 				<ul className='w-full list-disc list-inside text-sc'>

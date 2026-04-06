@@ -7,6 +7,7 @@ import { ControlPurchase } from "../views/ControlPurchase";
 import { CustomersSay } from "../views/CustomersSay";
 import { Features } from "../ui-kit/Features";
 import { DiscountCard } from "../ui-kit/DiscountCard";
+import { HR } from "../ui-kit/HR";
 
 export function meta({}: Route.MetaArgs) {
 	return [
@@ -22,13 +23,13 @@ export default function Home() {
 			<Hero />
 			<Features />
 			<Download />
-			<hr className='bg-hr h-0.5 border-0' />
-			<OurTopRest />
-			<hr className='bg-hr h-0.5 border-0' />
-			<OurTopDishes />
-			<hr className='bg-hr h-0.5 border-0' />
+			<HR />
+			<OurTopRest viewAllOnTop='hidden' viewAllOnBottom='flex self-end' />
+			<HR />
+			<OurTopDishes viewAllOnTop='hidden' viewAllOnBottom='flex self-end' />
+			<HR />
 			<ControlPurchase />
-			<hr className='bg-hr h-0.5 border-0' />
+			<HR />
 			<CustomersSay />
 			<DiscountCard />
 		</>

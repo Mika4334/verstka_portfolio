@@ -16,7 +16,7 @@ export function FoodCategorySort({ h }) {
 
 	return (
 		<div
-			className={`flex flex-col bg-white rounded-2xl justify-around px-6.75 w-max-full ${h ? h : ""}`}
+			className={`flex flex-col bg-white rounded-2xl justify-around px-6.75 w-max-full ${h ? h : ""}  shadow-[20px_20px_25px_rgba(0,0,0,0.25)]`}
 		>
 			<h5>Category</h5>
 			<div className='flex justify-between'>

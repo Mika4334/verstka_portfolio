@@ -27,8 +27,8 @@ export default [
 		index("components/pages/home.tsx"),
 		route("categories", "components/pages/category_filter.tsx"),
 		route("restpreview/:rest_id", "components/pages/restaruant_preview.tsx"),
-		// route("cart", "components/pages/cart.tsx"),
-		// route("pricing", "components/pages/pricing.tsx"),
+		route("cart", "components/pages/cart.tsx"),
+		route("pricing", "components/pages/pricing.tsx"),
 		// ...prefix("articles", [
 		// 	index("components/pages/aarticles.tsx"),
 		// 	route(":article_id", "components/pages/article0.tsx"),

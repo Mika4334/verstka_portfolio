@@ -1,7 +1,7 @@
 // 🚀 АВТОГЕНЕРИРОВАННЫЕ ИМПОРТЫ
-// 06.04.2026 09:57:06
-// Файлов: 59, Экспортов: 65
-// Хеш: 66b39df0
+// 08.04.2026 10:52:55
+// Файлов: 61, Экспортов: 67
+// Хеш: 5c4b28bb
 //
 
 // import { FOF } from './components/ui-kit/404';
@@ -29,6 +29,7 @@
 // import { Download } from './components/views/Download';
 // import { Dropdown } from './components/ui-kit/Dropdown';
 // import { DropdownForm } from './components/ui-kit/DropdownForm';
+// import { DropdownOption } from './components/ui-kit/DropdownOption';
 // import { ExpensesCard } from './components/ui-kit/ExpensesCard';
 // import { FAQ } from './components/views/FAQ';
 // import { FeatureItem } from './components/ui-kit/FeatureItem';
@@ -54,7 +55,8 @@
 // import { OurTopDishes } from './components/views/OurTopDishes';
 // import { OurTopRest } from './components/views/OurTopRest';
 // import { PlanCard } from './components/ui-kit/PlanCard';
-// import { PlanPlate } from './components/ui-kit/PlanPlate';
+// import { PlanPlate } from './components/views/PlanPlate';
+// import { PricingHero } from './components/views/PricingHero';
 // import { QuestionsAnswers } from './components/ui-kit/QuestionsAnswers';
 // import { RestCard } from './components/views/RestCard';
 // import { ReviewCard } from './components/ui-kit/ReviewCard';
@@ -99,6 +101,7 @@ export { DishCard } from './views/DishCard';
 export { Download } from './views/Download';
 export { Dropdown } from './ui-kit/Dropdown';
 export { DropdownForm } from './ui-kit/DropdownForm';
+export { DropdownOption } from './ui-kit/DropdownOption';
 export { ExpensesCard } from './ui-kit/ExpensesCard';
 export { FAQ } from './views/FAQ';
 export { FeatureItem } from './ui-kit/FeatureItem';
@@ -124,7 +127,8 @@ export { NavMenu } from './ui-kit/NavMenu';
 export { OurTopDishes } from './views/OurTopDishes';
 export { OurTopRest } from './views/OurTopRest';
 export { PlanCard } from './ui-kit/PlanCard';
-export { PlanPlate } from './ui-kit/PlanPlate';
+export { PlanPlate } from './views/PlanPlate';
+export { PricingHero } from './views/PricingHero';
 export { QuestionsAnswers } from './ui-kit/QuestionsAnswers';
 export { RestCard } from './views/RestCard';
 export { ReviewCard } from './ui-kit/ReviewCard';

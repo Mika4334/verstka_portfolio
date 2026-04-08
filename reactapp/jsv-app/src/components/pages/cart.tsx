@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
 import { Cart } from "../views/Cart";
+import { DiscountCard } from "../ui-kit/DiscountCard";
 
 export function meta({}: Route.MetaArgs) {
 	return [{ title: "Cart" }, { name: "Cart", content: "Cart" }];
@@ -54,10 +55,13 @@ const pOrder = [
 
 export default function MainCart() {
 	return (
-		<Cart
-			preOrder={pOrder}
-			customerAdress='Pushkina streeet'
-			coupons={coupons}
-		/>
+		<>
+			<Cart
+				preOrder={pOrder}
+				customerAdress='Pushkina streeet'
+				coupons={coupons}
+			/>
+			<DiscountCard />
+		</>
 	);
 }

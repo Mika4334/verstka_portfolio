@@ -2,6 +2,7 @@ import { CImage } from "./CImage";
 import { CIcon } from "./CIcon";
 import { BGImage } from "./BGImage";
 import { DropdownForm } from "./DropdownForm";
+import { HR } from "./HR";
 
 export function ExpensesCard({ w, h, customStyle }) {
 	return (
@@ -14,7 +15,7 @@ export function ExpensesCard({ w, h, customStyle }) {
 			</div>
 			<div>
 				<div className=' border-[0.93px] border-hr/50 rounded-3xl p-3.75 flex flex-col gap-3'>
-					<div className='flex justify-between items-center'>
+					<div className='flex justify-between items-start sm:items-center'>
 						<div className='flex items-center gap-3'>
 							<CImage imgH='h-30' src='/svg/expense0.svg' alt='expense' />
 							<div>
@@ -26,10 +27,15 @@ export function ExpensesCard({ w, h, customStyle }) {
 						</div>
 						<h5>$409.00</h5>
 					</div>
-					<CImage src='/svg/divider_violet.svg' alt='expenseuse' />
+					<div className='bg-pm/30 h-2 w-full rounded-full'>
+						<HR
+							color='bg-pm'
+							customStyle='h-full border-0 w-2/3 rounded-full'
+						/>
+					</div>
 				</div>
 				<div className=' border-[0.93px] border-hr/50 rounded-3xl p-3.75 flex flex-col gap-3'>
-					<div className='flex justify-between items-center'>
+					<div className='flex justify-between items-start sm:items-center'>
 						<div className='flex items-center gap-3'>
 							<CImage imgH='h-30' src='/svg/expense.svg' alt='expenseuse' />
 							<div>
@@ -41,7 +47,12 @@ export function ExpensesCard({ w, h, customStyle }) {
 						</div>
 						<h5>$45.78</h5>
 					</div>
-					<CImage src='/svg/divider_yellow.svg' alt='vocheruse' />
+					<div className='bg-orange-300/30 h-2 w-full rounded-full'>
+						<HR
+							color='bg-orange-300'
+							customStyle='h-full border-0 w-2/4 rounded-full'
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

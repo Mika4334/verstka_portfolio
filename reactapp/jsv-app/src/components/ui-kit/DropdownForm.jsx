@@ -1,22 +1,22 @@
+import { DropdownOption } from "./DropdownOption";
+
 export function DropdownForm({ w, h }) {
+	let drops = ["Select", "January", "February", "March"];
+	let options = drops.map((element, index) => (
+		<DropdownOption
+			key={index}
+			optionValue={element}
+			optionText={element}
+			customStyle='bg-hr'
+		/>
+	));
 	return (
 		<select
 			name='123'
-			id='month'
+			id='months'
 			className={`${w} ${h ? h : ""} pl-2.5 rounded-xl bg-hr/30 outline-0`}
 		>
-			<option className='bg-hr' value='Select'>
-				Select
-			</option>
-			<option className='bg-hr' value='January'>
-				January
-			</option>
-			<option className='bg-hr' value='February'>
-				February
-			</option>
-			<option className='bg-hr' value='March'>
-				March
-			</option>
+			{options}
 		</select>
 	);
 }

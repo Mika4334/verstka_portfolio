@@ -27,12 +27,18 @@ type Pages = {
       "rest_id": string;
     };
   };
+  "/cart": {
+    params: {};
+  };
+  "/pricing": {
+    params: {};
+  };
 };
 
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/*" | "/categories" | "/restpreview/:rest_id";
+    page: "/" | "/*" | "/categories" | "/restpreview/:rest_id" | "/cart" | "/pricing";
   };
   "components/pages/catchall.tsx": {
     id: "components/pages/catchall";
@@ -40,7 +46,7 @@ type RouteFiles = {
   };
   "components/pages/layout.tsx": {
     id: "components/pages/layout";
-    page: "/" | "/categories" | "/restpreview/:rest_id";
+    page: "/" | "/categories" | "/restpreview/:rest_id" | "/cart" | "/pricing";
   };
   "components/pages/home.tsx": {
     id: "components/pages/home";
@@ -54,6 +60,14 @@ type RouteFiles = {
     id: "components/pages/restaruant_preview";
     page: "/restpreview/:rest_id";
   };
+  "components/pages/cart.tsx": {
+    id: "components/pages/cart";
+    page: "/cart";
+  };
+  "components/pages/pricing.tsx": {
+    id: "components/pages/pricing";
+    page: "/pricing";
+  };
 };
 
 type RouteModules = {
@@ -63,4 +77,6 @@ type RouteModules = {
   "components/pages/home": typeof import("./src/components/pages/home.tsx");
   "components/pages/category_filter": typeof import("./src/components/pages/category_filter.tsx");
   "components/pages/restaruant_preview": typeof import("./src/components/pages/restaruant_preview.tsx");
+  "components/pages/cart": typeof import("./src/components/pages/cart.tsx");
+  "components/pages/pricing": typeof import("./src/components/pages/pricing.tsx");
 };

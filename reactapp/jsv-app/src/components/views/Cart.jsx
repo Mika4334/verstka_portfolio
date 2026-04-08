@@ -276,6 +276,352 @@
 // 	);
 // }
 
+// import { CartCard } from "../ui-kit/CartCard";
+// import { CImage } from "../ui-kit/CImage";
+// import { PrimaryButton } from "../ui-kit/BaseButton";
+// import { useState, useEffect, useCallback } from "react";
+// import { CIcon } from "../ui-kit/CIcon";
+
+// export function Cart({
+// 	customerAdress = "",
+// 	deliveryTime = "15 min",
+// 	delivery = 10,
+// 	preOrder,
+// 	coupons = {},
+// }) {
+// 	// Используем Map для более надежного хранения quantities с id товаров
+// 	const [quantities, setQuantities] = useState(() => {
+// 		const initialQuantities = {};
+// 		preOrder.forEach((item, index) => {
+// 			// Используем комбинацию индекса и имени как уникальный ключ
+// 			const itemId = `${item.name || item.imgSrc}_${index}`;
+// 			initialQuantities[itemId] = 1;
+// 		});
+// 		return initialQuantities;
+// 	});
+
+// 	// Создаем массив товаров с уникальными ID
+// 	const itemsWithIds = preOrder.map((item, index) => ({
+// 		...item,
+// 		uniqueId: `${item.name || item.imgSrc}_${index}`,
+// 		originalIndex: index,
+// 	}));
+
+// 	const handleIncrement = (uniqueId) => {
+// 		setQuantities((prev) => ({
+// 			...prev,
+// 			[uniqueId]: (prev[uniqueId] || 0) + 1,
+// 		}));
+// 	};
+
+// 	const handleDecrement = (uniqueId) => {
+// 		setQuantities((prev) => {
+// 			const currentQty = prev[uniqueId] || 0;
+
+// 			// Если количество станет 0, удаляем товар
+// 			if (currentQty === 1) {
+// 				const newQuantities = { ...prev };
+// 				delete newQuantities[uniqueId];
+// 				return newQuantities;
+// 			}
+
+// 			// Иначе просто уменьшаем количество
+// 			return {
+// 				...prev,
+// 				[uniqueId]: currentQty - 1,
+// 			};
+// 		});
+// 	};
+
+// 	const [discount, setDiscount] = useState(0);
+// 	const [couponCode, setCouponCode] = useState("");
+// 	const [couponMessage, setCouponMessage] = useState({ text: "", type: "" });
+// 	const [appliedCoupon, setAppliedCoupon] = useState(null);
+
+// 	// Вычисление subtotal с учетом актуальных quantities
+// 	const subtotal = itemsWithIds.reduce((sum, item) => {
+// 		const quantity = quantities[item.uniqueId] || 0;
+// 		return sum + item.price * quantity;
+// 	}, 0);
+
+// 	// Фильтруем товары для отображения
+// 	const visibleItems = itemsWithIds.filter(
+// 		(item) => quantities[item.uniqueId] > 0,
+// 	);
+
+// 	// Вычисление total
+// 	const total = Math.max(0, subtotal - discount + delivery);
+
+// 	// Эффект для пересчета скидки при изменении subtotal или appliedCoupon
+// 	useEffect(() => {
+// 		if (appliedCoupon) {
+// 			recalculateDiscount(appliedCoupon, subtotal);
+// 		}
+// 	});
+// 	// useEffect(() => {
+// 	// 	if (appliedCoupon) {
+// 	// 		recalculateDiscount(appliedCoupon, subtotal);
+// 	// 	}
+// 	// }, [subtotal, appliedCoupon]);
+
+// 	const recalculateDiscount = useCallback((coupon, currentSubtotal) => {
+// 		// Проверка минимальной суммы заказа, если указана
+// 		if (coupon.minOrder && currentSubtotal < coupon.minOrder) {
+// 			setDiscount(0);
+// 			setAppliedCoupon(null);
+// 			setCouponCode("");
+// 			setCouponMessage({
+// 				text: `Coupon removed: Minimum order amount $${coupon.minOrder} required`,
+// 				type: "error",
+// 			});
+// 			return;
+// 		}
+
+// 		// Проверка срока действия, если указан
+// 		if (coupon.expiryDate && new Date(coupon.expiryDate) < new Date()) {
+// 			setDiscount(0);
+// 			setAppliedCoupon(null);
+// 			setCouponCode("");
+// 			setCouponMessage({
+// 				text: "Coupon removed: This coupon has expired",
+// 				type: "error",
+// 			});
+// 			return;
+// 		}
+
+// 		// Расчет скидки
+// 		let discountAmount = 0;
+// 		if (coupon.type === "percentage") {
+// 			discountAmount = (currentSubtotal * coupon.value) / 100;
+// 			if (coupon.maxDiscount) {
+// 				discountAmount = Math.min(discountAmount, coupon.maxDiscount);
+// 			}
+// 		} else if (coupon.type === "fixed") {
+// 			discountAmount = coupon.value;
+// 		}
+
+// 		discountAmount = Math.min(discountAmount, currentSubtotal);
+// 		setDiscount(discountAmount);
+// 		setCouponMessage({
+// 			text: `Coupon applied! You saved $${discountAmount.toFixed(2)}`,
+// 			type: "success",
+// 		});
+// 	}, []);
+
+// 	const handleApplyCoupon = () => {
+// 		setCouponMessage({ text: "", type: "" });
+
+// 		if (!couponCode.trim()) {
+// 			setCouponMessage({
+// 				text: "Please enter a coupon code",
+// 				type: "error",
+// 			});
+// 			return;
+// 		}
+
+// 		const foundCoupon = coupons.find(
+// 			(coupon) => coupon.code.toUpperCase() === couponCode.trim().toUpperCase(),
+// 		);
+
+// 		if (foundCoupon) {
+// 			setAppliedCoupon(foundCoupon);
+// 			recalculateDiscount(foundCoupon, subtotal);
+// 		} else {
+// 			setDiscount(0);
+// 			setAppliedCoupon(null);
+// 			setCouponMessage({
+// 				text: "Invalid coupon code",
+// 				type: "error",
+// 			});
+// 		}
+// 	};
+
+// 	const handleRemoveCoupon = () => {
+// 		setDiscount(0);
+// 		setCouponCode("");
+// 		setAppliedCoupon(null);
+// 		setCouponMessage({ text: "", type: "" });
+// 	};
+
+// 	// Создание заказов с передачей пропсов
+// 	let orders = visibleItems.map((item) => (
+// 		<CartCard
+// 			key={item.uniqueId}
+// 			srcImg={item.imgSrc}
+// 			price={item.price}
+// 			quantity={quantities[item.uniqueId] || 0}
+// 			onIncrement={() => handleIncrement(item.uniqueId)}
+// 			onDecrement={() => handleDecrement(item.uniqueId)}
+// 			productName={item.productName} // Добавьте name в CartCard если нужно
+// 		/>
+// 	));
+
+// 	// Если корзина пуста, показываем соответствующее сообщение
+// 	if (visibleItems.length === 0) {
+// 		return (
+// 			<div className='flex flex-col justify-center items-center py-20'>
+// 				<h3 className='text-2xl font-bold mb-4'>Your cart is empty</h3>
+// 				<a
+// 					href='/' // СКОРРЕКТИРОВАТЬ ПОСЛЕ ПОДКЛЮЧЕНИЯ РОУТИНГА
+// 					className='flex justify-around items-center w-full max-w-100 h-20 text-2xl text-white bg-pm border-0.5 border-pm rounded-2xl hover:bg-pmhover hover:border-white'
+// 				>
+// 					Continue Shopping
+// 				</a>
+// 			</div>
+// 		);
+// 	}
+
+// 	return (
+// 		<>
+// 			<CIcon
+// 				src='/img/cart/map.png'
+// 				divH='h-100'
+// 				divW='w-full'
+// 				position=''
+// 				customStyle='flex justify-center sm:hidden relative scale-150 pt-16'
+// 			/>
+// 			<div className='flex flex-col justify-center items-center max-w-full'>
+// 				<CImage src='/img/cart/map.png' customStyle='hidden sm:flex' />
+
+// 				<div className='flex flex-col bg-white w-93 min-h-77 sm:h-80 rounded-3xl -mt-10 sm:-mt-34 z-1 max-w-full max-h-full drop-shadow-[5px_10px_10px_rgba(0,0,0,0.20)]'>
+// 					<div className='flex gap-5 bg-black rounded-t-3xl p-5  drop-shadow-[0px_5px_2px_rgba(0,0,0,0.30)]'>
+// 						<CImage src='/img/cart/delivery_man.png' />
+// 						<div className='flex flex-col justify-center items-start text-white'>
+// 							<h5>David Smith</h5>
+// 							<p>Food Rider</p>
+// 						</div>
+// 					</div>
+// 					<div className='flex h-full'>
+// 						<div className='flex gap-3 px-2 py-2 sm:px-5 min-h-50'>
+// 							<div className='flex gap-5 h-3/5 mt-3 sm:h-3/4 sm:pt-3'>
+// 								<div className='flex flex-col items-center justify-center'>
+// 									<CImage src='/svg/deliver_locatin.svg' />
+// 									<div className='border-l-2 border-pm border-dashed h-full w-0'></div>
+// 									<CImage src='/svg/deliver_time.svg' />
+// 								</div>
+
+// 								<div className='flex flex-col justify-between'>
+// 									<div>
+// 										<p className='text-xs sm:text-sm text-sc'>Delivery Time</p>
+// 										<p className='text-xs sm:text-sm'>{deliveryTime}</p>
+// 									</div>
+// 									<div>
+// 										<p className='text-xs sm:text-sm text-sc'>Your Address</p>
+// 										<p className='text-xs sm:text-sm'>{customerAdress}</p>
+// 									</div>
+// 								</div>
+// 							</div>
+// 							<div className='self-end w-32 h-10'>
+// 								<PrimaryButton textValue='Pending' />
+// 							</div>
+// 						</div>
+// 					</div>
+// 				</div>
+
+// 				<div className='flex flex-col items-center mt-24 md:mt-28 lg:mt-40 w-full'>
+// 					<div className='flex w-full justify-center max-w-244'>
+// 						<CImage
+// 							src='/svg/CartArrowLeft.svg'
+// 							customStyle='self-end hidden sm:block'
+// 						/>
+// 						{/* ИЗМЕНИТЬ ПОВЕДЕНИЕ НА САБМИТ */}
+// 						<form className='min-w-79 w-full flex flex-col gap-8 justify-center items-center'>
+// 							{orders}
+// 							<div className='flex flex-col gap-5 w-full'>
+// 								<div className='relative group'>
+// 									<div className='absolute inset-y-0 inset-s-0 flex items-center ps-3 pointer-events-none'>
+// 										<div
+// 											className="w-5 h-5 bg-gray-400 group-focus-within:bg-pm
+//                                             [mask:url('/svg/coupon.svg')_center/contain_no-repeat]
+//                                             [-webkit-mask:url('/svg/coupon.svg')_center/contain_no-repeat]"
+// 										/>
+// 									</div>
+// 									<div className='flex justify-center items-center h-15'>
+// 										<input
+// 											value={couponCode}
+// 											onChange={(e) => setCouponCode(e.target.value)}
+// 											className='SignUpInputs h-full'
+// 											placeholder='Apply Coupon'
+// 											type='text'
+// 											disabled={appliedCoupon !== null}
+// 										/>
+// 										{appliedCoupon === null ? (
+// 											<button
+// 												type='button'
+// 												onClick={handleApplyCoupon}
+// 												className={`ml-2 w-1/4 h-full px-4 py-2 rounded-lg text-white bg-pm border-0.5 border-pm hover:bg-pmhover hover:border-white cursor-pointer`}
+// 											>
+// 												Apply
+// 											</button>
+// 										) : (
+// 											<button
+// 												type='button'
+// 												onClick={handleRemoveCoupon}
+// 												className='ml-2 w-1/4 h-full px-4 py-2 rounded-lg text-white bg-red-500 border-0.5 border-red-500 hover:bg-red-600 hover:border-white cursor-pointer'
+// 											>
+// 												Remove
+// 											</button>
+// 										)}
+// 									</div>
+// 								</div>
+// 								{couponMessage.text && (
+// 									<h6
+// 										className={`tracking-wider ${
+// 											couponMessage.type === "success"
+// 												? "text-green-600"
+// 												: "text-red-600"
+// 										}`}
+// 									>
+// 										{couponMessage.text}
+// 									</h6>
+// 								)}
+// 							</div>
+// 							<div className='flex flex-col w-full gap-4.5'>
+// 								<div className='flex justify-between items-center border-b border-dashed border-sc text-sc'>
+// 									<p>Subtotal</p>
+// 									<p>${subtotal.toFixed(2)}</p>
+// 								</div>
+// 								{discount > 0 && (
+// 									<div className='flex justify-between items-center border-b border-dashed border-sc text-green-600'>
+// 										<p>Discount</p>
+// 										<p>-${discount.toFixed(2)}</p>
+// 									</div>
+// 								)}
+// 								<div className='flex justify-between items-center border-b border-dashed border-sc text-sc'>
+// 									<p>Delivery</p>
+// 									<p>${delivery}</p>
+// 								</div>
+// 								<div className='flex justify-between items-center font-bold text-2xl'>
+// 									<p>Total</p>
+// 									<p>${total.toFixed(2)}</p>
+// 								</div>
+// 							</div>
+// 							<PrimaryButton
+// 								textValue='Review Payment'
+// 								height='h-11.5 '
+// 								width='w-full'
+// 								type='submit'
+// 							/>
+// 						</form>
+// 						<div className='flex flex-col justify-between w-0 sm:w-fit'>
+// 							<CImage
+// 								src='/svg/il2.svg'
+// 								w='w-5 sm:w-10'
+// 								imgW='w-10'
+// 								customStyle='-mt-10'
+// 							/>
+// 							<CImage
+// 								src='/svg/CartArrowRight.svg'
+// 								customStyle='self-end hidden sm:block'
+// 							/>
+// 						</div>
+// 					</div>
+// 				</div>
+// 			</div>
+// 		</>
+// 	);
+// }
+
 import { CartCard } from "../ui-kit/CartCard";
 import { CImage } from "../ui-kit/CImage";
 import { PrimaryButton } from "../ui-kit/BaseButton";
@@ -353,18 +699,18 @@ export function Cart({
 	const total = Math.max(0, subtotal - discount + delivery);
 
 	// Эффект для пересчета скидки при изменении subtotal или appliedCoupon
-	useEffect(() => {
-		if (appliedCoupon) {
-			recalculateDiscount(appliedCoupon, subtotal);
-		}
-	});
 	// useEffect(() => {
 	// 	if (appliedCoupon) {
 	// 		recalculateDiscount(appliedCoupon, subtotal);
 	// 	}
-	// }, [subtotal, appliedCoupon]);
+	// });
+	useEffect(() => {
+		if (appliedCoupon) {
+			recalculateDiscount(appliedCoupon, subtotal);
+		}
+	}, [subtotal, appliedCoupon]);
 
-	const recalculateDiscount = useCallback((coupon, currentSubtotal) => {
+	var recalculateDiscount = useCallback((coupon, currentSubtotal) => {
 		// Проверка минимальной суммы заказа, если указана
 		if (coupon.minOrder && currentSubtotal < coupon.minOrder) {
 			setDiscount(0);

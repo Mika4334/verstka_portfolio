@@ -1,21 +1,60 @@
-export function NavMenu() {
+import { NavLink } from "react-router";
+
+export function NavMenu({ footerVersion }) {
 	return (
-		<div
-			id='navMenu'
-			className='navMenu w-93.5 h-6.75 flex justify-around items-center'
-		>
-			<a className='hover:text-pm' href=''>
+		<>
+			<NavLink
+				className={
+					footerVersion
+						? "hover:text-pm uppercase sm:capitalize text-sc"
+						: "hover:text-pm"
+				}
+				to='categories'
+				end
+			>
 				Menu
-			</a>
-			<a className='hover:text-pm' href=''>
+			</NavLink>
+			<NavLink
+				className={
+					footerVersion
+						? "hover:text-pm uppercase sm:capitalize text-sc"
+						: "hover:text-pm"
+				}
+				to='blog'
+			>
 				Blog
-			</a>
-			<a className='hover:text-pm' href=''>
+			</NavLink>
+			<NavLink
+				className={
+					footerVersion
+						? "hover:text-pm uppercase sm:capitalize text-sc"
+						: "hover:text-pm"
+				}
+				to='pricing'
+				end
+			>
 				Pricing
-			</a>
-			<a className='hover:text-pm' href=''>
+			</NavLink>
+			<div className={footerVersion ? "" : "hidden"}>
+				<NavLink
+					className='hover:text-pm uppercase sm:capitalize text-sc'
+					to='/'
+					end
+				>
+					Abou Us
+				</NavLink>
+			</div>
+			<NavLink
+				className={
+					footerVersion
+						? "hover:text-pm uppercase sm:capitalize text-sc"
+						: "hover:text-pm"
+				}
+				to='contact'
+				end
+			>
 				Contact
-			</a>
-		</div>
+			</NavLink>
+		</>
 	);
 }

@@ -18,7 +18,12 @@ export function NavBar({
 				<div
 					className={`${hideNavLoginSignup ? "hidden!" : ""} hidden md:flex items-center`}
 				>
-					<NavMenu />
+					<div
+						id='navMenu'
+						className='navMenu w-93.5 h-6.75 flex justify-around items-center'
+					>
+						<NavMenu />
+					</div>
 					<div className='flex justify-between w-58 w-max-58 min-h-11 h-15'>
 						<LoginButton textValue='Login' width='w-full' height='h-full' />
 						<PrimaryButton textValue='Signup' width='w-full' height='h-full' />

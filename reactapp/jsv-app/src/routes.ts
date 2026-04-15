@@ -14,13 +14,13 @@ export default [
 		route("restpreview/:rest_id", "components/pages/restaruant_preview.tsx"),
 		route("cart", "components/pages/cart.tsx"),
 		route("pricing", "components/pages/pricing.tsx"),
-		...prefix("articles", [
-			index("components/pages/articles.tsx"),
+		...prefix("blog", [
+			index("components/pages/blog.tsx"),
 			layout("components/pages/article_layout.tsx", [
 				route(":article_id", "components/pages/article0.tsx"),
 			]),
 		]),
-		route("customer_support", "components/pages/customer_support.tsx"),
+		route("contact", "components/pages/customer_support.tsx"),
 	]),
 	layout("components/pages/auth_layout.tsx", [
 		route("signup", "components/pages/sign_up.tsx"),

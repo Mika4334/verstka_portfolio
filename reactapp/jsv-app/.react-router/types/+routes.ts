@@ -33,15 +33,15 @@ type Pages = {
   "/pricing": {
     params: {};
   };
-  "/articles": {
+  "/blog": {
     params: {};
   };
-  "/articles/:article_id": {
+  "/blog/:article_id": {
     params: {
       "article_id": string;
     };
   };
-  "/customer_support": {
+  "/contact": {
     params: {};
   };
   "/signup": {
@@ -58,7 +58,7 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/*" | "/categories" | "/restpreview/:rest_id" | "/cart" | "/pricing" | "/articles" | "/articles/:article_id" | "/customer_support" | "/signup" | "/signin" | "/forgetpassword";
+    page: "/" | "/*" | "/categories" | "/restpreview/:rest_id" | "/cart" | "/pricing" | "/blog" | "/blog/:article_id" | "/contact" | "/signup" | "/signin" | "/forgetpassword";
   };
   "components/pages/catchall.tsx": {
     id: "components/pages/catchall";
@@ -66,7 +66,7 @@ type RouteFiles = {
   };
   "components/pages/main_layout.tsx": {
     id: "components/pages/main_layout";
-    page: "/" | "/categories" | "/restpreview/:rest_id" | "/cart" | "/pricing" | "/articles" | "/articles/:article_id" | "/customer_support";
+    page: "/" | "/categories" | "/restpreview/:rest_id" | "/cart" | "/pricing" | "/blog" | "/blog/:article_id" | "/contact";
   };
   "components/pages/home.tsx": {
     id: "components/pages/home";
@@ -88,21 +88,21 @@ type RouteFiles = {
     id: "components/pages/pricing";
     page: "/pricing";
   };
-  "components/pages/articles.tsx": {
-    id: "components/pages/articles";
-    page: "/articles";
+  "components/pages/blog.tsx": {
+    id: "components/pages/blog";
+    page: "/blog";
   };
   "components/pages/article_layout.tsx": {
     id: "components/pages/article_layout";
-    page: "/articles/:article_id";
+    page: "/blog/:article_id";
   };
   "components/pages/article0.tsx": {
     id: "components/pages/article0";
-    page: "/articles/:article_id";
+    page: "/blog/:article_id";
   };
   "components/pages/customer_support.tsx": {
     id: "components/pages/customer_support";
-    page: "/customer_support";
+    page: "/contact";
   };
   "components/pages/auth_layout.tsx": {
     id: "components/pages/auth_layout";
@@ -131,7 +131,7 @@ type RouteModules = {
   "components/pages/restaruant_preview": typeof import("./src/components/pages/restaruant_preview.tsx");
   "components/pages/cart": typeof import("./src/components/pages/cart.tsx");
   "components/pages/pricing": typeof import("./src/components/pages/pricing.tsx");
-  "components/pages/articles": typeof import("./src/components/pages/articles.tsx");
+  "components/pages/blog": typeof import("./src/components/pages/blog.tsx");
   "components/pages/article_layout": typeof import("./src/components/pages/article_layout.tsx");
   "components/pages/article0": typeof import("./src/components/pages/article0.tsx");
   "components/pages/customer_support": typeof import("./src/components/pages/customer_support.tsx");

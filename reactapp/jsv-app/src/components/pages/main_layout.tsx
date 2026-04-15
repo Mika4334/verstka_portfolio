@@ -14,7 +14,7 @@ export default function MainLayout() {
 	return (
 		<>
 			<main className='flex flex-col gap-30 max-w-full w-full px-5 lg:px-17 xl:px-23.75 overflow-x-hidden'>
-				<NavBar hideNavLoginSignup={false} />
+				<NavBar hideNavLoginSignup={false} hideBottomBorder={false} />
 				<Outlet />
 				<div className='relative left-1/2 right-1/2 w-screen -ml-[50vw] mr-[50vw]'>
 					<Footer />

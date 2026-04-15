@@ -1,6 +1,9 @@
 import { CIcon } from "./CIcon";
 import React, { useState, useRef, useEffect } from "react";
 
+// Продумать как уменьшить количество показываемых элементов
+// в зависимости от ширины экрана ( md )
+
 export function ArticleSlider({
 	children,
 	forceCol,
@@ -36,7 +39,7 @@ export function ArticleSlider({
 
 	return (
 		<>
-			<div className='max-w-full flex overflow-x-hidden py-2'>
+			<div className='max-w-full flex overflow-x-hidden py-2 pr-4 pb-4 sm:pr-10 sm:pb-10'>
 				<div
 					ref={divRef}
 					className={
@@ -49,7 +52,7 @@ export function ArticleSlider({
 				</div>
 			</div>
 			<div
-				className={`${forceCol ? (showButton ? "flex items-center gap-10 justify-center" : "hidden") : ""} `}
+				className={`${forceCol ? (showButton ? "flex items-center gap-10 justify-center" : "hidden") : "flex gap-10 p-10"} `}
 			>
 				<button
 					onClick={prevSlide}

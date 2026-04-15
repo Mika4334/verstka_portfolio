@@ -1,14 +1,15 @@
 // 🚀 АВТОГЕНЕРИРОВАННЫЕ ИМПОРТЫ
-// 08.04.2026 10:52:55
-// Файлов: 61, Экспортов: 67
-// Хеш: 5c4b28bb
+// 15.04.2026 09:41:25
+// Файлов: 64, Экспортов: 72
+// Хеш: 21f120cb
 //
 
 // import { FOF } from './components/ui-kit/404';
 // import { AppleMenu } from './components/ui-kit/AppleMenu';
 // import { ArticleCard } from './components/ui-kit/ArticleCard';
-// import { ArticlePost } from './components/ui-kit/ArticlePost';
+// import { ArticlePost } from './components/views/ArticlePost';
 // import { ArticleSlider } from './components/ui-kit/ArticleSlider';
+// import { ArticleView } from './components/views/ArticleView';
 // import { Badge } from './components/ui-kit/Badge';
 // import { PrimaryButton } from './components/ui-kit/BaseButton';
 // import { SecondaryButton } from './components/ui-kit/BaseButton';
@@ -22,6 +23,9 @@
 // import { CIcon } from './components/ui-kit/CIcon';
 // import { CImage } from './components/ui-kit/CImage';
 // import { ControlPurchase } from './components/views/ControlPurchase';
+// import { SignUpView } from './components/views/Credentials';
+// import { SignInView } from './components/views/Credentials';
+// import { ForgetView } from './components/views/Credentials';
 // import { CustomersSay } from './components/views/CustomersSay';
 // import { CustomerSupportForm } from './components/ui-kit/CustomerSupportForm';
 // import { DiscountCard } from './components/ui-kit/DiscountCard';
@@ -46,6 +50,7 @@
 // import { HeroLineText } from './components/ui-kit/HeroLineText';
 // import { HeroP } from './components/ui-kit/HeroP';
 // import { HR } from './components/ui-kit/HR';
+// import { LastArticles } from './components/views/LastArticles';
 // import { SignUpForm } from './components/ui-kit/LoginForm';
 // import { SignInForm } from './components/ui-kit/LoginForm';
 // import { ForgetForm } from './components/ui-kit/LoginForm';
@@ -79,8 +84,9 @@
 export { FOF } from './ui-kit/404';
 export { AppleMenu } from './ui-kit/AppleMenu';
 export { ArticleCard } from './ui-kit/ArticleCard';
-export { ArticlePost } from './ui-kit/ArticlePost';
+export { ArticlePost } from './views/ArticlePost';
 export { ArticleSlider } from './ui-kit/ArticleSlider';
+export { ArticleView } from './views/ArticleView';
 export { Badge } from './ui-kit/Badge';
 export { PrimaryButton } from './ui-kit/BaseButton';
 export { SecondaryButton } from './ui-kit/BaseButton';
@@ -94,6 +100,9 @@ export { ChooseOption } from './ui-kit/ChooseOption';
 export { CIcon } from './ui-kit/CIcon';
 export { CImage } from './ui-kit/CImage';
 export { ControlPurchase } from './views/ControlPurchase';
+export { SignUpView } from './views/Credentials';
+export { SignInView } from './views/Credentials';
+export { ForgetView } from './views/Credentials';
 export { CustomersSay } from './views/CustomersSay';
 export { CustomerSupportForm } from './ui-kit/CustomerSupportForm';
 export { DiscountCard } from './ui-kit/DiscountCard';
@@ -118,6 +127,7 @@ export { HeroH1 } from './ui-kit/HeroH1';
 export { HeroLineText } from './ui-kit/HeroLineText';
 export { HeroP } from './ui-kit/HeroP';
 export { HR } from './ui-kit/HR';
+export { LastArticles } from './views/LastArticles';
 export { SignUpForm } from './ui-kit/LoginForm';
 export { SignInForm } from './ui-kit/LoginForm';
 export { ForgetForm } from './ui-kit/LoginForm';

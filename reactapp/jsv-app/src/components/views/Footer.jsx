@@ -5,7 +5,7 @@ export function Footer() {
 	return (
 		<div
 			className='w-full flex flex-col gap-10 bg-hr/50 
-			pt-13 sm:pt-17 sm:pb-14.25pt-[96px] md:pb-20.25 px-5 lg:px-17 xl:px-23.75
+			py-13 sm:py-17 md:py-20.25 px-5 lg:px-17 xl:px-23.75
 			mt-10'
 		>
 			<div className='flex justify-between'>

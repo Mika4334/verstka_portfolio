@@ -16,7 +16,6 @@ export function meta({}: Route.MetaArgs) {
 	];
 }
 
-// ADD BURGER MENU
 export default function Home() {
 	return (
 		<>

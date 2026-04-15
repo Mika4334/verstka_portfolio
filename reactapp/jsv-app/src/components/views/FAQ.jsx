@@ -1,7 +1,6 @@
 import { CIcon } from "../ui-kit/CIcon";
 import { H2 } from "../ui-kit/H2";
 import { QuestionsAnswers } from "../ui-kit/QuestionsAnswers";
-import React from "react";
 
 export function FAQ({ qa }) {
 	// let questionsAnswers = React.Children.toArray(children);
@@ -28,6 +27,8 @@ export function FAQ({ qa }) {
 		</div>
 	);
 }
+
+// import React from "react";
 // export function FAQ({ children }) {
 // 	let questionsAnswers = React.Children.toArray(children);
 // 	return (

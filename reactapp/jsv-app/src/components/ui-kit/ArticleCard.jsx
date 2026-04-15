@@ -13,7 +13,7 @@ export function ArticleCard({
 	return (
 		<a
 			href='/'
-			className='min-w-66.5 max-h-94 xl:w-87 xl:h-110 xl:justify-around flex flex-col px-3.25 py-4.25 gap-3.75 bg-white rounded-xl'
+			className='min-w-66.5 max-h-94 xl:w-87 xl:h-110 xl:justify-around flex flex-col px-3.25 py-4.25 gap-3.75 bg-white rounded-xl shadow-[7px_15px_10px_rgba(0,0,0,0.25)]'
 		>
 			<CImage
 				src={headImage}

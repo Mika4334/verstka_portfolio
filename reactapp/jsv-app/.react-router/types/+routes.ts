@@ -33,20 +33,40 @@ type Pages = {
   "/pricing": {
     params: {};
   };
+  "/articles": {
+    params: {};
+  };
+  "/articles/:article_id": {
+    params: {
+      "article_id": string;
+    };
+  };
+  "/customer_support": {
+    params: {};
+  };
+  "/signup": {
+    params: {};
+  };
+  "/signin": {
+    params: {};
+  };
+  "/forgetpassword": {
+    params: {};
+  };
 };
 
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/*" | "/categories" | "/restpreview/:rest_id" | "/cart" | "/pricing";
+    page: "/" | "/*" | "/categories" | "/restpreview/:rest_id" | "/cart" | "/pricing" | "/articles" | "/articles/:article_id" | "/customer_support" | "/signup" | "/signin" | "/forgetpassword";
   };
   "components/pages/catchall.tsx": {
     id: "components/pages/catchall";
     page: "/*";
   };
-  "components/pages/layout.tsx": {
-    id: "components/pages/layout";
-    page: "/" | "/categories" | "/restpreview/:rest_id" | "/cart" | "/pricing";
+  "components/pages/main_layout.tsx": {
+    id: "components/pages/main_layout";
+    page: "/" | "/categories" | "/restpreview/:rest_id" | "/cart" | "/pricing" | "/articles" | "/articles/:article_id" | "/customer_support";
   };
   "components/pages/home.tsx": {
     id: "components/pages/home";
@@ -68,15 +88,55 @@ type RouteFiles = {
     id: "components/pages/pricing";
     page: "/pricing";
   };
+  "components/pages/articles.tsx": {
+    id: "components/pages/articles";
+    page: "/articles";
+  };
+  "components/pages/article_layout.tsx": {
+    id: "components/pages/article_layout";
+    page: "/articles/:article_id";
+  };
+  "components/pages/article0.tsx": {
+    id: "components/pages/article0";
+    page: "/articles/:article_id";
+  };
+  "components/pages/customer_support.tsx": {
+    id: "components/pages/customer_support";
+    page: "/customer_support";
+  };
+  "components/pages/auth_layout.tsx": {
+    id: "components/pages/auth_layout";
+    page: "/signup" | "/signin" | "/forgetpassword";
+  };
+  "components/pages/sign_up.tsx": {
+    id: "components/pages/sign_up";
+    page: "/signup";
+  };
+  "components/pages/sign_in.tsx": {
+    id: "components/pages/sign_in";
+    page: "/signin";
+  };
+  "components/pages/forget_password.tsx": {
+    id: "components/pages/forget_password";
+    page: "/forgetpassword";
+  };
 };
 
 type RouteModules = {
   "root": typeof import("./src/root.tsx");
   "components/pages/catchall": typeof import("./src/components/pages/catchall.tsx");
-  "components/pages/layout": typeof import("./src/components/pages/layout.tsx");
+  "components/pages/main_layout": typeof import("./src/components/pages/main_layout.tsx");
   "components/pages/home": typeof import("./src/components/pages/home.tsx");
   "components/pages/category_filter": typeof import("./src/components/pages/category_filter.tsx");
   "components/pages/restaruant_preview": typeof import("./src/components/pages/restaruant_preview.tsx");
   "components/pages/cart": typeof import("./src/components/pages/cart.tsx");
   "components/pages/pricing": typeof import("./src/components/pages/pricing.tsx");
+  "components/pages/articles": typeof import("./src/components/pages/articles.tsx");
+  "components/pages/article_layout": typeof import("./src/components/pages/article_layout.tsx");
+  "components/pages/article0": typeof import("./src/components/pages/article0.tsx");
+  "components/pages/customer_support": typeof import("./src/components/pages/customer_support.tsx");
+  "components/pages/auth_layout": typeof import("./src/components/pages/auth_layout.tsx");
+  "components/pages/sign_up": typeof import("./src/components/pages/sign_up.tsx");
+  "components/pages/sign_in": typeof import("./src/components/pages/sign_in.tsx");
+  "components/pages/forget_password": typeof import("./src/components/pages/forget_password.tsx");
 };

@@ -3,7 +3,7 @@ import { Dropdown } from "./Dropdown";
 
 export function PlanCard({ planName, price, featureItems }) {
 	return (
-		<div className='w-max-full w-78 px-6 py-8 bg-white rounded-lg flex flex-col justify-around gap-5 sm:hidden'>
+		<div className='w-max-full w-78 px-6 py-8 bg-white rounded-lg flex flex-col justify-around gap-5 sm:hidden shadow-[7px_7px_35px_rgba(0,0,0,0.25)]'>
 			<h4 className='capitalize text-4xl!'>{planName.toLowerCase()}</h4>
 			<div className='flex items-center h-13'>
 				<p className='self-start pt-1'>$</p>

@@ -3,13 +3,21 @@ import { LoginButton, PrimaryButton } from "../ui-kit/BaseButton";
 import { BurgerMenu } from "../ui-kit/BurgerMenu";
 import { Logo } from "../ui-kit/Logo";
 
-export function NavBar() {
+export function NavBar({
+	hideLogoName = true,
+	hideNavLoginSignup,
+	hideBottomBorder,
+}) {
 	return (
-		<nav className='max-w-full pt-12 pb-6.25 border-b border-hr'>
+		<nav
+			className={`max-w-full pt-12 pb-6.25 ${hideBottomBorder ? "" : "border-b border-hr"} `}
+		>
 			<div className='flex justify-between items-center w-full'>
-				<Logo withName />
+				<Logo withName={hideLogoName} />
 				<BurgerMenu />
-				<div className='hidden md:flex items-center'>
+				<div
+					className={`${hideNavLoginSignup ? "hidden!" : ""} hidden md:flex items-center`}
+				>
 					<NavMenu />
 					<div className='flex justify-between w-58 w-max-58 min-h-11 h-15'>
 						<LoginButton textValue='Login' width='w-full' height='h-full' />

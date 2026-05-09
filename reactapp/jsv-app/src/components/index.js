@@ -1,7 +1,7 @@
 // 🚀 АВТОГЕНЕРИРОВАННЫЕ ИМПОРТЫ
-// 15.04.2026 09:41:25
-// Файлов: 64, Экспортов: 72
-// Хеш: 21f120cb
+// 20.04.2026 06:42:19
+// Файлов: 65, Экспортов: 73
+// Хеш: c04e9e0f
 //
 
 // import { FOF } from './components/ui-kit/404';
@@ -69,6 +69,7 @@
 // import { SearchBar } from './components/ui-kit/SearchBar';
 // import { SignUpCard } from './components/ui-kit/SignUpCard';
 // import { SITE } from './components/site';
+// import { SocialLinks } from './components/ui-kit/SocialLinks';
 // import { Stars } from './components/ui-kit/Stars';
 // import { StatusCard } from './components/ui-kit/StatusCard';
 // import { Trustpilot } from './components/ui-kit/Truspilot';
@@ -146,6 +147,7 @@ export { ReviewSlider } from './ui-kit/ReviewSlider';
 export { SearchBar } from './ui-kit/SearchBar';
 export { SignUpCard } from './ui-kit/SignUpCard';
 export { SITE } from './site';
+export { SocialLinks } from './ui-kit/SocialLinks';
 export { Stars } from './ui-kit/Stars';
 export { StatusCard } from './ui-kit/StatusCard';
 export { Trustpilot } from './ui-kit/Truspilot';

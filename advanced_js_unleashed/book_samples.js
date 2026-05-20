@@ -1572,3 +1572,129 @@
 // }
 
 // 212 page
+
+// let array = [1, 4, 9, 16];
+// Array.prototype.myMap = function (fn) {
+// 	let newArray = [];
+// 	for (const element of this) {
+// 		newArray.push(fn(element));
+// 	}
+// 	return newArray;
+// };
+// array.myMap((x) => x * 1);
+
+//~///////~///
+// let array = [1, 4, 9, 16];
+// Array.prototype.myMap = function (fn) {
+// 	let newArray = [];
+// 	for (let index = 0; index < this.length; index++) {
+// 		newArray.push(fn(this[index], index, this));
+// 	}
+// 	return newArray;
+// };
+// console.log(array.myMap((x) => x * 10));
+
+// function Student(name, age, id, courses) {
+// 	this.name = name;
+// 	this.age = age;
+// 	this.id = id;
+// 	this.courses = courses;
+// }
+
+// Student.prototype[Symbol.iterator] = function () {
+// 	// "this" refers to the student object on which this method is called
+// 	const currentStudent = this;
+// 	const studentProps = Object.getOwnPropertyNames(currentStudent);
+// 	let propIndex = 0;
+// 	const studentIterator = {
+// 		next: () => {
+// 			if (propIndex < studentProps.length) {
+// 				const key = studentProps[propIndex];
+// 				const value = currentStudent[key];
+// 				propIndex++;
+// 				const formattedValue = `${key.padStart(7)} => ${value}`;
+
+// 				return {
+// 					value: formattedValue,
+// 					done: false,
+// 				};
+// 			}
+
+// 			return {
+// 				value: undefined,
+// 				done: true,
+// 			};
+// 		},
+// 	};
+
+// 	return studentIterator;
+// };
+
+// const jack = new Student("Jack", 20, "21A", ["Maths", "Biology", "Physics"]);
+// for (const val of jack) {
+// 	console.log(val);
+// }
+/*
+8 name => Jack
+9 age => 20
+10 id => 21A
+11 courses => Maths,Biology,Physics
+12 */
+
+// Generators
+//~///////~///
+function* odds() {
+	for (let i = 1; i <= 10; i += 2) {
+		yield i;
+	}
+}
+for (const num of odds()) {
+	console.log(num);
+}
+// The function* syntax marks a function as a generator function. Space between * and function
+// is also valid syntax: function *.
+// • The yield keyword produces a value. The value on the right of the yield keyword is what we
+// get when we call the next method on the iterator object returned from the generator function.
+// The yield keyword also marks a place where a generator function is paused.
+
+//~///////~///
+// Infinite sequence
+// function* randomNumberGenerator(max) {
+// 	while (true) {
+// 		yield Math.floor(Math.random() * max);
+// 	}
+// }
+// const randomNumGen = randomNumberGenerator(10);
+// // log 10 random numbers
+// for (let i = 0; i < 10; i++) {
+// 	console.log(randomNumGen.next().value);
+// }
+//~///////~///
+function Student(name, age, id, courses) {
+	this.name = name;
+	this.age = age;
+	this.id = id;
+	this.courses = courses;
+}
+Student.prototype[Symbol.iterator] = function* () {
+	// "this" refers to the student object on which this method is called
+	const currentStudent = this;
+	const studentProps = Object.getOwnPropertyNames(currentStudent);
+
+	for (let i = 0; i < studentProps.length; i++) {
+		const key = studentProps[i];
+		const value = currentStudent[key];
+		const formattedValue = `${key.padStart(7)} => ${value}`;
+
+		yield formattedValue;
+	}
+};
+const jack = new Student("Jack", 20, "21A", ["Maths", "Biology", "Physics"]);
+for (const val of jack) {
+	console.log(val);
+}
+
+// Consuming values
+//~///////~///
+
+// page 219

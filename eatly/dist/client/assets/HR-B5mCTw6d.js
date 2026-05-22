@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-CKgUh5eB.js";var t=e();function n({color:e=`bg-hr`,customStyle:n=`h-0.5 border-0`}){return(0,t.jsx)(`hr`,{className:`${e||``} ${n||``}`})}export{n as t};

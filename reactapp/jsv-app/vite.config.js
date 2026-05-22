@@ -7,7 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-	base: "./dist/client/",
+	base: "./",
 	// plugins: [preReloadPlugin(), tailwindcss(), reactRouter(), react()],
 	// plugins: [preReloadPlugin(), tailwindcss(), reactRouter()],
 	plugins: [tailwindcss(), reactRouter()],

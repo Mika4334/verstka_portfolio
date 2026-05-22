@@ -4,10 +4,16 @@
 		"**/.server/**/*",
 		"**/.client/**/*",
 		".react-router/types/**/*",
-		"../../dist",
-		"../../dist",
-		"../../dist",
-		"../../dist"
+		"../../eatly/dist",
+		"../../eatly/dist",
+		"../../eatly/dist",
+		"../../eatly/dist",
+		"../../eatly/dist",
+		"../../eatly/dist",
+		"../../eatly/dist",
+		"../../eatly/client",
+		"../../eatly/dist",
+		"../../eatly/dist"
 	],
 	"compilerOptions": {
 		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",

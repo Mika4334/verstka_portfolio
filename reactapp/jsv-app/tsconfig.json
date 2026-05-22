@@ -3,7 +3,11 @@
 		"**/*",
 		"**/.server/**/*",
 		"**/.client/**/*",
-		".react-router/types/**/*"
+		".react-router/types/**/*",
+		"../../dist",
+		"../../dist",
+		"../../dist",
+		"../../dist"
 	],
 	"compilerOptions": {
 		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",

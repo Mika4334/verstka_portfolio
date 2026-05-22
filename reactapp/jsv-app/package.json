@@ -6,7 +6,8 @@
 	"scripts": {
 		"rrdev": "react-router dev",
 		"dev": "vite",
-		"build": "vite build --base=./",
+		"build0": "vite build --base=./",
+		"build": "react-router build",
 		"lint": "eslint .",
 		"preview": "vite preview"
 	},

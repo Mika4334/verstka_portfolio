@@ -1643,14 +1643,14 @@
 
 // Generators
 //~///////~///
-function* odds() {
-	for (let i = 1; i <= 10; i += 2) {
-		yield i;
-	}
-}
-for (const num of odds()) {
-	console.log(num);
-}
+// function* odds() {
+// 	for (let i = 1; i <= 10; i += 2) {
+// 		yield i;
+// 	}
+// }
+// for (const num of odds()) {
+// 	console.log(num);
+// }
 // The function* syntax marks a function as a generator function. Space between * and function
 // is also valid syntax: function *.
 // • The yield keyword produces a value. The value on the right of the yield keyword is what we
@@ -1670,31 +1670,222 @@ for (const num of odds()) {
 // 	console.log(randomNumGen.next().value);
 // }
 //~///////~///
-function Student(name, age, id, courses) {
-	this.name = name;
-	this.age = age;
-	this.id = id;
-	this.courses = courses;
-}
-Student.prototype[Symbol.iterator] = function* () {
-	// "this" refers to the student object on which this method is called
-	const currentStudent = this;
-	const studentProps = Object.getOwnPropertyNames(currentStudent);
+// function Student(name, age, id, courses) {
+// 	this.name = name;
+// 	this.age = age;
+// 	this.id = id;
+// 	this.courses = courses;
+// }
+// Student.prototype[Symbol.iterator] = function* () {
+// 	// "this" refers to the student object on which this method is called
+// 	const currentStudent = this;
+// 	const studentProps = Object.getOwnPropertyNames(currentStudent);
 
-	for (let i = 0; i < studentProps.length; i++) {
-		const key = studentProps[i];
-		const value = currentStudent[key];
-		const formattedValue = `${key.padStart(7)} => ${value}`;
+// 	for (let i = 0; i < studentProps.length; i++) {
+// 		const key = studentProps[i];
+// 		const value = currentStudent[key];
+// 		const formattedValue = `${key.padStart(7)} => ${value}`;
 
-		yield formattedValue;
-	}
-};
-const jack = new Student("Jack", 20, "21A", ["Maths", "Biology", "Physics"]);
-for (const val of jack) {
-	console.log(val);
-}
+// 		yield formattedValue;
+// 	}
+// };
+// const jack = new Student("Jack", 20, "21A", ["Maths", "Biology", "Physics"]);
+// for (const val of jack) {
+// 	console.log(val);
+// }
 
 // Consuming values
 //~///////~///
+// function* myGenerator() {
+// 	const name = yield "What is your name?";
+// 	yield `Hello ${name}!`;
+// }
 
-// page 219
+// const gen = myGenerator();
+// console.log(gen.next().value); // What is your name?
+// console.log(gen.next("John").value); // Hello John!
+
+// //~///////~///
+// function* generatorRandomNumber(limit) {
+// 	while (true) {
+// 		const randomNumber = Math.floor(Math.random() * limit);
+// 		limit = yield randomNumber;
+// 	}
+// }
+// const randomNumGenerator = generatorRandomNumber(10);
+// console.log(randomNumGenerator.next());
+// console.log(randomNumGenerator.next(20));
+// console.log(randomNumGenerator.next(40));
+
+//~///////~///
+// //Delegating to other iterators
+// function* evens() {
+// 	yield 2;
+// 	yield 4;
+// 	yield 6;
+// }
+// function* odds() {
+// 	yield 1;
+// 	yield 3;
+// 	yield 5;
+// }
+// function* printNums(isEven) {
+// 	if (isEven) {
+// 		yield* evens();
+// 	} else {
+// 		yield* odds();
+// 	}
+// }
+// for (const num of printNums(true)) {
+// 	console.log(num);
+// }
+
+//~///////~///
+// async iterable
+// function delayedValue(time, value) {
+// 	return new Promise((resolve /*, reject */) => {
+// 		setTimeout(() => resolve(value), time);
+// 	});
+// }
+
+// async function* generate() {
+// 	yield delayedValue(2000, 1);
+// 	yield delayedValue(1000, 2);
+// 	yield delayedValue(500, 3);
+// 	yield delayedValue(250, 4);
+// 	yield delayedValue(125, 5);
+// 	yield delayedValue(50, 6);
+// 	console.log("All done!");
+// }
+// async function main() {
+// 	for await (const value of generate()) {
+// 		console.log("value", value);
+// 	}
+// }
+// main().catch((e) => console.error(e));
+
+//~///////~///
+// function fetchUsers(userCount) {
+// 	// keep max user count to 10
+// 	if (userCount > 10) {
+// 		userCount = 10;
+// 	}
+// 	const BASE_URL = "https://jsonplaceholder.typicode.com/users";
+// 	let userId = 1;
+// 	const userAsyncIterator = {
+// 		async next() {
+// 			if (userId > userCount) {
+// 				return { value: undefined, done: true };
+// 			}
+
+// 			const response = await fetch(`${BASE_URL}/${userId++}`);
+
+// 			if (response.ok) {
+// 				const userData = await response.json();
+// 				return { value: userData, done: false };
+// 			} else {
+// 				throw new Error("failed to fetch users");
+// 			}
+// 		},
+// 		[Symbol.asyncIterator]() {
+// 			return this;
+// 		},
+// 	};
+
+// 	return userAsyncIterator;
+// }
+
+// async function getData() {
+// 	const usersAsyncIterator = fetchUsers(3);
+
+// 	let userIteratorResult = await usersAsyncIterator.next();
+
+// 	while (!userIteratorResult.done) {
+// 		console.log(userIteratorResult.value);
+// 		userIteratorResult = await usersAsyncIterator.next();
+// 	}
+// }
+// getData();
+
+//~///////~///
+//async generators
+// async function* fetchUsers(userCount) {
+// 	// keep max user count to 10
+// 	if (userCount > 10) {
+// 		userCount = 10;
+// 	}
+// 	const BASE_URL = "https://jsonplaceholder.typicode.com/users";
+// 	for (let userId = 1; userId <= userCount; userId++) {
+// 		const response = await fetch(`${BASE_URL}/${userId}`);
+
+// 		if (response.ok) {
+// 			const userData = await response.json();
+// 			yield userData;
+// 			// yield response.json();
+// 		} else {
+// 			throw new Error("failed to fetch users");
+// 		}
+// 	}
+// }
+
+// async function getData() {
+// 	const usersAsyncGenerator = fetchUsers(5);
+
+// 	let userGeneratorResult = await usersAsyncGenerator.next();
+
+// 	while (!userGeneratorResult.done) {
+// 		console.log(userGeneratorResult.value);
+// 		userGeneratorResult = await usersAsyncGenerator.next();
+// 	}
+// }
+// getData();
+
+//~///////~///
+// for await…of
+// async function* fetchUsers(userCount) {
+// 	// keep max user count to 10
+// 	if (userCount > 10) {
+// 		userCount = 10;
+// 	}
+// 	const BASE_URL = "https://jsonplaceholder.typicode.com/users";
+// 	for (let userId = 1; userId <= userCount; userId++) {
+// 		const response = await fetch(`${BASE_URL}/${userId}`);
+// 		if (response.ok) {
+// 			const userData = await response.json();
+// 			yield userData;
+// 			// yield response.json();
+// 		} else {
+// 			throw new Error("failed to fetch users");
+// 		}
+// 	}
+// }
+
+// async function getData() {
+// 	for await (const user of fetchUsers(3)) {
+// 		console.log(user);
+// 	}
+// }
+// getData();
+
+//Debugging
+
+//~///////~///
+// function isOldEnoughToDrive() {
+// 	const age = Number(prompt("What is your age?"));
+// 	let result;
+
+// 	// debugger;
+
+// 	if (age === 18) {
+// 		result = "You are just about the right age to drive!";
+// 	} else if (age < 18) {
+// 		result = "Not allowed to drive";
+// 	} else if (age > 18) {
+// 		result = "Allowed to drive!";
+// 	} else {
+// 		result = "invalid age value provided";
+// 	}
+// 	const resultElm = document.querySelector("#result");
+// 	resultElm.innerHTML = result;
+// }
+// isOldEnoughToDrive();

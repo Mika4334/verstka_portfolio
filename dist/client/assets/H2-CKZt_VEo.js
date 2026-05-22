@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-Bz_Lre7Z.js";var t=e();function n({beforeText:e,spanText:n,afterText:r,textSize:i,Sbrk:a,brkS:o}){return(0,t.jsxs)(`h2`,{className:i,children:[e,o&&(0,t.jsx)(`br`,{}),(0,t.jsx)(`span`,{className:`text-pm`,children:n}),a&&(0,t.jsx)(`br`,{}),r]})}export{n as t};

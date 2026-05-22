@@ -1,1 +1,0 @@
-import{O as e,t}from"./jsx-runtime-Bz_Lre7Z.js";var n=t();function r(){return(0,n.jsx)(`div`,{className:`flex items-center justify-center w-full h-full`,children:(0,n.jsx)(`h1`,{className:`text-pm`,children:`404 - not found`})})}function i({}){return[{title:`404`},{name:`not found`,content:`Wrong path`}]}var a=e(function(){return(0,n.jsx)(r,{})});export{a as default,i as meta};

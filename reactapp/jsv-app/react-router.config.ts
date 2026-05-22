@@ -5,6 +5,6 @@ export default {
 	buildDirectory: "dist",
 	ssr: false,
 	future: {
-		v8_middleware: false,
+		v8_middleware: true,
 	},
 } satisfies Config;

@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-Bz_Lre7Z.js";var t=e();function n({width:e,height:n,src:r,alt:i,cover:a,center:o,otherStyle:s}){return(0,t.jsx)(`div`,{className:`${e} ${n} ${r} ${a?`bg-cover`:`bg-contain`} ${o??`bg-center`} ${s||``} bg-no-repeat flex justify-center items-center`,children:(0,t.jsx)(`img`,{className:`-z-1`,alt:i})})}export{n as t};

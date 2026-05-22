@@ -14,11 +14,6 @@ type Pages = {
   "/": {
     params: {};
   };
-  "/*": {
-    params: {
-      "*": string;
-    };
-  };
   "/categories": {
     params: {};
   };
@@ -58,11 +53,7 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/*" | "/categories" | "/restpreview/:rest_id" | "/cart" | "/pricing" | "/blog" | "/blog/:article_id" | "/contact" | "/signup" | "/signin" | "/forgetpassword";
-  };
-  "components/pages/catchall.tsx": {
-    id: "components/pages/catchall";
-    page: "/*";
+    page: "/" | "/categories" | "/restpreview/:rest_id" | "/cart" | "/pricing" | "/blog" | "/blog/:article_id" | "/contact" | "/signup" | "/signin" | "/forgetpassword";
   };
   "components/pages/main_layout.tsx": {
     id: "components/pages/main_layout";
@@ -124,7 +115,6 @@ type RouteFiles = {
 
 type RouteModules = {
   "root": typeof import("./src/root.tsx");
-  "components/pages/catchall": typeof import("./src/components/pages/catchall.tsx");
   "components/pages/main_layout": typeof import("./src/components/pages/main_layout.tsx");
   "components/pages/home": typeof import("./src/components/pages/home.tsx");
   "components/pages/category_filter": typeof import("./src/components/pages/category_filter.tsx");

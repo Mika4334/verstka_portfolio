@@ -4,7 +4,8 @@
 		"**/.server/**/*",
 		"**/.client/**/*",
 		".react-router/types/**/*",
-		"/verstka_portfolio/eatly/"
+		"/verstka_portfolio/eatly/",
+		"../../eatly/assets"
 	],
 	"compilerOptions": {
 		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",

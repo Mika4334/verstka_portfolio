@@ -7,7 +7,6 @@ import {
 } from "@react-router/dev/routes";
 
 export default [
-	route("*", "components/pages/catchall.tsx"),
 	layout("components/pages/main_layout.tsx", [
 		index("components/pages/home.tsx"),
 		// layout("components/pages/auth.tsx", [
@@ -29,4 +28,5 @@ export default [
 		route("signin", "components/pages/sign_in.tsx"),
 		route("forgetpassword", "components/pages/forget_password.tsx"),
 	]),
+	route("*", "components/pages/catchall.tsx"),
 ] satisfies RouteConfig;

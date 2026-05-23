@@ -1,11 +1,15 @@
 // Объект: ключ = папка, значение = описание проекта
 const projects = {
-	"4konya": "Адаптивная вёрстка сайта для коворкинга. Flexbox, Grid, анимации.",
-	mntn: "Лендинг для альпинистов. Параллакс, адаптив, чистый CSS/JS.",
+	eatly:
+		"Адаптивная многостраничная вёрстка сайта. Vite, React, ReactRouter (framework mode), Tailwind",
+	"4konya":
+		"Адаптивная вёрстка сайта для коворкинга. PixelPerfect, Flexbox, Grid, анимации.",
+	mntn: "Лендинг для альпинистов. Параллакс, адаптив, Tailwind/JS.",
 	fetch_jsonplaceholder:
 		"Работа с API: получение и отображение данных через fetch().",
-	flexes_layout: "Коллекция макетов на Flexbox. Практика вёрстки.",
-	"tik-tak-toe": "Игра «Крестики-нолики». Логика на React.",
+	flexes_layout:
+		"Коллекция макетов на Flexbox (boilerplate/placeholder). Практика вёрстки.",
+	"tik-tak-toe": "Игра «Крестики-нолики». Логика на React. Сборка Vite",
 };
 
 const baseUrl = "https://mika4334.github.io/verstka_portfolio/";

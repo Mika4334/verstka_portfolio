@@ -26,10 +26,10 @@ export function NavBar({
 						<NavMenu />
 					</div>
 					<div className='flex justify-between w-58 w-max-58 min-h-11 h-15'>
-						<NavLink to='signup' end>
+						<NavLink className='w-full' to='signup' end>
 							<LoginButton textValue='Login' width='w-full' height='h-full' />
 						</NavLink>
-						<NavLink to='signin' end>
+						<NavLink className='w-full' to='signin' end>
 							<PrimaryButton
 								textValue='Signup'
 								width='w-full'

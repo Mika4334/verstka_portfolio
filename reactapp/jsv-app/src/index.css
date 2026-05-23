@@ -69,9 +69,9 @@ header {
 }
 
 .features {
-	@apply sm:flex-row sm:justify-between sm:h-55 sm:pt-12.25 sm:pb-12.25 sm:bg-[url(svg/BG.svg)] 
+	@apply sm:flex-row sm:justify-between sm:h-55 sm:pt-12.25 sm:pb-12.25 sm:bg-[url(./svg/BG.svg)] 
   lg:pl-62.25 lg:pr-62.25 
-  flex flex-col justify-around items-center h-187 w-full pl-10 pr-10 bg-no-repeat bg-cover bg-center bg-[url(svg/BGmobile.svg)]
+  flex flex-col justify-around items-center h-187 w-full pl-10 pr-10 bg-no-repeat bg-cover bg-center bg-[url(./svg/BGmobile.svg)]
   text-center text-white;
 }
 

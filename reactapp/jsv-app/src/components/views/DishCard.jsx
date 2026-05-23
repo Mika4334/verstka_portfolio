@@ -18,7 +18,7 @@ export function DishCard({ w, imgW, h, srcImg, alt, badgeText, badgeColor }) {
 						w='w-50'
 						h='h-8'
 						position='right-[15px] top-[15px]'
-						src=' /svg/heart.svg'
+						src='/svg/heart.svg'
 						alt='CurlArrow'
 					/>
 				</a>

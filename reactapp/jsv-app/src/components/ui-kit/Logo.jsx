@@ -1,7 +1,13 @@
+import { NavLink } from "react-router";
+
 export function Logo({ withName }) {
 	return (
 		<>
-			<a href='' className={withName ? "block logo w-28 h-10.5" : "hidden"}>
+			<NavLink
+				className={withName ? "block logo w-28 h-10.5" : "hidden"}
+				to='/'
+			>
+				{/* <a href='' className={withName ? "block logo w-28 h-10.5" : "hidden"}> */}
 				<svg
 					width='112'
 					height='43'
@@ -60,8 +66,13 @@ export function Logo({ withName }) {
 						fill='#6C5FBC'
 					/>
 				</svg>
-			</a>
-			<a href='' className={withName ? "hidden" : "block logo w-28 h-10.5"}>
+				{/* </a> */}
+			</NavLink>
+			<NavLink
+				className={withName ? "hidden" : "block logo w-28 h-10.5"}
+				to='/'
+			>
+				{/* <a href='' className={withName ? "hidden" : "block logo w-28 h-10.5"}> */}
 				<svg
 					viewBox='0 0 45.9417 42.3154'
 					xmlns='http://www.w3.org/2000/svg'
@@ -152,7 +163,8 @@ export function Logo({ withName }) {
 						</g>
 					</g>
 				</svg>
-			</a>
+				{/* </a> */}
+			</NavLink>
 		</>
 	);
 }

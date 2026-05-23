@@ -14,7 +14,7 @@ export function PrimaryButton({
 		<button className={buttonClass} type={type ? type : "button"}>
 			{textValue}
 			<img
-				src='/svg/arrow_right.svg'
+				src='/verstka_portfolio/eatly/svg/arrow_right.svg'
 				alt='arrow_right'
 				className={icon ? "" : "hidden h-0 w-0"}
 			/>

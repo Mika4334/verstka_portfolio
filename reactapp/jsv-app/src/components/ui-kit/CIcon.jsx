@@ -16,7 +16,7 @@ export function CIcon({
 		>
 			<img
 				className={`max-w-fit ${w ?? ""} ${h ?? ""} ${relative && "absolute"} ${position ?? ""} ${hide && "hidden"}`}
-				src={src}
+				src={"/verstka_portfolio/eatly/" + src}
 				alt={alt}
 			/>
 		</div>

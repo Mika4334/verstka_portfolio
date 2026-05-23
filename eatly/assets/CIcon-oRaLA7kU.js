@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-BXkSAHUF.js";var t=e();function n({w:e,h:n,divH:r,divW:i,relative:a=``,customStyle:o,position:s,src:c,alt:l,hide:u}){return(0,t.jsx)(`div`,{className:`${r??``} ${i??``} h-0 w-0 ${a&&`relative`} ${o||``}`,children:(0,t.jsx)(`img`,{className:`max-w-fit ${e??``} ${n??``} ${a&&`absolute`} ${s??``} ${u&&`hidden`}`,src:c,alt:l})})}export{n as t};

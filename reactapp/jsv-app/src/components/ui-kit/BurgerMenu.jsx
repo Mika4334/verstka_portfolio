@@ -1,3 +1,5 @@
+import { NavLink } from "react-router";
+
 export function BurgerMenu() {
 	return (
 		<div className='block sm:hidden'>
@@ -36,10 +38,18 @@ export function BurgerMenu() {
 				</svg>
 			</button>
 			<div popover='auto' id='burgerPopover' className='burgerPopover'>
-				<a href=''>Menu</a>
-				<a href=''>Blog</a>
-				<a href=''>Pricing</a>
-				<a href=''>Contact</a>
+				<NavLink className='hover:text-pm' to='categories' end>
+					Menu
+				</NavLink>
+				<NavLink className='hover:text-pm' to='blog' end>
+					Blog
+				</NavLink>
+				<NavLink className='hover:text-pm' to='pricing' end>
+					Pricing
+				</NavLink>
+				<NavLink className='hover:text-pm' to='contact' end>
+					Contact
+				</NavLink>
 			</div>
 		</div>
 	);

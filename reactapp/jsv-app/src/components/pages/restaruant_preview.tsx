@@ -41,7 +41,7 @@ export default function RestPreview() {
 			<RestCard
 				w='w-full'
 				h='h-124'
-				srcImg={`bg-[url(/img/rest/kfc.png)]`}
+				srcImg={`bg-[url(img/rest/kfc.png)]`}
 				imgH='h-100'
 				alt='kfc'
 				href='#'

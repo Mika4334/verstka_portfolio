@@ -33,7 +33,7 @@ export function OurTopRest({ viewAllOnTop, viewAllOnBottom }) {
 				<RestCard
 					w='w-99'
 					h='max-h-74'
-					srcImg={`bg-[url(/img/rest/kfc.png)]`}
+					srcImg={`bg-[url(img/rest/kfc.png)]`}
 					href='#'
 					badgeColor='y'
 					badgeText='Healthy'
@@ -41,7 +41,7 @@ export function OurTopRest({ viewAllOnTop, viewAllOnBottom }) {
 				<RestCard
 					w='w-99'
 					h='max-h-74'
-					srcImg={`bg-[url(/img/rest/bk.png)]`}
+					srcImg={`bg-[url(img/rest/bk.png)]`}
 					href='#'
 					badgeColor='r'
 					badgeText='Trending'
@@ -49,7 +49,7 @@ export function OurTopRest({ viewAllOnTop, viewAllOnBottom }) {
 				<RestCard
 					w='w-99'
 					h='max-h-74'
-					srcImg={`bg-[url(/img/rest/kfc.png)]`}
+					srcImg={`bg-[url(img/rest/kfc.png)]`}
 					href='#'
 					badgeColor='y'
 					badgeText='Healthy'

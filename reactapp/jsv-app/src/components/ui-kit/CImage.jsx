@@ -15,7 +15,7 @@ export function CImage({
 		>
 			<img
 				className={`${imgW ? imgW : ""} ${imgH ? imgH : ""}  ${imgCustomStyle ? imgCustomStyle : ""} w-full max-w-fit h-fit max-h-full `}
-				src={"/verstka_portfolio/eatly/" + src}
+				src={"/verstka_portfolio/eatly" + src}
 				alt={alt}
 			/>
 		</div>

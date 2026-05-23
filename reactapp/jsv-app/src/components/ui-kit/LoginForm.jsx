@@ -108,20 +108,20 @@ export function SignUpForm() {
 					<p>Copyright 2022</p>
 				</div>
 			</div>
-			<div className='pt-40 px-4 lg:px-10 gap-10 w-full hidden md:flex flex-col justify-center bg-pm bg-[url(img/sliderbg.png)] bg-contain bg-no-repeat'>
+			<div className='pt-40 px-4 lg:px-10 gap-10 w-full hidden md:flex flex-col justify-center bg-pm bg-[url(./img/sliderbg.png)] bg-contain bg-no-repeat'>
 				<WeekendSlider iconHide={true} whiteTheme={true}>
 					<SignUpCard
-						imgSrc='img/sliderimage.png'
+						imgSrc='/img/sliderimage.png'
 						heading='#1 Find Foods With Love '
 						text='Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.'
 					/>
 					<SignUpCard
-						imgSrc='img/sliderimage.png'
+						imgSrc='/img/sliderimage.png'
 						heading='#2 Find Foods With Love '
 						text='Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.'
 					/>
 					<SignUpCard
-						imgSrc='img/sliderimage.png'
+						imgSrc='/img/sliderimage.png'
 						heading='#3 Find Foods With Love '
 						text='Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.'
 					/>
@@ -209,20 +209,20 @@ export function SignInForm() {
 					<p>Copyright 2022</p>
 				</div>
 			</div>
-			<div className='pt-40 px-4 lg:px-10 gap-10 w-full hidden md:flex flex-col justify-center bg-pm bg-[url(img/sliderbg.png)] bg-contain bg-no-repeat'>
+			<div className='pt-40 px-4 lg:px-10 gap-10 w-full hidden md:flex flex-col justify-center bg-pm bg-[url(./img/sliderbg.png)] bg-contain bg-no-repeat'>
 				<WeekendSlider iconHide={true} whiteTheme={true}>
 					<SignUpCard
-						imgSrc='img/sliderimage.png'
+						imgSrc='/img/sliderimage.png'
 						heading='#1 Find Foods With Love '
 						text='Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.'
 					/>
 					<SignUpCard
-						imgSrc='img/sliderimage.png'
+						imgSrc='/img/sliderimage.png'
 						heading='#2 Find Foods With Love '
 						text='Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.'
 					/>
 					<SignUpCard
-						imgSrc='img/sliderimage.png'
+						imgSrc='/img/sliderimage.png'
 						heading='#3 Find Foods With Love '
 						text='Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.'
 					/>
@@ -275,20 +275,20 @@ export function ForgetForm() {
 					<p>Copyright 2022</p>
 				</div>
 			</div>
-			<div className='pt-40 px-4 lg:px-10 gap-10 w-full hidden md:flex flex-col justify-center bg-pm bg-[url(img/sliderbg.png)] bg-contain bg-no-repeat'>
+			<div className='pt-40 px-4 lg:px-10 gap-10 w-full hidden md:flex flex-col justify-center bg-pm bg-[url(./img/sliderbg.png)] bg-contain bg-no-repeat'>
 				<WeekendSlider iconHide={true} whiteTheme={true}>
 					<SignUpCard
-						imgSrc='img/sliderimage.png'
+						imgSrc='/img/sliderimage.png'
 						heading='#1 Find Foods With Love '
 						text='Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.'
 					/>
 					<SignUpCard
-						imgSrc='img/sliderimage.png'
+						imgSrc='/img/sliderimage.png'
 						heading='#2 Find Foods With Love '
 						text='Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.'
 					/>
 					<SignUpCard
-						imgSrc='img/sliderimage.png'
+						imgSrc='/img/sliderimage.png'
 						heading='#3 Find Foods With Love '
 						text='Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.'
 					/>
@@ -405,11 +405,11 @@ export function ForgetForm() {
 //                     <div className='text-nowrap'>Copyright 2022</div>
 //                 </div >
 //             </div>
-//             <div className='w-1/2 hidden md:flex flex-col gap-5 justify-center sm:px-12 lg:px-15 bg-pm bg-[url(img/sliderbg.png)] bg-contain bg-no-repeat'>
+//             <div className='w-1/2 hidden md:flex flex-col gap-5 justify-center sm:px-12 lg:px-15 bg-pm bg-[url(./img/sliderbg.png)] bg-contain bg-no-repeat'>
 //                 <WeekendSlider iconHide={true} whiteTheme={true}>
-//                     <SignUpCard imgSrc='img/sliderimage.png' heading='#1 Find Foods With Love ' text='Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.' />
-//                     <SignUpCard imgSrc='img/sliderimage.png' heading='#2 Find Foods With Love ' text='Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.' />
-//                     <SignUpCard imgSrc='img/sliderimage.png' heading='#3 Find Foods With Love ' text='Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.' />
+//                     <SignUpCard imgSrc='/img/sliderimage.png' heading='#1 Find Foods With Love ' text='Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.' />
+//                     <SignUpCard imgSrc='/img/sliderimage.png' heading='#2 Find Foods With Love ' text='Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.' />
+//                     <SignUpCard imgSrc='/img/sliderimage.png' heading='#3 Find Foods With Love ' text='Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.' />
 //                 </WeekendSlider>
 //             </div>
 //         </>
